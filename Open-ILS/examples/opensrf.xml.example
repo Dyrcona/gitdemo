@@ -137,13 +137,13 @@ vim:et:ts=4:sw=4:
                  hold requests, but with diminishing returns after a point;
                  if increasing this value, it is recommend to do so slowly
             -->
-            <parallel>1</parallel>
+            <parallel>6</parallel>
         </hold_targeter>
 
         <!-- Settings for the fine generator cron job -->
         <fine_generator>
             <!-- number of parallel processes to use during fine generation -->
-            <parallel>1</parallel>
+            <parallel>3</parallel>
         </fine_generator>
         
         <reporter>
@@ -942,12 +942,10 @@ vim:et:ts=4:sw=4:
                 </unix_config>
                 <app_settings>
                     <!-- number of parallel open-ils.trigger processes to use for collection and reaction -->
-                    <!--
                     <parallel>
                         <collect>3</collect>
                         <react>3</react>
                     </parallel>
-                    -->
                 </app_settings>
             </open-ils.trigger>
 
