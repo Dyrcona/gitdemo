@@ -1,0 +1,41 @@
+<record>
+<leader>01149com a2200265Ka 4500</leader>
+<controlfield tag="008">120919s        xxu          000    eng d</controlfield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[kit]</subfield>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="505" ind1="0" ind2="">
+<subfield code="a">Contents:</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a"/>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a"/>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a"/>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a"/>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a"/>
+</datafield>
+</record>

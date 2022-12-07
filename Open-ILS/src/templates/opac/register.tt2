@@ -44,12 +44,19 @@ register_fields = [
 
 # The dojo date widget in the patron edit UI only accepts default 
 # values in ISO8601 format.  It will not accept locale-shaped dates.
-IF !ctx.register.settings.stgu.dob.example;
-    ctx.register.settings.stgu.dob.example = l('YYYY-MM-DD or YYYY/MM/DD');
-END;
+# Force change it for this form:
+ctx.register.settings.stgu.dob.example = l('YYYY-MM-DD (1970-05-29)');
 
 %]
 
+<style type="text/css">
+#stgu\.first_given_name, #stgu\.second_given_name, #stgu\.family_name,
+ #stgu\.pref_first_given_name, #stgu\.pref_second_given_name,
+ #stgu\.pref_family_name, #stgma\.street1, #stgma\.street2, #stgma\.city,
+ #stgma\.county, #stgma\.state, #stgma\.post_code {
+ text-transform: uppercase;
+}
+</style>
 <h2 class="sr-only">[% l('Account Registration') %]</h2>
 <div id="content-wrapper">
     <div id="main-content-register">
@@ -58,8 +65,10 @@ END;
         <hr/>
 
         [% IF ctx.register.success %]
-            <h3>[% l('Registration successful!') %]<h3>
-            <h4>[% l('Please see library staff to complete your registration.') %]</h4>
+            <h3>Thank you for submitting your request for a library card!<h3>
+            <h4>Please allow time for a library staff member to review your application
+and reach out with next steps. If you have any questions or concerns,
+please contact your <a href="https://www.cwmars.org/memberlibraries">library.</a></h4>
 
             [% IF ctx.register.username_taken %]
             <p>
@@ -211,6 +220,25 @@ FOR field_def IN register_fields;
                         </tr>
                         [% END %]
                     [% END %]
+                    <tr>
+                    <td colspan='3'>
+                    <p style="font-size: 120%;"><strong>
+                    Submit this form to request a library card from
+                    your local library.</strong></p>
+                    <p style="font-size: 120%;"><strong> By
+                    submitting, you understand and agree to the <a target="_blank" rel="noopener"
+                    href="https://www.cwmars.org/about/borrowing-lending">CW
+                    MARS shared network policies</a><br>as well as any
+                    <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">local library</a> policies, rules, and regulations.
+                    </strong></p>
+                    <p style="font-size: 120%;"><strong>
+                    Please ensure you have entered at least one form
+                    of contact (phone number and/or email address),<br>
+                    so that staff at your local library can follow up
+                    as necessary.
+                    </strong></p>
+                    </td>
+                    </tr>
                     <tr>
                         <td colspan='3'>
                             <a href="[% ctx.opac_root %]/home" 

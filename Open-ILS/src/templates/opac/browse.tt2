@@ -7,7 +7,7 @@
     INCLUDE "opac/parts/topnav.tt2";
 
     ctx.page_title = l("Browse the Catalog");
-    blimit = CGI.param('blimit') || ctx.opac_hits_per_page || 10;
+    blimit = CGI.param('blimit') || ctx.opac_hits_per_page || 25;
 
     depart_list = ['blimit', 'bterm', 'bpivot'];
     ctx.metalinks.push('<meta name="robots" content="noindex,follow">');

@@ -1,0 +1,27 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/openils/bin
+SHELL=/bin/bash
+MAILTO=opensrf@cwmars.org
+
+# Generate fines
+0 0,7-23 * * *   /openils/bin/fine_generator.pl /openils/conf/opensrf_core.xml
+
+# Run the hold thawer
+5  0  * * *   /openils/bin/thaw_expired_frozen_holds.srfsh
+
+# Run the reshelving completer
+0 1 * * *  /openils/bin/reshelving_complete.srfsh
+
+# Run any SQL updates at 9:00 PM on Tuesdays and Thursdays.
+0 21 * * 2,4     /home/opensrf/db-updates/sql_updates.sh
+
+# Run a vacuum analyze once/day.
+30 02 * * *      /usr/bin/psql -U evergreen -h db1 -c 'vacuum analyze;' > /dev/null
+
+# Update the ARIS stats once per year
+0 4 1 7 * /home/opensrf/stats-dashboard-aris-sql/run.sh
+
+# Run the carousel updater
+5  3  * * *   /openils/bin/refresh_carousels.srfsh
+
+# Run the Summon extract every night at 10:15 PM
+15 22 * * * cd /home/opensrf/cwmars_custom/summon && ./extract.pl -c summon.yml

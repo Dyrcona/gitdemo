@@ -18,6 +18,7 @@
 %]
 
     <div id='ac_tab_wrapper'>
+        <a name="addedcontent"></a><!-- Anchor is here! -->
     [% 
         all_hidden = 1;
         FOR type IN ac_types.keys;
@@ -37,17 +38,17 @@
     </div>
 
     <div id='ac_content'>
-        <hr/>
+ 
         [% 
             IF selected_type; 
                 content = ctx.added_content.$selected_type.content;
                 IF content;
                     content;
                 ELSE;
-                    l('No Content Available');
+                    l(''); #Removed "No Content Available" text
                 END;
             ELSIF all_hidden;
-                l('No Content Available');
+                l(''); #Removed "No Content Available" text
             END;
         %]
     </div>

@@ -47,14 +47,14 @@ vim:et:ts=4:sw=4:
             in most cases, this is overridden by location 
             specific config settings.  this is just the default
             -->
-            <sender_address>evergreen@localhost</sender_address>
+            <sender_address>no-reply@cwmars.org</sender_address>
         </email_notify>
 
 
       <notifications>
         <!-- global mail server settings -->
         <smtp_server>localhost</smtp_server>
-        <sender_address>evergreen@localhost</sender_address>
+        <sender_address>no-reply@cwmars.org</sender_address>
 
         <!-- global telephony (asterisk) settings -->
         <telephony>
@@ -93,7 +93,7 @@ vim:et:ts=4:sw=4:
         <overdue>
 
             <!-- optionally, you can define a sender address per notice type -->
-            <sender_address>overdue@localhost</sender_address>
+            <sender_address>no-reply@cwmars.org</sender_address>
 
             <!-- The system can generate an XML file of overdue notices.  This is the
                 directory where they are stored.  Files are named overdue.YYYY-MM-DD.xml -->
@@ -688,7 +688,7 @@ vim:et:ts=4:sw=4:
                     <max_superpages>100</max_superpages>
 
                     <!-- zip code database file -->
-                    <!--<zips_file>LOCALSTATEDIR/data/zips.txt</zips_file>-->
+                    <zips_file>LOCALSTATEDIR/data/zips.txt</zips_file>
                 </app_settings>
             </open-ils.search>
 
@@ -775,7 +775,39 @@ vim:et:ts=4:sw=4:
                 </unix_config>
                 <app_settings>
                     <marctemplates>
-                        <K_book>LOCALSTATEDIR/templates/marc/k_book.xml</K_book>
+                      <art-reproduction>/openils/var/templates/marc/art-reproduction.xml</art-reproduction>
+                      <bluray>/openils/var/templates/marc/blu-ray_dvd.xml</bluray>
+                      <board_games_multiple>/openils/var/templates/marc/board_game.xml</board_games_multiple>
+                      <board_game_single>/openils/var/templates/marc/board_game_single.xml</board_game_single>
+                      <book>/openils/var/templates/marc/k_book.xml</book>
+                      <braille_book>/openils/var/templates/marc/braille_book.xml</braille_book>
+                      <cd_book>/openils/var/templates/marc/cd_book.xml</cd_book>
+                      <cd_music>/openils/var/templates/marc/cd_music.xml</cd_music>
+                      <dvd>/openils/var/templates/marc/dvd.xml</dvd>
+                      <equipment>/openils/var/templates/marc/equipment.xml</equipment>
+                      <ereader_content>/openils/var/templates/marc/e-reader_content.xml</ereader_content>
+                      <ereader_nocontent>/openils/var/templates/marc/e-reader_no_cont.xml</ereader_nocontent>
+                      <kit>/openils/var/templates/marc/kit.xml</kit>
+                      <large_print>/openils/var/templates/marc/large_print.xml</large_print>
+                      <lot_aud-vis>/openils/var/templates/marc/LOT_aud-vis.xml</lot_aud-vis>
+                      <lot_board-games>/openils/var/templates/marc/LOT_board-games.xml</lot_board-games>
+                      <lot_collection>/openils/var/templates/marc/LOT_collection.xml</lot_collection>
+                      <lot_home>/openils/var/templates/marc/LOT_home.xml</lot_home>
+                      <lot_rec>/openils/var/templates/marc/LOT_rec.xml</lot_rec>
+                      <lot_tech>/openils/var/templates/marc/LOT_tech.xml</lot_tech>
+                      <maps>/openils/var/templates/marc/map.xml</maps>
+                      <mp3_cd_book>/openils/var/templates/marc/mp3_cd_book.xml</mp3_cd_book>
+                      <museum_pass>/openils/var/templates/marc/museum_pass.xml</museum_pass>
+                      <phonograph_music>/openils/var/templates/marc/phonograph_music.xml</phonograph_music>
+                      <phonograph_spoken>/openils/var/templates/marc/phonograph_spoken.xml</phonograph_spoken>
+                      <photograph_online>/openils/var/templates/marc/photograph_online.xml</photograph_online>
+                      <playaway>/openils/var/templates/marc/playaway.xml</playaway>
+                      <puzzle_juv>/openils/var/templates/marc/puzzle_juv.xml</puzzle_juv>
+                      <puzzles_multiple>/openils/var/templates/marc/puzzles_multiple.xml</puzzles_multiple>
+                      <serial>/openils/var/templates/marc/serial.xml</serial>
+                      <serial_microform>/openils/var/templates/marc/serial_microform.xml</serial_microform>
+                      <toy>/openils/var/templates/marc/toy.xml</toy>
+                      <video_game>/openils/var/templates/marc/video_game.xml</video_game>
                     </marctemplates>
                 </app_settings>
             </open-ils.cat>

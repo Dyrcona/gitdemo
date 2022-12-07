@@ -1,4 +1,3 @@
-
 <script type="text/javascript">
 
     /* Checks to see if a given type of added content has data to show.
@@ -68,7 +67,9 @@
                     // hide the Loading... text
                     dojo.byId('novelist-loading').innerHTML = '';
                 }
-            )}, 100);
+            );
+       /* Suggestion from Novelist */
+       }, 500);
 [%- END; # Novelist -%]
 
         [% END; # IF ident

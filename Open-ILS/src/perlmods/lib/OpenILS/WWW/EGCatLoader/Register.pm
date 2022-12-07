@@ -38,6 +38,14 @@ sub load_patron_reg {
         my $val = $cgi->param($_);
         $self->inspect_register_value($_, $val);
         s/^stgu\.//g;
+        # Upcase certain fields per CW MARS
+        my @upcase_fields = ('first_given_name', 'second_given_name', 'family_name',
+                             'pref_first_given_name', 'pref_second_given_name',
+                             'pref_family_name');
+        my $f = $_;
+        if (grep {$f eq $_} @upcase_fields) {
+            $val = uc($val);
+        }
         $user->$_($val);
     }
 
@@ -56,7 +64,7 @@ sub load_patron_reg {
         my $val = $cgi->param($_);
         $self->inspect_register_value($_, $val);
         s/^stgma\.//g;
-        $addr->$_($val);
+        $addr->$_(uc($val)); # Uppercase per CW MARS
         $has_addr = 1;
     }
 

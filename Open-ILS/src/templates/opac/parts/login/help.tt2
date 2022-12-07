@@ -1,17 +1,10 @@
-<div class="login-help-box">
+<p>
+    <a href="https://www.cwmars.org/help"><img
+        src="[% ctx.media_prefix %]/opac/images/questions.png[% ctx.cache_key %]" alt="[% l('Questions?') %]" style="margin-top:29px;" /></a>
 
-    <div class="login-help-button">
-        <a href="http://example.com" class="opac-button">[% l('Questions?') %]</a>
-    </div>
-
-    <div>
+    <div style="width:182px;color:black;padding:5px 25px;">
         [% l('Visit our FAQs section for answers to common questions about how to use your account.') %]
     </div>
+    <a href="https://www.cwmars.org/help/catalog-help/help-my-account"><img
+        alt="[% l('FAQs') %]" src="[% ctx.media_prefix %]/opac/images/faqs-btn.png[% ctx.cache_key %]" style="margin-top:13px;" /></a>
 
-    <div class="login-help-button">
-        <div class="opac-multiline-button">
-        <a href="http://example.com">[% l('FAQs') %]</a>
-	</div>
-    </div>
-
-</div>

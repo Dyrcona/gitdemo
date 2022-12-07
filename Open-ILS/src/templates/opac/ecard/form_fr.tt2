@@ -1,0 +1,45 @@
+[%- PROCESS "opac/parts/header.tt2";
+    PROCESS "opac/parts/org_selector.tt2";
+    WRAPPER "opac/parts/base.tt2";
+    INCLUDE "opac/parts/topnav.tt2";
+    ctx.page_title = l("Get a CW MARS eCard");
+    ctx_org = ctx.physical_loc || ctx.search_ou || ctx.aou_tree.id;
+%]
+<div id="content-wrapper">
+<div id="main-content-register"
+     style="margin: auto; width: 65%;">
+<h2>Obtenez une eCarte de CW MARS</h2>
+[% IF ctx.ecard.enabled && ctx.ecard.quipu_id %]
+<div id="ecard-intro">
+<!-- The following script tags can be placed in the library's <head> or <body> tag -->
+<script src="https://ecard-us2.quipugroup.net/js/eCARDEmbed.js"></script>
+<script>loadQGeCARD([% ctx.ecard.quipu_id %])</script>
+
+[% INCLUDE "opac/ecard/lang.tt2" %]
+
+<p>Une carte électronique (eCarte) est une carte de bibliothèque de CW MARS à laquelle vous pouvez vous inscrire en ligne pour accéder à des documents électroniques, tels que des livres électroniques, des livres audio, des magazines et des bases de données.</p>
+
+<p>La carte électronique (ecarte) est destinée aux usagers qui n'ont pas encore de carte de bibliothèque CW MARS. Cette carte peut être convertie a une carte de bibliothèque physique avec des privilèges d'emprunt en visitant votre bibliothèque locale. Pour plus d'informations sur la carte électronique, lisez notre FAQ.</p>
+
+<p>Vous pouvez demander une carte électronique CW MARS si vous...</p>
+<ul>
+<li>vivez dans une ville de Massachusetts avec une bibliothèque membre de CW MARS,</li>
+<li>avez 13 ans ou plus,</li>
+<li>et n'avez pas actuellement de carte de bibliothèque d'une bibliothèque membre de CW MARS.</li>
+</ul>
+
+<p>Contactez votre bibliothèque locale si vous n'êtes pas éligible à vous inscrire en ligne ou à renouveler une carte expirée.</p>
+
+<p>Le financement du contenu électronique est assuré par les bibliothèques membres de CW MARS et le Conseil des commissaires des bibliothèques de Massachusetts avec un financement de l'Institut du musée et des services de bibliothèque et le Commonwealth de Massachusetts.</p>
+
+</div>
+<!-- The following <div> tag should be placed on the web page where the library would like the registration form to display -->
+<div id="eCARD" data-language="fr" data-branchid="[% ctx_org %]"></div>
+[% ELSE %]
+<p>
+[% l('Electronic card registration is not enabled for this library.') %]
+</p>
+[% END #IF %]
+</div>
+</div>
+[% END #WRAPPER %]

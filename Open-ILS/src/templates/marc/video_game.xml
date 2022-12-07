@@ -1,0 +1,41 @@
+<record>
+<leader>00309nmm a2200145Ka 4500</leader>
+<controlfield tag="007">cb cza</controlfield>
+<controlfield tag="008">      s2014                        eng d</controlfield>
+<datafield tag="020" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="024" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="028" ind1="4" ind2="2">
+<subfield code="a"/>
+<subfield code="b"/>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[video game]</subfield>
+<subfield code="b"/>
+</datafield>
+<datafield tag="250" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="260" ind1="" ind2="">
+<subfield code="a"/>
+<subfield code="b"/>
+<subfield code="c"/>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 video game cartridge :</subfield>
+<subfield code="b">sd., col.</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="1" ind2="0">
+<subfield code="a">Video games.</subfield>
+</datafield>
+</record>

@@ -10,16 +10,36 @@
     <div class="row w-100">
         <div class="col-12">
             <ul class="navbar-nav">
-                <!--Link 1-->
-            [% IF ctx.get_org_setting(ctx.physical_loc || ctx.aou_tree.id, 'opac.allow_pending_user') && !ctx.user %]
-                <li class="nav-item"><a class="nav-link" href="[% mkurl(ctx.opac_root _ '/register') %]">[%
-                l('Request Library Card') %]</a></li>
-            [% ELSE %]
-                <li class="nav-item"><a class="nav-link" href="#">[% l('Example Link 1') %]</a></li>
-            [% END %]
-                <li class="nav-item"><a class="nav-link" href="#">[% l('Example Link 2') %]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[% l('Example Link 3') %]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[% l('Example Link 4') %]</a></li>
+            <li class="nav-item">
+            <a class="nav-link" href="http://www.cwmars.org/" target="_blank" rel="noopener">
+            <i class="fas fa-home" style="color: #fff;"></i>CW MARS
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.cwmars.org/explore/new-titles" target="_blank" rel="noopener">
+            <i class="fas fa-exclamation" style="color: #fff;"></i>New Titles at Your Library
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.cwmars.org/explore/most-requested-titles" target="_blank" rel="noopener">
+            <i class="fas fa-star" style="color: #fff;"></i>Popular Titles
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/eg/kpac/home">
+            <i class="fas fa-child" style="color: #fff;"></i>Kid's Catalog
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.cwmars.org/search/commonwealth-catalog" target="_blank" rel="noopener">
+            <i class="fas fa-cat" style="color: #fff;"></i>Commonwealth Catalog
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.cwmars.org/help" target="_blank" rel="noopener">
+            <i class="fas fa-question" style="color: #fff;"></i>Help
+            </a>
+            </li>
             </ul>
         </div>
     </div>

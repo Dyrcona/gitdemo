@@ -24,6 +24,7 @@ limiting the set of desired records for a given metarecord.
 %]
 
 <div class="metarecord_filters">
+<div><p><strong>This hold will be filled by the first item available in any of the formats or languages you have chosen.</strong><br /><a class="tooltips" href="#"><strong>More Information<img alt="More Information" src="/images/question-mark.png"></strong><span>The selections below DO NOT place holds on more than one item. If you select more than one format, your hold will be filled by the first available copy in any selected format.<br /><br /> For example, you might see a regular print, large print or audiobook option. If you just want a paper copy, you might select regular print and large print, but not the audiobook.</span></a></p></div>
   <div class="metarecord_filter_container">
     <div class="metarecord_filter_header">
       <div>[% l('Select your desired format(s).') %]</div>

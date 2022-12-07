@@ -42,7 +42,10 @@ sysconf_DATA = $(examples)/action_trigger_filters.json.example \
 	       $(examples)/oils_yaz.xml.example \
 	       $(examples)/kpac.xml.example \
 	       $(examples)/oils_z3950.xml.example \
-	       $(examples)/marc_stream_importer.conf.example
+	       $(examples)/marc_stream_importer.conf.example \
+	       $(examples)/libcode.txt \
+	       $(examples)/libtarget.txt \
+	       $(examples)/oils_ncip.xml
 
 #----------------------------
 # Build ILS CORE
@@ -56,7 +59,8 @@ OILSCORE_DIRS = c-apps extras perlmods
 OILSCORE_INST = ilscore-install
 
 core_data = @srcdir@/extras/ils_events.xml \
-	    $(examples)/hold_notification_template.example
+	    $(examples)/hold_notification_template.example \
+	    $(examples)/zips.txt
 
 core_scripts =   $(examples)/oils_ctl.sh \
 		 $(supportscr)/fine_generator.pl \
@@ -257,6 +261,7 @@ ilscore-install:
 		echo "Installing template data files to $(datadir)/locale/" && \
 		cp -r @srcdir@/data/locale/* $(datadir)/locale/ ;\
 	fi;
+	cp -r $(examples)/a_t_filters $(DESTDIR)@sysconfdir@
 	$(MKDIR_P) $(DESTDIR)$(datadir)/overdue/
 	sed -i 's|LOCALSTATEDIR|@localstatedir@|g' '$(DESTDIR)@sysconfdir@/oils_sip.xml.example'
 	sed -i 's|SYSCONFDIR|@sysconfdir@|g' '$(DESTDIR)@sysconfdir@/oils_sip.xml.example'

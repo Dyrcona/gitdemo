@@ -1,0 +1,109 @@
+# Evergreen crontab.example
+# Author: Joe Atzberger, ESI
+# Author: Bill Erickson, ESI
+#
+# This is an example of a crontab file for Debian.  It may not work
+# in other versions of crontab, like on Solaris 8 or BSD, for example.
+#
+# While similar in structure,
+# this is NOT an example for cron (as root).  Cron takes an extra
+# argument per line to designate the user to run as.  You could
+# reasonably extrapolate the needed info from here though.
+#
+# WARNING: These jobs will do things like charge fines, send
+# potentially VERY MANY emails to patrons and even debar offending
+# users.  DO NOT RUN OR SCHEDULE these jobs without being sure you
+# really intend to.  Make sure the relevant message templates are
+# configured to your liking before scheduling messages to be sent.
+#
+# Except where indicated, these processes only need to run
+# on 1 Evergreen server/brick.
+
+# Modified for CW MARS by Jason Stephenson.
+
+
+# ENVIRONMENT:
+# First, establish Evergreen ENV variables.
+#
+MAILTO=opensrf@cwmars.org
+SHELL      = /bin/bash
+PATH       = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/openils/bin
+OPENILS    = /openils
+SRF_CORE   = /openils/conf/opensrf_core.xml
+EG_BIN_DIR = /openils/bin
+AT_FILTERS = /openils/conf/a_t_filters/
+# crontab format:
+# m h dom mon dow   command
+
+# Run the hold targeter
+0 7-23 * * *    $EG_BIN_DIR/hold_targeter.pl --osrf-config $SRF_CORE --soft-retarget-interval='1 hour'
+
+# create the list of blocked patrons for offline use
+# Note: The resulting list.txt file needs to be copied to all Apache servers
+30 6  * * *   $EG_BIN_DIR/offline-blocked-list.pl $SRF_CORE > $OPENILS/var/web/standalone/list.txt
+
+# Calculate scores for popularity badges
+30 4 * * * $EG_BIN_DIR/badge_score_generator.pl $SRF_CORE
+
+# Action/Trigger entries ----
+
+
+# Password Reset
+#
+*/1 * * * *   $EG_BIN_DIR/action_trigger_runner.pl --osrf-config $SRF_CORE  --run-pending --granularity password-reset --granularity-only
+
+# Runs all pending A/T events every half hour
+*/30 * * * * $EG_BIN_DIR/action_trigger_runner.pl --osrf-config $SRF_CORE --run-pending
+
+# Passive A/T event generation.
+0 * * * *   $EG_BIN_DIR/action_trigger_runner.pl --osrf-config $SRF_CORE --process-hooks --run-pending --granularity hourly
+30 2 * * * $EG_BIN_DIR/action_trigger_runner.pl --osrf-config $SRF_CORE --process-hooks --run-pending --granularity Daily-PD-2 --granularity-only
+5 3 * * * $EG_BIN_DIR/action_trigger_runner.pl --osrf-config $SRF_CORE --process-hooks --run-pending --granularity daily
+
+# Custom triggers for notices. (Now moved into individual script files for a better linear running)
+
+# Overdues + PDF Notices
+10 1 * * *   cd /home/opensrf/overdue/ && ./run_overdues.sh
+
+# EDI
+0 8-20 * * * env FTP_PASSIVE=1 $EG_BIN_DIR/edi_order_pusher.pl > /dev/null
+30 8-20 * * 1-5 env FTP_PASSIVE=1 $EG_BIN_DIR/edi_fetcher.pl 2>&1 > /dev/null | grep -v 'already retrieved'
+
+# TODO: add other entries
+
+# Clean up
+0 5 * * * find /openils/var/web/notices/ -mtime +14 -name "*.pdf" -delete
+1 5 * * * find /openils/var/data/overdue -mtime +14 -type f -delete
+5 5 * * * find /openils/var/tmp -mtime +14 -delete
+
+# CW MARS local cron jobs
+0 19 * * * cd /home/opensrf/cwmars_custom && ./purge_cwmars_circ.sh
+30 3 * * * cd /home/opensrf/cwmars_custom && ./cwmars_dashboard.sh >/dev/null
+15 4 * * * cd /home/opensrf/cwmars_custom && ./age_public_profiles.sh >/dev/null
+30 4 * * * cd /home/opensrf/cwmars_custom && ./circmod_statcat.sh >/dev/null
+30 4 * * * cd /home/opensrf/cwmars_custom && ./newtitleslists.sh >/dev/null
+30 5 * * * cd /home/opensrf/cwmars_custom && ./cwmars_cleanup.sh >/dev/null
+30 1 * * * cd /home/opensrf/cwmars_custom && ./purge_reports.sh >/dev/null
+00 8 * * * cd /home/opensrf/cwmars_custom && ./check_autorenewals.sh
+00 2 * * 6 cd /home/opensrf/cwmars_custom && ./patron_purge.sh >/dev/null
+00 22 21 6,12 * cd /home/opensrf/cwmars_custom && ./purge_gcc_patrons.sh > /dev/null
+00 22 15 7 * cd /home/opensrf/cwmars_custom && ./purge_aic_patrons.sh > /dev/null
+30 8 * * 6 cd /home/opensrf/cwmars_custom && ./purge_bibs.sh >/dev/null
+2 21 * * * cd /home/opensrf/cwmars_custom && ./dusty_titles.sh >/dev/null
+0 6 * * *  cd /home/opensrf/cwmars_custom && ./purge_audit.sh >/dev/null
+2 6 * * * for i in `find /openils/var/web/reporter/ -type f -mtime +90`; do rm $i 2>/dev/null; done
+5 0 * * * find /openils/var/web/reporter/ -empty -type d -delete
+50 12 * * * for i in `find /openils/var/log/ -type f -mtime +7 -name "*.gz"`; do rm $i 2>/dev/null; done
+0 21 * * 3 /home/opensrf/cwmars_custom/isbns/isbn_gatherer.sh
+0 21 * * 2 /home/opensrf/cwmars_custom/eds/export.sh aic mwcc
+
+# Run Boopsie upload every Monday night at 9:30.
+#30 21 * * 1   cd /home/opensrf/cwmars_custom/boopsie && ./boopsie.sh
+
+# Backup util2 to backup server every hour.
+35 * * * * /home/opensrf/cwmars_custom/backup_util2.sh
+
+# Add fiscal year db entry every May 15th.
+0 0 15 5 * cd /home/opensrf/cwmars_custom && ./fiscal-year.sh > /dev/null
+# Export record dump to Autographics every July 1st
+30 21 1 7 * /home/opensrf/cwmars_custom/commcat/export.sh

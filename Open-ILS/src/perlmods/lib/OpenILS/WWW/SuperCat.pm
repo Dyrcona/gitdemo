@@ -2188,7 +2188,7 @@ sub sru_search {
                     }
                 }
 
-                $quote_it = 0 if ( $base eq 'all' );
+                $quote_it = 0 if ( $base eq 'all' || ( $base eq '=' && grep {$qualifier eq $_} qw(eg.keyword eg.title eg.author) ) );
                 $term = maybeQuote($term) if $quote_it;
 
             } else {

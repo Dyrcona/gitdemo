@@ -9,7 +9,7 @@
                 label = l('Google Preview');
                 name = 'google_preview';
         %]
-        <div id="gbp_extra" class="rdetail_extras">
+        <div id="gbp_extra" class="rdetail_extras hide_me">
             <div class="rdetail_extras_hr"></div>
             <div id="gbp_extra_links" class="rdetail_extras_link">
                 <a id='gbp_arrow_link' name='[% name %]' class='rdetail_extras_lbl'>[% arrow_right %]</a>
@@ -53,15 +53,15 @@
         END;
 
         extras = [
-            {name => 'summaryplus',  label => l('Summaries & More'), hide => hide_summary},
-            {name => 'annotation', label => l('Annotation'), hide => 1}, 
-            {name => 'awards',  label => l('Awards, Reviews, & Suggested Reads')}, 
-            {name => 'excerpt',  label => l('Excerpt'), hide => 1},
+        #    {name => 'summaryplus',  label => l('Summaries & More'), hide => hide_summary},
+        #    {name => 'annotation', label => l('Annotation'), hide => 1}, 
+        #    {name => 'awards',  label => l('Awards, Reviews, & Suggested Reads')}, 
+        #    {name => 'excerpt',  label => l('Excerpt'), hide => 1},
             {name => 'issues',   label => l('Issues Held'), hide => !(ctx.have_holdings_to_show || ctx.have_mfhd_to_show)},
-            {name => 'preview',  label => l('Preview'), hide => 1}, 
-            {name => 'addedcontent',  label => l('Additional Content'), hide => hide_ac},  # hide if all content is known to not exist
-            {name => 'cnbrowse', label => l('Shelf Browser')},
-            {name => 'marchtml', label => l('MARC Record')}
+        #    {name => 'preview',  label => l('Preview'), hide => 1}, 
+        #    {name => 'addedcontent',  label => l('Additional Content'), hide => hide_ac},  # hide if all content is known to not exist
+        #    {name => 'cnbrowse', label => l('Shelf Browser')},
+            {name => 'marchtml', label => l('Bibliographic Record')}
         ];
 
         FOREACH extra IN extras;

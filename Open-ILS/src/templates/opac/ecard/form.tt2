@@ -1,0 +1,45 @@
+[%- PROCESS "opac/parts/header.tt2";
+    PROCESS "opac/parts/org_selector.tt2";
+    WRAPPER "opac/parts/base.tt2";
+    INCLUDE "opac/parts/topnav.tt2";
+    ctx.page_title = l("Get a CW MARS eCard");
+    ctx_org = ctx.physical_loc || ctx.search_ou || ctx.aou_tree.id;
+%]
+<div id="content-wrapper">
+<div id="main-content-register"
+     style="margin: auto; width: 65%;">
+<h2>[% ctx.page_title %]</h2>
+[% IF ctx.ecard.enabled && ctx.ecard.quipu_id %]
+<div id="ecard-intro">
+<!-- The following script tags can be placed in the library's <head> or <body> tag -->
+<script src="https://ecard-us2.quipugroup.net/js/eCARDEmbed.js"></script>
+<script>loadQGeCARD([% ctx.ecard.quipu_id %])</script>
+
+[% INCLUDE "opac/ecard/lang.tt2" %]
+
+<p>An eCard is a CW MARS library card that you can register for online to access electronic materials, such as ebooks, audiobooks, magazines, and databases.</p>
+
+<p>The eCard is for patrons who do not already have a CW MARS library card and may be upgraded to a physical library card with borrowing privileges by visiting your local library. For more information about the eCard, <a href="https://www.cwmars.org/help/general-faq#h.tsmz4ldtjggv" target="_blank" rel="noopener">read our FAQ</a>.</p>
+
+<p>You are eligible to apply for a CW MARS eCard, if you...</p>
+<ul>
+<li>live in a Massachusetts town with a <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">CW MARS member library</a>,</li>
+<li>are age 13 or older,</li>
+<li>and do not currently have a library card from a <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">CW MARS member library</a>.</li>
+</ul>
+
+<p>Contact your local library if you are not eligible to register online or to renew an expired card.</p>
+
+<p>Funding for electronic content is provided by <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">CW MARS member libraries</a>, and the <a href="https://mblc.state.ma.us/" target="_blank" rel="noopener">Massachusetts Board of Library Commissioners</a> with funding from the <a href="https://www.imls.gov/" target="_blank" rel="noopener">Institute of Museum and Library Services</a> and the Commonwealth of Massachusetts.</p>
+
+</div>
+<!-- The following <div> tag should be placed on the web page where the library would like the registration form to display -->
+<div id="eCARD" data-language="en" data-branchid="[% ctx_org %]"></div>
+[% ELSE %]
+<p>
+[% l('Electronic card registration is not enabled for this library.') %]
+</p>
+[% END #IF %]
+</div>
+</div>
+[% END #WRAPPER %]

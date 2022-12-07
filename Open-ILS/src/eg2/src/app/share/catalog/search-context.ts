@@ -417,7 +417,7 @@ export class CatalogSearchContext {
      */
     reset(): void {
         this.pager.offset = 0;
-        this.sort = '';
+        this.sort = 'poprel';
         this.showBasket = false;
         this.result = new CatalogSearchResults();
         this.resultIds = [];

@@ -388,7 +388,8 @@ img {
 }
 
 #topnav_logo {
-    margin: 2em 0;
+    margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 #homesearch_main_logo {
@@ -3864,11 +3865,11 @@ label[for*=expert_]
 #homeLogo{
     filter: alpha(opacity=50);
     background-color: #fff; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
+    height: 206px; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: contain; /* Resize the background image to cover the entire container */
-    background-image: url("[% ctx.media_prefix %]/images/Evergreen-Final-Logo.png");
+    background-image: url("[% ctx.media_prefix %]/images/home-logo.png");
 
 }
 
@@ -3971,7 +3972,7 @@ label[for*=expert_]
 }
 
 #rdetail_extras_div .card-header {
-    background-color: #007a54;
+    background-color: #16416F;
 }
 
 #rdetail_extras_div .card-header  a {

@@ -1,11 +1,16 @@
 <div id="gold-links-holder">
     <div id="gold-links">
-        <div id="header-links">
-            <a href="http://example.com">[% l('Link 1') %]</a>
-            <a href="http://example.com">[% l('Link 2') %]</a>
-            <a href="http://example.com">[% l('Link 3') %]</a>
-            <a href="http://example.com">[% l('Link 4') %]</a>
-            <a href="http://example.com">[% l('Link 5') %]</a>
-        </div>
+    <div id="header-links">
+    <a href="https://www.cwmars.org/explore/new-titles" target="_blank" rel="noopener">
+       New Titles at Your Library
+    </a>
+    &nbsp;|&nbsp;
+    <a href="https://www.cwmars.org/explore/most-requested-titles" target="_blank" rel="noopener">
+       Popular Titles
+    </a>
+    &nbsp;|&nbsp;
+    <a href="http://catalog.cwmars.org/eg/kpac/home">Kids Catalog</a>
+    </div>
     </div>
 </div>
+

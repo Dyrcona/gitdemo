@@ -11,10 +11,14 @@
                     <option value="identifier|isbn">[% l('ISBN') %]</option>
                     <option value="identifier|upc">[% l('UPC') %]</option>
                     <option value="identifier|issn">[% l('ISSN') %]</option>
+                    <option value="identifier|scn">[% l('OCLC') %]</option>
+                    <option value="identifier|upc">[% l('UPC') %]</option>
+                    <option value="identifier|music_number">[% l('Music Number') %]</option>
                     <option value="cnbrowse">[% l('Call Number (Shelf Browse)') %]</option>
                     <option value="identifier|lccn">[% l('LCCN') %]</option>
                     <option value="identifier|tcn">[% l('TCN') %]</option>
                     <option value="item_barcode">[% l('Item Barcode') %]</option>
+                    <option value="identifier|gov_doc_number">[% l('Government Document Number') %]</option>
                 </select>
 	
                 <input type="text" name="query" size="16" autofocus placeholder='[% l("Identifier") %]' aria-label='[% l("Identifier") %]' />

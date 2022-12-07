@@ -9,6 +9,11 @@
 
 <div id="search_results_parent">
     [% INCLUDE 'kpac/parts/record_row.tt2' rec_id=ctx.bre_id %]
+ <div class="sub_header">[% l('You can find this item at these locations:') %]</div>
+  <div class="item_detail_location_wrapper">
+    [% INCLUDE 'kpac/parts/copy_table.tt2' rec_id=ctx.bre_id %]
+  </div>
+ <div>[% INCLUDE 'kpac/parts/addedcontent.tt2' %]</div>
 </div>
           
 <div class="checkout_options">
@@ -72,7 +77,7 @@
                                     [%  def_lib = ctx.default_pickup_lib || ctx.physical_loc;
                                         PROCESS "opac/parts/org_selector.tt2";
                                         INCLUDE build_org_selector name='pickup_lib' 
-                                        value=def_lib id='pickup_lib' can_have_vols_only=1 hold_pickup_lib=1 %]
+                                        value=def_lib id='pickup_lib' can_have_vols_only=1 hold_pickup_lib=0 %]
 
                                  <!-- HIDDEN FIELDS FOR DEFAULT NOTIFICATION PREFERENCES -->
                                  [%- IF ctx.notify_method -%]

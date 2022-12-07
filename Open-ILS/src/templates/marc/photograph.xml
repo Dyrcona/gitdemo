@@ -1,0 +1,39 @@
+<record>
+<leader>00309nkm a2200145Ka 4500</leader>
+<controlfield tag="007">kh bo</controlfield>
+<controlfield tag="008">      s        maunnn        o   ineng d</controlfield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[electronic resource].</subfield>
+</datafield>
+<datafield tag="260" ind1="" ind2="">
+<subfield code="c"/>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 photograph :</subfield>
+<subfield code="b">black and white ;</subfield>
+<subfield code="c"> -- x -- cm.</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="651" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="700" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="710" ind1="2" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+<subfield code="z">View online</subfield>
+<subfield code="u"/>
+</datafield>
+</record>

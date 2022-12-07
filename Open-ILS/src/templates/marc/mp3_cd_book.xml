@@ -1,0 +1,52 @@
+<record>
+  <leader>01149cim a22002657a 4500</leader>
+  <controlfield tag="007">sd fungnn---ed</controlfield>	
+  <controlfield tag="008">170101s        xxunnnn           n eng d</controlfield>
+  <datafield tag="020" ind1="" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="024" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="028" ind1="4" ind2="2">
+    <subfield code="a"/>
+  </datafield>
+    <datafield tag="100" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="d"/>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="h">[sound recording]</subfield>
+    <subfield code="b"/>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="250" ind1="" ind2="">
+  <subfield code="a">MP3 version.</subfield>
+  </datafield>
+  <datafield tag="260" ind1="" ind2="">
+    <subfield code="a"/>
+    <subfield code="b"/>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="300" ind1="" ind2="">
+    <subfield code="a">sound disc :</subfield>
+    <subfield code="b">MP3 audio,digital ;</subfield>
+    <subfield code="c">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="538" ind1="" ind2="">
+  <subfield code="a">System requirements: CD/MP3 player or PC computer with MP3-capable software.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="" ind2="">
+    <subfield code="a">Narrated by</subfield>
+  </datafield>
+  <datafield tag="500" ind1="" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="650" ind1="" ind2="0">
+    <subfield code="a"/>
+  </datafield>
+   <datafield tag="700" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+</record>

@@ -1,0 +1,52 @@
+<record>
+<leader>00309ngm a22001457a 4500</leader>
+<controlfield tag="007">vd cvaizq</controlfield>
+<controlfield tag="008">                                 v eng d</controlfield>
+<datafield tag="020" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="024" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="028" ind1="0" ind2="2">
+<subfield code="a"/>
+<subfield code="b"/>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[videorecording]</subfield>
+<subfield code="b"/>
+<subfield code="c"/>
+</datafield>
+<datafield tag="250" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="260" ind1="" ind2="">
+<subfield code="a"/>
+<subfield code="b"/>
+<subfield code="c"/>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 videodisc (min.) :</subfield>
+<subfield code="b">sd., col. ;</subfield>
+<subfield code="c">4 3/4 in.</subfield>
+</datafield>
+<datafield tag="538" ind1="" ind2="">
+<subfield code="a">DVD.</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="700" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="700" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="700" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+</record>

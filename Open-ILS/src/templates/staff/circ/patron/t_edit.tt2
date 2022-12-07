@@ -586,6 +586,7 @@ within the "form" by name for validation.
       selected="patron.home_ou" 
       onchange="handle_home_org_changed"
       org-aria="{{idl_fields.au.home_ou.name}}"
+      hidden-test="disable_home_org"
       disable-test="disable_home_org">
     </eg-org-selector>
   </div>

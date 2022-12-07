@@ -65,12 +65,12 @@ Example OpenSRF bootstrap configuration file for Evergreen
      -->
     <router_name>router</router_name>
 
-    <logfile>LOCALSTATEDIR/log/osrfsys.log</logfile>
     <!--
-      <logfile>syslog</logfile>
-      <syslog>local0</syslog>
-      <actlog>local1</actlog>
-     -->
+	<logfile>LOCALSTATEDIR/log/osrfsys.log</logfile>
+    -->
+    <logfile>syslog</logfile>
+    <syslog>local0</syslog>
+    <actlog>local1</actlog>
     <loglevel>3</loglevel>
     <settings_config>SYSCONFDIR/opensrf.xml</settings_config>
   </opensrf>
@@ -104,12 +104,12 @@ Example OpenSRF bootstrap configuration file for Evergreen
     <passwd>password</passwd>
     <port>5222</port>
     <loglevel>3</loglevel>
-    <logfile>LOCALSTATEDIR/log/gateway.log</logfile>
     <!--
-      <logfile>syslog</logfile>
-      <syslog>local6</syslog>
-      <actlog>local1</actlog>
+	<logfile>LOCALSTATEDIR/log/gateway.log</logfile>
     -->
+    <logfile>syslog</logfile>
+    <syslog>local6</syslog>
+    <actlog>local1</actlog>
   </gateway>
   <!-- ======================================================================================== -->
   <routers>
@@ -140,11 +140,11 @@ Example OpenSRF bootstrap configuration file for Evergreen
         <connect_timeout>10</connect_timeout>
         <max_reconnect_attempts>5</max_reconnect_attempts>
       </transport>
-      <logfile>LOCALSTATEDIR/log/router-public.log</logfile>
       <!--
-        <logfile>syslog</logfile>
-        <syslog>local2</syslog>
+	  <logfile>LOCALSTATEDIR/log/router-public.log</logfile>
       -->
+      <logfile>syslog</logfile>
+      <syslog>local2</syslog>
       <loglevel>2</loglevel>
     </router>
     <router>
@@ -165,11 +165,11 @@ Example OpenSRF bootstrap configuration file for Evergreen
         <connect_timeout>10</connect_timeout>
         <max_reconnect_attempts>5</max_reconnect_attempts>
       </transport>
-      <logfile>LOCALSTATEDIR/log/router-private.log</logfile>
       <!--
-        <logfile>syslog</logfile>
-        <syslog>local2</syslog>
+        <logfile>LOCALSTATEDIR/log/router-private.log</logfile>
       -->
+      <logfile>syslog</logfile>
+      <syslog>local2</syslog>
       <loglevel>2</loglevel>
     </router>
   </routers>

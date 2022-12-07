@@ -1,0 +1,23 @@
+[%-
+MACRO getformurl(lang, name)
+IF ctx.ecard.lang == lang;
+   name;
+ELSE;
+    path = '/eg/opac/ecard/form';
+    IF lang != "en";
+        path = path _ "_" _ lang;
+    END;
+    '<a href="' _ path _ '">' _ name _ '</a>';
+END;
+-%]
+<p>
+(
+[% getformurl('en', 'English') %] |
+[% getformurl('es', 'Español') %] |
+<!-- [% getformurl('pt', 'Português') %] | -->
+[% getformurl('zh', '中文') %] |
+[% getformurl('fr', 'Français') %] |
+[% getformurl('pl', 'Polszczyzna') %] |
+[% getformurl('ru', 'Русский') %]
+)
+</p>

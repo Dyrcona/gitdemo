@@ -1,6 +1,5 @@
 <yazgfs>
-  <!-- You can add a listen entry, if you want your z39.50 server to
-       listen on a port other than the default, 9999. -->
+    <listen id="public">tcp:0.0.0.0:210</listen>
     <server id="server1">
     <retrievalinfo>
         <retrieval syntax="xml"/>

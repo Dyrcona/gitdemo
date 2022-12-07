@@ -84,7 +84,7 @@
     END;
 
     # Extract MARC fields from XML
-    #   get_marc_attrs( args = { marc_xml => doc } )
+    #   get_marc_attrs( { marc_xml => doc } )
     BLOCK get_marc_attrs;
         USE Dumper;
         xml = args.marc_xml;
@@ -182,7 +182,12 @@
 
         args.isbns = [];
         FOR isbn IN xml.findnodes('//*[@tag="020"]/*[@code="a"]');
-            args.isbns.push(isbn.textContent);
+            text = isbn.textContent;
+            FOR q IN isbn.findnodes('../*[@code="q"]');
+                text = text _ ' ' _ q.textContent;
+                LAST; # Should only be 1, but just makin' sure.
+            END;
+            args.isbns.push(text);
         END;
 
         # UPCs can be identified either by ind1="1" or subfield 2 of "upc"
@@ -398,6 +403,12 @@
         END;
         args.summary = (args.summaries.size) ? args.summaries.0 : '';
 
+        args.targetauds = [];
+        FOR sub IN xml.findnodes('//*[@tag="521"]/*[@code="a"]');
+            args.targetauds.push(sub.textContent);
+        END;
+        args.targetaud = (args.targetauds.size) ? args.targetauds.0 : '';
+
         # 250 gets pride of place for edition statement, and is the
         # only logical choice for 880 graphic fields
         graphic_880s = [];
@@ -470,8 +481,8 @@
         args.online_res = [];
         FOR node IN xml.findnodes('//*[@tag="856" and @ind1="4" and (@ind2="0" or @ind2="1")]');
             IF node.findnodes('./*[@code="9" or @code="w" or @code="n"]'); NEXT; END; # asset.uri's
-            label = node.findnodes('./*[@code="y"]');
-            notes = node.findnodes('./*[@code="z" or @code="3"]');
+            label = node.findnodes('./*[@code="y" or @code="z"][1]');
+            notes = node.findnodes('./*[@code="3"]');
             FOR href IN node.findnodes('./*[@code="u"]');
                 NEXT UNLESS href;
                 # it's possible for multiple $u's to exist within 1 856 tag.

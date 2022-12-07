@@ -1,5 +1,4 @@
-<div id="homesearch_main_logo">
-    <img id="homesearch_main_logo_image" src="[% ctx.media_prefix %]/opac/images/main_logo.png[% ctx.cache_key %]"
-        [% img_alt(l('Evergreen Logo')) %]/>
-</div>
 [% PROCESS carousels %]
+<div id="homesearch_main_logo">
+<img id="homesearch_main_logo_image" src="[% ctx.media_prefix %]/opac/images/home-logo.png[% ctx.cache_key %]" alt="[% l('CW MARS') %]" style="display:block; margin-left: auto; margin-right: auto;"/>
+</div>

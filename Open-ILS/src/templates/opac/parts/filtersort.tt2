@@ -15,15 +15,6 @@
         <option value='pubdate'[% value == 'pubdate' ? ' selected="selected"' : '' %]>[% l("Date: Oldest to Newest") %]</option>
     </optgroup>
     <optgroup label='[% l("Sort by Popularity") %]'>
-        <option value='popularity'[% value == 'popularity' ? ' selected="selected"' : '' %]>[% l("Most Popular") %]</option>
-<!-- Sorting by least popular items first is probably not an expected
-     choice in production, but could be useful in cases where every
-     record has at least one badge value assigned and you want
-     to investigate the long tail.
--->
-<!--
-        <option value='popularity.descending'[% value == 'popularity.descending' ? ' selected="selected"' : '' %]>[% l("Least Popular") %]</option>
--->
-        <option value='poprel'[% value == 'poprel' ? ' selected="selected"' : '' %]>[% l("Popularity Adjusted Relevance") %]</option>
+        <option value='poprel'[% value == 'poprel' ? ' selected="selected"' : '' %]>[% l("Sort by Popularity") %]</option>
     </optgroup>
 </select>

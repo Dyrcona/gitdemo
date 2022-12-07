@@ -1,0 +1,45 @@
+<record>
+<leader>00309nem a2200145Ka 4500</leader>
+<controlfield tag="007">aj aanun</controlfield>
+<controlfield tag="008">      s        xxu       a         eng d</controlfield>
+<datafield tag="020" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="024" ind1="0" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[map].</subfield>
+</datafield>
+<datafield tag="260" ind1="" ind2="">
+<subfield code="a"/>
+<subfield code="b"/>
+<subfield code="c"/>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 map :</subfield>
+<subfield code="b">col. ;</subfield>
+<subfield code="c">on sheet -- x -- cm., folded to --  x -- cm.</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a">Scale: </subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="651" ind1="" ind2="0">
+<subfield code="a"/>
+<subfield code="x">Maps.</subfield>
+</datafield>
+<datafield tag="651" ind1="" ind2="0">
+<subfield code='a'/>
+<subfield code="x">Maps.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="710" ind1="2" ind2="">
+<subfield code="a"/>
+</datafield>
+</record>

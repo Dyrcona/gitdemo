@@ -4,6 +4,10 @@
     rtl = ctx.get_i18n_l(ctx.eg_locale).rtl;
 %]
 
+.suppress {
+   display:none;
+}
+
 body {
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,11 +60,7 @@ a {
 .searchbar {
     font-weight: bold;
     padding-top: 10px;
-    [% IF rtl == 't' -%]
-    margin-right: 1em;
-    [%- ELSE %]
-    margin-left: 1em;
-    [%- END %]
+    text-align: center;
 }
 
 .refine_search {
@@ -190,14 +190,10 @@ for now until a better color is picked - if needed.
 }
 
 #header-wrap {
-    background-color: [% css_colors.header %];
-    background-image: -moz-linear-gradient([% css_colors.primary %], [% css_colors.primary_fade %]);
-    background-image: -o-linear-gradient([% css_colors.primary %], [% css_colors.primary_fade %]);
-    background-image: -webkit-linear-gradient([% css_colors.primary %], [% css_colors.primary_fade %]);
-    background-image: linear-gradient([% css_colors.primary %], [% css_colors.primary_fade %]);
+    background-color: #fff;
 }
 #header {
-    color: [% css_colors.background %];
+    color: #fff;
     margin-left: 1em;
     margin-right: 1em;
     font-size: [% css_fonts.size_small %];
@@ -453,7 +449,6 @@ for now until a better color is picked - if needed.
 #acct_checked_tabs a, #acct_holds_tabs a, #acct_prefs_tabs a {
     margin-top: 0px;
     font-size: [% css_fonts.size_smaller %];
-    color: [% css_colors.accent_darker %];
     padding: 10px 10px 10px 10px;
 }
 
@@ -595,7 +590,7 @@ span#rdetail_hold_counts p {
 .rdetail_aux_utils {
     padding-bottom: 6px;
     [% IF rtl == 't' -%]
-    border-right: 1px dotted [% css_colors.accent_light %];
+    border-right: 1px dotted #ccc;
     padding-right:17px;
     padding-left:70px;
     [%- ELSE %]
@@ -683,6 +678,7 @@ div.format_icon {
     [%- ELSE %]
     padding: 7px 0px 3px 13px;
     [%- END %]
+    white-space: nowrap;
 }
 
 #rdetails_status td[headers=copy_header_library], 
@@ -732,8 +728,9 @@ div.format_icon {
 }
 
 .rdetail_extras {
-    background-color: [% css_colors.primary_fade %];
-    border: 1px solid [% css_colors.primary %];
+/*    background: [% css_colors.primary_fade %]; */
+    background:#fff;
+/*    border: 1px solid [% css_colors.primary %]; */
     padding-top:1px;
     clear:both;
 }
@@ -742,17 +739,17 @@ div.format_icon {
     margin: 1em 0;
 }
 
-.rdetail_extras_hr {
-    [% IF rtl == 't' -%]
-    margin-right: 1px;
-    margin-left: 1px;
-    [%- ELSE %]
-    margin-left: 1px;
-    margin-right: 1px;
-    [%- END %]
-    height: 1px;
-    background-color: [% css_colors.accent_light %];
-}
+/* .rdetail_extras_hr { */
+/*    [% IF rtl == 't' -%] */
+/*    margin-right: 1px; */
+/*    margin-left: 1px; */
+/*    [%- ELSE %] */
+/*    margin-left: 1px; */
+/*    margin-right: 1px; */
+/*    [%- END %] */
+/*    height: 1px; */
+/*    background: [% css_colors.accent_light %]; */
+/* } */
 
 .rdetail_extras_link {
     padding: 6px 12px;
@@ -761,8 +758,12 @@ div.format_icon {
 }
 
 .rdetail_extras_lbl {
-    color: [% css_colors.text_invert %];
-    text-decoration: none;
+      position:relative;
+      top:-4px;
+      left:7px;
+      color:#00593d
+/*    color: [% css_colors.text_invert %]; */
+/*    text-decoration: none; */
 }
 
 #rdetail_extras_expand, #rdetail_extras_collapse, #rdetail_locs_collapse {
@@ -846,12 +847,12 @@ div.format_icon {
 
 #main-content .login_boxes {
     border: 1px solid [% css_colors.accent_lighter %];
-    background-color: [% css_colors.accent_lightest %];
-    background-image: -moz-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
-    background-image: -ms-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
-    background-image: -o-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
-    background-image: -webkit-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
-    background-image: linear-gradient(to bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+    background: linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+    background: -moz-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+    background: -ms-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+    background: -o-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+    background: -webkit-linear-gradient(bottom, [% css_colors.accent_ultralight %] 15%, [% css_colors.accent_lightest %] 55%, [% css_colors.accent_ultralight %] 85%);
+
     color: [% css_colors.accent_darker %];
 }
 
@@ -1272,9 +1273,10 @@ div.result_table_utils_cont {
     float:right;
     padding: 15px 0px 0px 23px;
     [% END -%]
+    background: [% css_colors.accent_ultralight %];
     width: 177px;
+    height: 166px;
 }
-
 .cc_logo_img
 {
    width: 79%;
@@ -1373,6 +1375,17 @@ div.result_table_utils_cont {
    display: block;
    padding: 1em 0 0 1em;
    text-align:center;
+}
+
+/* Stripe's payment form */
+#payment-form
+{
+    background-color: [% css_colors.accent_ultralight %];
+    width: 50%;
+}
+#card-element
+{
+    padding: 10px;
 }
 
 /* Stripe's payment form */
@@ -1741,6 +1754,7 @@ div#facet_sidebar {
     padding-top:5px;
     padding-bottom: 10px;
     font-size: [% css_fonts.size_small %];
+    color: [% css_colors.text_invert %];
 }
 
 #footer a {
@@ -2142,7 +2156,7 @@ h2.bookbag-name { margin-bottom: 0em; padding-bottom: 0em; }
     text-align: left;
     margin-left: 15px;
     [% END -%]
-    width: 40%;
+    width: 45%;
 }
 .bookbag-specific div.meta {
     background-color: [% css_colors.accent_light %];
@@ -2563,6 +2577,10 @@ a.preflib_change {
     background-color: [% css_colors.text_alert %];
     color: [% css_colors.text_invert %];
     text-align: center;
+}
+
+#maintenance_message > a {
+    color: white;
 }
 
 #search-box > span {
@@ -3229,6 +3247,33 @@ a.preflib_change {
         table#acct_checked_hist_header td:nth-of-type(7):before { content: "[% l('Barcode') %]"; }
         table#acct_checked_hist_header td:nth-of-type(8):before { content: "[% l('Call number') %]"; }
 
+
+        table#acct_holds_main_header thead tr th {
+                display: block;
+        }
+        table#acct_holds_main_header tbody tr td {
+                display: block;
+        }
+
+        table#acct_holds_main_header td {
+                /* Behave  like a "row" */
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 40%;
+        }
+
+
+        table#acct_holds_main_header td:before {
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                left: 2px;
+                width: 40%;
+                padding-right: 10px;
+                white-space: nowrap;
+        }
+
         table#acct_holds_main_header td:nth-of-type(1) { border-top: 5px solid #aaa; padding-top: 15px; background-color: #fff;}
         table#acct_holds_main_header td:nth-of-type(2):before { content: "[% l('Title') %]";}
         table#acct_holds_main_header td:nth-of-type(3):before { content: "[% l('Author') %]"; }
@@ -3309,6 +3354,42 @@ label[for*=expert_]
   padding: 10px;
 }
 
+/* 
+jfk added style for inline tooltip
+*/
+
+a.tooltips {
+  position: relative;
+  display: inline;
+  outline: none;
+}
+
+a.tooltips strong {
+  line-height: 30px;
+}
+
+a.tooltips hover {
+  text-decoration: none;
+}
+
+a.tooltips span {
+  z-index:10;display:none; padding: 14px 20px;
+  margin-top: -30px; margin-left:28px;
+  width:300px; line-height:16px;
+}
+
+a.tooltips:hover span {
+  display:inline; position:absolute; color:#111;
+  border:1px solid #DCA; background:#FFFAF0;
+} 
+
+.callout {
+  z-index:20; 
+  position:absolute; 
+  top:30px;
+  border:0;
+  left:-12px;
+}
 /*Inline rules from other templates files*/
 
 .td-left{

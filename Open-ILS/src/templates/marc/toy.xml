@@ -1,0 +1,31 @@
+<record>
+ <leader>00309nrm a22001457a 4500</leader>
+ <controlfield tag="008">170101s        xxunnn j          wneng d</controlfield>
+  <datafield tag="024" ind1="1" ind2="">
+  <subfield code="a"/>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+  <subfield code="a"> </subfield>
+  <subfield code="h">[toy]</subfield>
+ </datafield>
+ <datafield tag="260" ind1="" ind2="">
+ <subfield code="a"/>
+ <subfield code="b"/>
+ <subfield code="c"/> 
+ </datafield>
+  <datafield tag="300" ind1="" ind2="">
+  <subfield code="a"/>
+   </datafield>
+  <datafield tag="500" ind1="" ind2="">
+  <subfield code="a"/>
+  </datafield>
+  <datafield tag="500" ind1="" ind2="">
+  <subfield code="a"/>
+  </datafield>
+ <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a"/>
+  </datafield>
+ <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a">Toys.</subfield>
+ </datafield>
+ </record>

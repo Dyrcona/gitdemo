@@ -222,7 +222,7 @@ BLOCK render_all_contents;
 [%-  content_html = PROCESS render_all_contents;
     IF content_html.length > 0;
 %]
-<h2 class='rdetail_contents'>[% l('Content descriptions') %]</h2>
+<h2 class='rdetail_contents'>[% l('Notes') %]</h2>
 <table class='rdetail_content'>
     <tbody>
 [%- content_html %]

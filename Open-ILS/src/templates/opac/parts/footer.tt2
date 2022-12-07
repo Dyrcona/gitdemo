@@ -1,16 +1,19 @@
-[% IF !ctx.is_staff %]
 <div id="footer-wrap">
 <div id="footer">
     [% IF ctx.get_org_setting(
         ctx.physical_loc || ctx.aou_tree.id, 'opac.allow_pending_user') %]
     <a href="[% mkurl(ctx.opac_root _ '/register') %]">[% 
         l('Request Library Card') %]</a> &nbsp;|&nbsp;
-    [% ELSE %]
-    <a href="http://example.com">[% l('Bottom Link 2') %]</a> &nbsp;|&nbsp;
     [% END %]
-    <a href="http://example.com">[% l('Bottom Link 3') %]</a> &nbsp;|&nbsp;
-    <a href="http://example.com">[% l('Bottom Link 4') %]</a> &nbsp;|&nbsp;
-    <a href="http://example.com">[% l('Bottom Link 5') %]</a>
+    <a href="http://www.cwmars.org" target="_blank" rel="noopener">[% l('CW MARS Home') %]</a> &nbsp;|&nbsp;
+    <a href="https://www.cwmars.org/#h.p_hRgZvBvYJgE9" target="_blank" rel="noopener">[% l('CW MARS App') %]</a>&nbsp;|&nbsp;
+    [% IF ctx.get_org_setting(ctx.physical_loc || ctx.aou_tree.id, 'opac.ecard_registration_enabled') %]
+    <a href="[% mkurl(ctx.opac_root _ '/ecard/form') %]">[% l('CW MARS eCard') %]</a>&nbsp;|&nbsp;
+    [% END %]
+    <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">[% l('CW MARS Libraries') %]</a>&nbsp;|&nbsp;
+    <a href="http://cwmars.overdrive.com" target="_blank" rel="noopener">[% l('OverDrive Digital Catalog') %]</a> &nbsp;|&nbsp;
+    <a href="https://www.cwmars.org/search/commonwealth-catalog" target="_blank" rel="noopener">[% l('Commonwealth Catalog') %]</a> &nbsp;|&nbsp;
+    <a href="https://www.cwmars.org/help" target="_blank" rel="noopener">[% l('Help') %]</a>
     [% IF ctx.timing %]
     <div id="timing">
         [% FOR event IN ctx.timing %]
@@ -24,13 +27,13 @@
     </div>
     <div id="footer_logo">
         [% l('Powered by') %]
-        <a href="http://evergreen-ils.org">
+        <a href="http://evergreen-ils.org" target="_blank" rel="noopener">
             <img id="footer_logo_image" src="[% ctx.media_prefix %]/opac/images/eg_tiny_logo.png[% ctx.cache_key %]"
                 style="border:none; width: 94px; height: 16px;"
                 alt="[% l('Evergreen') %]"
             />
+       [% l('provided through CW MARS, Inc.') %]
         </a>
     </div>
 </div>
 </div>
-[% END %]

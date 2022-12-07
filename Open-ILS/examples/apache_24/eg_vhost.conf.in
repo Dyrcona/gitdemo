@@ -43,7 +43,10 @@ RewriteRule ^/opac/extras/slimpac/advanced.html$ %{REQUEST_SCHEME}://%{HTTP_HOST
 OSRFGatewayConfig @sysconfdir@/opensrf_core.xml
 OSRFTranslatorConfig @sysconfdir@/opensrf_core.xml
 # Translator memcache server.  Default is localhost
-# OSRFTranslatorCacheServer 127.0.0.1:11211
+OSRFTranslatorCacheServer 192.168.1.70:11211
+OSRFTranslatorCacheServer 192.168.1.71:11211
+OSRFTranslatorCacheServer 192.168.1.98:11211
+
 
 # ----------------------------------------------------------------------------------
 # Log redaction
@@ -126,6 +129,13 @@ RewriteRule ^/opac/extras/ac/jacket/(small|medium|large)/$ \
 #        ErrorDocument 404 /opac/images/noimage_large.png
 #</Location>
 
+#----------------------------------------------------------------------------------
+#  Add the library ID  (OILS_OPAC_LIBRARY_ID)
+#----------------------------------------------------------------------------------
+RewriteEngine   ON
+RewriteCond %{QUERY_STRING} (^loc|&loc|;loc|^locg|&locg|;locg)=(\d+)
+RewriteRule .   -   [E=OILS_OPAC_LIBRARY_ID:%2]
+
 # ----------------------------------------------------------------------------------
 # Add the row ID (RID) and date so we can make unAPI happy
 # ----------------------------------------------------------------------------------
@@ -143,6 +153,18 @@ RewriteRule . - [E=locale:%1]
 # ----------------------------------------------------------------------------------
 # My Account
 RewriteRule /opac/[^/]*/skin/default/xml/myopac.xml %{REQUEST_SCHEME}://%{HTTP_HOST}/eg/opac/myopac/main?%{ENV:OILS_JSPAC_SEARCH_TYPE}%{ENV:OILS_JSPAC_SEARCH_TERMS}%{ENV:OILS_JSPAC_SEARCH_LOCATION} [NE,R,L]
+
+# ----------------
+# Apache Redirects
+# ----------------
+
+RewriteMap lowercase int:tolower
+RewriteMap libcode   txt:/openils/conf/libcode.txt
+RewriteMap libtarget txt:/openils/conf/libtarget.txt
+RewriteRule . - [E=libcode:${libcode:${lowercase:%{HTTP_HOST}}|CWMARS}]
+RewriteRule . - [E=libtarget:${libtarget:%{ENV:libcode}}]
+RewriteRule . - [E=OILS_OPAC_LIBRARY_ID:${libtarget:%{ENV:libcode}}]
+RewriteRule . - [E=physical_loc:${libtarget:%{ENV:libcode}}]
 
 # -----------------------------------------------------------------------------$
 # Force HTTPS for /eg/circ/selfcheck
@@ -211,7 +233,7 @@ Options -Indexes
 
     # Uncomment to force SSL any time a patron is logged in.  This protects 
     # authentication tokens.  Left commented out for backwards compat for now.
-    #SetEnv OILS_OPAC_FORCE_LOGIN_SSL 1
+    SetEnv OILS_OPAC_FORCE_LOGIN_SSL 1
 
     # If set, the skin uses the combined JS file at $SKINDIR/js/combined.js
     #SetEnv OILS_OPAC_COMBINED_JS 1
@@ -433,9 +455,9 @@ RewriteRule .? - [E=locale:%{HTTP:Accept-Language}]
 # Below is a sample configuration for a proxy running on the same
 # server and passing the client IP address via the X-Forwarded-For header.
 #
-#RemoteIPInternalProxy 127.0.0.1/24
-#RemoteIPInternalProxy ::1
-#RemoteIPHeader X-Forwarded-For
+RemoteIPInternalProxy 127.0.0.1/24
+RemoteIPInternalProxy ::1
+RemoteIPHeader X-Forwarded-For
 
 <Location /osrf-http-translator>
     SetHandler osrf_http_translator_module
@@ -505,7 +527,7 @@ RewriteRule .? - [E=locale:%{HTTP:Accept-Language}]
     PerlAuthenHandler OpenILS::WWW::Proxy::Authen
     Require valid-user
     PerlSendHeader On
-    allow from all
+    Require all granted
     SSLRequireSSL
 </Location>
 
@@ -657,7 +679,7 @@ RewriteRule ^/openurl$ ${openurl:%1} [NE,PT]
     # routed from Perl handlers back to the same Apache instance, like
     # added content requests.  Use this when running Apache with a 
     # non-standard port, typical with a proxy setup.  Defaults to "80".
-    # PerlSetVar OILSWebInternalHTTPPort "7080"
+    PerlSetVar OILSWebInternalHTTPPort "7080"
 
     # Enable Template-Toolkit error debugging messages (apache error log)
     PerlSetVar OILSWebDebugTemplate "false"
@@ -873,6 +895,20 @@ RewriteRule ^/openurl$ ${openurl:%1} [NE,PT]
         </IfModule>
     </IfModule>
 </Location>
+# ----------------------------------------------------------------------------------
+# Overdue Notices
+# ----------------------------------------------------------------------------------
+<Location /notices>
+   SetHandler perl-script
+   PerlSetVar OILSProxyTitle "Notices Login"
+   PerlSetVar OILSProxyDescription "Please log in with an authorized staff account to view overdue notices"
+   PerlSetVar OILSProxyPermissions "STAFF_LOGIN"
+   PerlHandler OpenILS::WWW::Proxy
+   Options +ExecCGI +Indexes
+   PerlSendHeader On
+   Require all granted
+   DirectoryIndex index.html
+</Location>
 
 <Location /api/basicauth>
     SetHandler perl-script
@@ -969,8 +1005,8 @@ RewriteRule ^/openurl$ ${openurl:%1} [NE,PT]
 
 # Uncomment the following to force SSL for everything. Note that this defeats caching
 # and you will suffer a performance hit.
-#RewriteCond %{HTTPS} off
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [NE,R,L]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [NE,R,L]
 
 # ------------------------------------------------------------------------
 # /eg2/ client setup and locale configuration.

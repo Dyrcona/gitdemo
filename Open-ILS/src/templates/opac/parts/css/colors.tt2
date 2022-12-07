@@ -12,10 +12,10 @@
         text_greatnews = "green", # green
         text_invert = "#fff", # white
         text_match = "#c00", # deep red
-        primary = "#00593d", # dark green
-        primary_fade = "#007a54", # medium green
-        primary_offset = "#417860", # light_green
-        control = "#69A088", # lighter green
+        primary = "#16416F", # dark blue 
+        primary_fade = "#002B49", # dark blue
+        primary_offset = "#63CFE3", # light blue
+        control = "#16416F", # dark blue
         accent_light = "#ccc", #  grey (light)
         accent_lighter = "#ddd", #  grey (lighter)
         accent_lighter2 = "#d8d8d8", #  grey (lighter again)
@@ -28,23 +28,23 @@
         border_standard = "#e9ebf3", # light grey-blue
         border_dark = "black", # black
         border_alert = "red", # red
-        button = "#00593d", #dark green
+        button = "#16416f", #dark blue
         button_text = "#fbf9f9", # off-white 
         button_text_shadow = "#555555", # medium grey
         table_heading = "#d8d8d8", # grey-blue
         mobile_header_text = "#fff", # white
         item_selected = "#ddd", # grey (lighter)
-        link = "#00593d", # dark green
-        footer = "#00593d", #dark green
+        link = "#16416f", # dark blue
+        footer = "#16416f", #dark blue
         footer_text = "#FFFFFF" #white
         header = "#FFFFFF", #white
         header_text = "#FFFFFF", #white
         header_links_bar = "#000000", #black
         header_links_text = "#FFFFFF", #white
         header_links_text_hover = "#FFFFFF", #white
-        opac_button = "#00593d", # dark green
+        opac_button = "#16416f", # dark blue
         opac_button_text = "#FFFFFF", #white
-        opac_button_hover = "#00593d", # dark green
+        opac_button_hover = "#16416f", # dark blue
         opac_button_hover_text = "#FFFFFF" #white
     };
     

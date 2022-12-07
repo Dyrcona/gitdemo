@@ -1,0 +1,52 @@
+<record>
+  <leader>01149cim a22002657a 4500</leader>
+  <controlfield tag="007">sz zunznn---uu</controlfield>	
+  <controlfield tag="008">170101s        xxunnnn q         n eng d</controlfield>
+  <datafield tag="020" ind1="" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="024" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="028" ind1="4" ind2="2">
+    <subfield code="a"/>
+  </datafield>
+    <datafield tag="100" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="d"/>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="h">[electronic resource]</subfield>
+    <subfield code="b"/>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="260" ind1="" ind2="">
+    <subfield code="a">Solon, Ohio :</subfield>
+    <subfield code="b">Findaway World,</subfield>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="300" ind1="" ind2="">
+    <subfield code="a">1 sound media player :</subfield>
+    <subfield code="b">digital ;</subfield>
+    <subfield code="c">3 3/8 by 2 1/8 in.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="" ind2="">
+    <subfield code="a">Narrated by</subfield>
+  </datafield>
+  <datafield tag="500" ind1="" ind2="">
+  <subfield code="a">Issued on Playaway, a dedicated audio media player.</subfield>
+  </datafield>
+  <datafield tag="500" ind1="" ind2="">
+    <subfield code="a">In container (21 x 13 x 3 cm.) with earphones, AAA battery and lanyard.</subfield>
+  </datafield>
+  <datafield tag="650" ind1="" ind2="0">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a"/>
+  </datafield>
+   <datafield tag="700" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+</record>

@@ -68,24 +68,6 @@ oils_rpt_editor_pivot_data
     while(DOM.oils_rpt_editor_pivot_data.lastChild)
         DOM.oils_rpt_editor_pivot_data.removeChild(DOM.oils_rpt_editor_pivot_data.lastChild);
 
-    if(hasAgg) {
-        unHideMe(DOM.oils_rpt_editor_pivot_label_row);
-        unHideMe(DOM.oils_rpt_editor_pivot_data_row);
-
-        for(var i in rptObject.def.select) {
-            var col = rptObject.def.select[i];
-            if(OILS_RPT_TRANSFORMS[col.column.transform].aggregate) 
-               insertSelectorVal(DOM.oils_rpt_editor_pivot_data, -1, col.alias, parseInt(i)+1);
-            else
-               insertSelectorVal(DOM.oils_rpt_editor_pivot_label, -1, col.alias, parseInt(i)+1);
-        }
-
-    } else {
-        hideMe(DOM.oils_rpt_editor_pivot_label_row);
-        hideMe(DOM.oils_rpt_editor_pivot_data_row);
-    }
-
-
     // schedule defaults.
     DOM.oils_rpt_param_editor_sched_start_date.value = mkYearMonDay();
     setSelector(DOM.oils_rpt_param_editor_sched_start_hour, '12:00');

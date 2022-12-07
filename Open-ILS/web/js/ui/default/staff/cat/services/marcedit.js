@@ -1211,6 +1211,11 @@ angular.module('egMarcMod', ['egCoreMod', 'ui.bootstrap'])
 
                         if ($scope.record_type == 'bre' && !$scope.brandNewRecord) {
                             $scope.bib_source.id = $scope.bibSource = rec.source(); //$scope.Record().source();
+                        } else if ($scope.record_type == 'bre') {
+                            // CW MARS customization to make local the default for new records.
+                            if (!$scope.Record().source()) {
+                                $scope.bib_source.id = 2;
+                            }
                         }
 
                     }).then(function(){

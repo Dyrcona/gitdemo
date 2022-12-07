@@ -3,8 +3,8 @@
     <div class="modal-content">
      <form method='post' action="/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain">
       <div class="modal-header">
-        <h1 class="modal-title" id="exampleModalLabel">[% l('Login To Evergreen') %]</h1>
-        <button type="button" class="close" data-dismiss="modal" aria-label=[% l("Close") %]>
+        <h1 class="modal-title" id="exampleModalLabel">[% l('Log in to Your Account') %]</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       </div>
@@ -29,12 +29,12 @@
 	<div class="table table-borderless table-sm">
 		<div class="row">
 			<div class="col-sm w-50">
-				<label for='username_field' class="lbl1" >[% l('Library Card Number') %]
+				<label for='username_field' class="lbl1" >[% l('Library Card Number or User Name') %]
 				<a href="#" title="[% INCLUDE "opac/parts/login/username_hint.tt2" %]" data-html="true" data-toggle="tooltip">
 				<i class="fas fa-question-circle"></i></a></label>
 			</div>
 			<div class="col-sm w-50">
-				<label for="password_field" class="lbl1" >[% l('PIN') %]
+				<label for="password_field" class="lbl1" >[% l('Password') %]
 				<a href="#" title="[% INCLUDE "opac/parts/login/password_hint.tt2" %]" data-html="true" data-toggle="tooltip">
                 <i class="fas fa-question-circle"></i>
                 </a></label>
@@ -50,10 +50,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm w-50">
-                            [% IF ctx.get_org_setting(
-                                ctx.physical_loc || ctx.aou_tree.id, 'opac.allow_pending_user') %]
-				<a href='[% mkurl(ctx.opac_root _ '/register', {}, 1) %]'>[% l('Request A Card') %]</a>
-                            [% END %]
+				<a href="https://www.cwmars.org/card" target="_blank" rel="noopener">[% l('Need A Card?') %]</a>
 			</div>
 			<div class="col-sm w-50">
 				[% IF reset_password == 'true' %]

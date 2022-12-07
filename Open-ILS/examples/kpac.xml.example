@@ -1,4 +1,4 @@
-<kpac version="1.0" xmlns="http://evergreen-ils.org/spec/OPAC/kpac/v1">
+<kpac version="1.0" encoding="UTF-8" xmlns="http://evergreen-ils.org/spec/OPAC/kpac/v1">
 
     <!-- 
     If configured, all searches, including topic searches configured
@@ -11,16 +11,21 @@
     <pages>
         <!-- top-level layout pages -->
         <page id="1" columns="5" name="Home" img="/images/home.jpg">
-            <cell type="topic">10</cell>
-            <cell type="topic">11</cell>
-            <cell type="topic">12</cell>
-            <cell type="topic">13</cell>
-            <cell type="topic">14</cell>
-            <cell type="topic">15</cell>
-            <cell type="topic">16</cell>
-            <cell type="topic">17</cell>
-            <cell type="topic">18</cell>
-            <cell type="topic">19</cell>
+            <cell type="topic">1000</cell> <!-- Princesses -->
+            <cell type="topic">1060</cell> <!-- Pirates -->
+            <cell type="topic">1120</cell> <!-- Work Machines -->
+            <cell type="topic">1180</cell> <!-- Fairies -->
+            <cell type="topic">1240</cell> <!-- Magic -->
+            <cell type="topic">1300</cell> <!-- Scary Things -->
+            <cell type="topic">100</cell> <!-- Animals &amp; Pets -->
+            <cell type="topic">200</cell> <!-- Art, Music &amp; Drama -->
+            <cell type="topic">400</cell> <!-- Culture &amp; Religion -->
+            <cell type="topic">500</cell> <!-- Famous People -->
+            <cell type="topic">600</cell> <!-- Health &amp; Social Issues -->
+            <cell type="topic">700</cell> <!-- Geography -->
+            <cell type="topic">800</cell> <!-- History -->
+            <cell type="topic">900</cell> <!-- Math &amp; Science -->
+            <cell type="topic">2000</cell> <!-- Sports &amp; Recreation -->
         </page>
 
         <!-- sample alternate layout -->
@@ -31,27 +36,647 @@
         </page>
 
         <!-- topic pages -->
-        <page id="10" columns="3" name="Musical Instruments" img="category.png">
-            <cell name="Piano"    img="category.png" type="search">su:piano</cell>
-            <cell name="Guitar"   img="category.png" type="search">su:guitar</cell>
-            <cell name="Trumpet"  img="category.png" type="search">su:trumpet</cell>
-            <cell name="Drums"    img="category.png" type="search">su:drums</cell>
-            <cell name="Bass"     img="category.png" type="search">su:bass</cell>
-            <cell name="Clarinet" img="category.png" type="link">http://en.wikipedia.org/wiki/Clarinet</cell>
+<page id="1000" columns="3" name="Princesses" img="princesses.png">
+        <cell name="Princesses"  img="princesses.png" type="search">kw:princess</cell>
+        <cell name="Disney Princesses"  img="Disney-Princesses.png" type="search">kw:princess kw:disney</cell>
+</page>
+<page id="1060" columns="3" name="Pirates" img="pirates.png">
+        <cell name="Pirates"  img="pirates.png" type="search">kw:pirate audience(j)</cell>
+</page>
+<page id="1120" columns="3" name="Work Machines" img="work-machines.png">
+        <cell name="Trucks"  img="trucks.png" type="search">kw:truck</cell>
+        <cell name="Bulldozers"  img="bulldozers.png" type="search">kw:bulldozer</cell>
+        <cell name="Ambulances"  img="ambulances.png" type="search">kw:ambulance</cell>
+        <cell name="Firetrucks"  img="firetrucks.png" type="search">kw:firetruck</cell>
+        <cell name="Cranes"  img="cranes.png" type="search">kw:construction kw:crane audience(j)</cell>
+</page>
+<page id="1180" columns="3" name="Fairies" img="fairies.png">
+        <cell name="Fairies"  img="fairies.png" type="search">kw:fairy</cell>
+        <cell name="Fairytales"  img="fairytales.png" type="search">su:fairy tales</cell>
+</page>
+<page id="1240" columns="3" name="Magic" img="magic.png">
+        <cell name="Magic"  img="magic.png" type="search">kw:magic trick -johnson</cell>
+</page>
+<page id="1300" columns="3" name="Scary Things" img="scary-things.png">
+        <cell name="Scary Things"  img="scary-things.png" type="search">kw:scary</cell>
+        <cell name="Ghost Stories" img="ghost-stories.png" type="search">su:ghost story</cell>
+        <cell name="Monsters"  img="monsters.png" type="search">su:monsters</cell>
+</page>
+        
+        <page id="100" columns="3" name="Animals &amp; Pets" img="animals-pets.png">
+            <cell type="topic">110</cell> <!-- Birds -->
+            <cell type="topic">120</cell> <!-- Creepy Crawlies -->
+            <cell name="Dinosaurs" img="dinosaurs.png" type="search">su:dinosaurs</cell>
+            <cell type="topic">140</cell> <!-- Endangered &amp; Extinct -->
+            <cell type="topic">150</cell> <!-- Fish &amp; Marine Life -->
+            <cell type="topic">160</cell> <!-- Pets &amp; Farm Animals -->
+            <cell type="topic">170</cell> <!-- Reptiles &amp; Amphibians -->
+            <cell type="topic">180</cell> <!-- Wild Animals -->
         </page>
-        <page id="11" columns="3" name="Current Events" img="category.png">
-            <cell name="Entertainment"  img="category.png" type="search">su:entertainment sort(pubdate)#descending</cell>
-            <cell name="Politics"       img="category.png" type="search">su:politics sort(pubdate)#descending</cell>
-            <cell name="Economy"        img="category.png" type="search">su:economy sort(pubdate)#descending</cell>
+        <page id="200" columns="3" name="Art, Music, &amp; Drama" img="art-music-drama.png">
+            <cell type="topic">210</cell> <!-- Art -->
+            <cell type="topic">220</cell> <!-- Music -->
+            <cell type="topic">230</cell> <!-- Drama -->
         </page>
-        <page id="12" columns="3" name="Programming" img="category.png"/>
-        <page id="13" columns="3" name="It's Alive!" img="category.png"/>
-        <page id="14" columns="3" name="Book Series" img="category.png"/>
-        <page id="15" columns="3" name="Book Series" img="category.png"/>
-        <page id="16" columns="3" name="Book Series" img="category.png"/>
-        <page id="17" columns="3" name="Book Series" img="category.png"/>
-        <page id="18" columns="3" name="Book Series" img="category.png"/>
-        <page id="19" columns="3" name="Book Series" img="category.png"/>
+
+        <page id="400" columns="3" name="Culture &amp; Religion" img="religion.png">
+            <cell type="topic">410</cell> <!-- Holidays -->
+            <cell type="topic">420</cell> <!-- Languages -->
+            <cell type="topic">430</cell> <!-- Religion -->
+            <cell type="topic">440</cell> <!-- Culture -->
+        </page>
+        <page id="500" columns="3" name="Famous People" img="famous-people.png">
+            <cell type="topic">510</cell> <!-- African-Americans -->
+            <cell type="topic">520</cell> <!-- Americans in History -->
+            <cell type="topic">530</cell> <!-- Athletes -->
+            <cell name="Explorers"  img="explorers.png" type="search">su:explorers</cell>
+            <cell type="topic">540</cell> <!-- Hispanics -->
+            <cell type="topic">550</cell> <!-- Scientists &amp; Inventors -->
+            <cell name="US Presidents"  img="us-presidents.png" type="search">su:united states president biography</cell>
+            <cell type="topic">560</cell> <!-- Women -->
+        </page>
+        <page id="600" columns="3" name="Health &amp; Social Issues" img="health-social-issues.png">
+            <cell type="topic">610</cell> <!-- Feelings -->
+            <cell name="Five Senses"  img="five-senses.png" type="search">keyword:human senses</cell>
+            <cell name="Germs"  img="germs.png" type="search">keyword:germs</cell>
+            <cell type="topic">620</cell> <!-- Human Body -->
+            <cell name="Nutrition"  img="nutrition.png" type="search">keyword:nutrition</cell>
+            <cell type="topic">640</cell> <!-- Social Issues -->
+        </page>
+        <page id="700" columns="3" name="Geography" img="geography.png">
+            <cell name="Africa" img="africa.png" type="search">keyword:africa geography</cell>
+            <cell name="Asia" img="asia.png" type="search">keyword:asia geography</cell>
+            <cell name="Australia" img="australia.png" type="search">keyword:australia geography</cell>
+            <cell name="Central America" img="central-america.png" type="search">keyword:central america geography</cell>
+            <cell name="Europe" img="europe.png" type="search">keyword:europe geography</cell>
+            <cell type="topic">710</cell> <!-- North America -->
+            <cell name="Polar Regions" img="polar-regions.png" type="search">keyword:polar regions geography</cell>
+            <cell name="South America" img="south-america.png" type="search">su:south america geography</cell>
+            <cell name="Flags" img="flags.png" type="search">su:flags</cell>
+        </page>
+        <page id="800" columns="3" name="History" img="history.png">
+            <cell type="topic">810</cell> <!-- Ancient World -->
+            <cell type="topic">820</cell> <!-- Middle Ages -->
+            <cell name="Renaissance" img="renaissance.png" type="search">su:renaissance</cell>
+            <cell type="topic">830</cell> <!-- United States -->
+            <cell type="topic">840</cell> <!-- Wars -->
+            <cell name="Terrorism" img="terrorism.png" type="search">su:terrorism</cell>
+        </page>
+        <page id="900" columns="3" name="Math &amp; Science" img="math-science.png">
+            <cell type="topic">910</cell> <!-- Math -->
+            <cell type="topic">920</cell> <!-- Science -->
+            <cell type="topic">950</cell> <!-- Technology -->
+        </page>
+        <page id="2000" columns="3" name="Sports &amp; Recreation" img="sports-recreation.png">
+            <cell type="topic">1010</cell> <!-- Hobbies -->
+            <cell type="topic">1020</cell> <!-- Individual Sports -->
+            <cell name="Olympics" img="olympics.png" type="search">su:olympics</cell>
+            <cell type="topic">1030</cell> <!-- Outdoor Activities -->
+            <cell name="Sports Championships" img="sports-championships.png" type="search">keyword:sports championships</cell>
+            <cell type="topic">1040</cell> <!-- Team Sports -->
+        </page>
+
+        <!-- sub topic pages -->
+        <page id="110" columns="3" name="Birds" img="birds.png">
+            <cell type="topic">111</cell> <!-- Backyard Birds -->
+            <cell type="topic">112</cell> <!-- Birds of Prey -->
+            <cell name="Eggs" img="eggs.png" type="search">su:eggs</cell>
+            <cell name="Exotic" img="exotic.png" type="search">keyword:tropical birds</cell>
+            <cell name="Migration" img="migration.png" type="search">keyword:bird migration</cell>
+            <cell name="Pets" img="pets.png" type="search">keyword:birds pets</cell>
+            <cell type="topic">117</cell> <!-- Water Birds -->
+        </page>
+        <page id="111" columns="3" name="Backyard Birds" img="backyard-birds.png">
+            <cell name="Backyard Birds" img="backyard-birds.png" type="search">keyword:backyard birds</cell>
+            <cell name="Chickens" img="chickens.png" type="search">su:chickens</cell>
+            <cell name="Crows" img="crows.png" type="search">su:crows</cell>
+            <cell name="Pigeons" img="pigeons.png" type="search">su:pigeons</cell>
+            <cell name="Robins" img="robins.png" type="search">su:robins</cell>
+            <cell name="Turkeys" img="turkeys.png" type="search">su:turkey</cell>
+        </page>
+        <page id="112" columns="3" name="Birds of Prey" img="birds-of-prey.png">
+            <cell name="Birds of Prey" img="birds-of-prey.png" type="search">su:birds of prey</cell>
+            <cell name="Eagles" img="eagles.png" type="search">su:eagles</cell>
+            <cell name="Falcons" img="falcons.png" type="search">su:falcons</cell>
+            <cell name="Hawks" img="hawks.png" type="search">su:hawks</cell>
+            <cell name="Owls" img="owls.png" type="search">su:owls</cell>
+            <cell name="Vultures" img="vultures.png" type="search">su:vultures</cell>
+        </page>
+        <page id="117" columns="3" name="Water Birds" img="water-birds.png">
+            <cell name="Ducks" img="ducks.png" type="search">su:ducks</cell>
+            <cell name="Geese" img="geese.png" type="search">su:geese</cell>
+            <cell name="Pelicans" img="pelicans.png" type="search">su:pelicans</cell>
+            <cell name="Penguins" img="penguins.png" type="search">su:penguins</cell>
+            <cell name="Seagulls" img="seagulls.png" type="search">su:gulls</cell>
+            <cell name="Swans" img="swans.png" type="search">su:swans</cell>
+        </page>
+        <page id="120" columns="3" name="Creepy Crawlies" img="creepy-crawlies.png">
+            <cell type="topic">121</cell> <!-- Bugs-->
+            <cell name="Spiders" img="spiders.png" type="search">su:spiders</cell>
+            <cell name="Worms" img="worms.png" type="search">su:worms</cell>
+        </page>
+        <page id="121" columns="3" name="Bugs" img="bugs.png">
+            <cell name="Ants" img="ants.png" type="search">su:ants</cell>
+            <cell name="Bees" img="bees.png" type="search">su:bee</cell>
+            <cell name="Butterflies" img="butterflies.png" type="search">su:butterflies</cell>
+            <cell name="Caterpillars" img="caterpillars.png" type="search">su:caterpillars</cell>
+            <cell name="Insects" img="insects.png" type="search">su:insects</cell>
+            <cell name="Ladybugs" img="ladybugs.png" type="search">su:ladybugs</cell>
+        </page>
+        <page id="140" columns="3" name="Endangered &amp; Extinct" img="endangered-extinct.png">
+            <cell name="Endangered" img="endangered.png" type="search">su:endangered animals</cell>
+            <cell type="topic">142</cell> <!-- Extinct -->
+        </page>
+        <page id="142" columns="3" name="Extinct" img="extinct.png">
+            <cell name="Extinct Animals" img="extinct-animals.png" type="search">su:extinct animals</cell>
+            <cell name="Dinosaurs" img="dinosaurs.png" type="search">su:dinosaurs</cell>
+            <cell name="Fossils" img="fossils.png" type="search">su:fossils</cell>
+            <cell name="Ice Age Animals" img="ice-age-animals.png" type="search">keyword:ice age animals</cell>
+        </page>
+        <page id="150" columns="3" name="Fish &amp; Marine Life" img="fish-marine-life.png">
+            <cell name="Fish" img="fish.png" type="search">su:fish</cell>
+            <cell name="Octopus" img="octopus.png" type="search">su:octopus</cell>
+            <cell type="topic">151</cell> <!-- Sea Mammals -->
+            <cell name="Sharks" img="sharks.png" type="search">su:shark</cell>
+            <cell type="topic">152</cell> <!-- Shellfish -->
+        </page>
+        <page id="151" columns="3" name="Sea Mammals" img="sea-mammals.png">
+            <cell name="Dolphins" img="dolphins.png" type="search">su:dolphin</cell>
+            <cell name="Manatees" img="manatees.png" type="search">su:manatee</cell>
+            <cell name="Seals" img="seals.png" type="search">su:seal</cell>
+            <cell name="Walruses" img="walruses.png" type="search">su:walrus</cell>
+            <cell name="Whales" img="whales.png" type="search">su:whale</cell>
+        </page>
+        <page id="152" columns="3" name="Shellfish" img="shellfish.png">
+            <cell name="Crabs" img="crabs.png" type="search">su:crab</cell>
+            <cell name="Lobsters" img="lobsters.png" type="search">su:lobster</cell>
+        </page>
+        <page id="160" columns="3" name="Pets &amp; Farm Animals" img="pet-farm-animals.png">
+            <cell type="topic">161</cell> <!-- Farm Animals -->
+            <cell type="topic">162</cell> <!-- Pets -->
+        </page>
+        <page id="161" columns="3" name="Farm Animals" img="farm-animals.png">
+            <cell name="Chickens" img="chickens.png" type="search">su:chicken</cell>
+            <cell name="Cows" img="cows.png" type="search">su:cow</cell>
+            <cell name="Goats" img="goats.png" type="search">su:goat</cell>
+            <cell name="Horses" img="horses.png" type="search">su:horse</cell>
+            <cell name="Pigs" img="pigs.png" type="search">su:pig</cell>
+            <cell name="Sheep" img="sheep.png" type="search">su:sheep</cell>
+        </page>
+        <page id="162" columns="3" name="Pets" img="pets.png">
+            <cell name="Birds" img="birds.png" type="search">keyword:pet bird</cell>
+            <cell name="Cats" img="cats.png" type="search">su:pet cats</cell>
+            <cell name="Dogs" img="dogs.png" type="search">su:pet dogs</cell>
+            <cell name="Fish" img="fish.png" type="search">keyword:pet fish</cell>
+            <cell name="Rabbits" img="rabbits.png" type="search">su:pet rabbits</cell>
+            <cell name="Rodents" img="rodents.png" type="search">su:rodents as pets</cell>
+        </page>
+        <page id="170" columns="3" name="Reptiles &amp; Amphibians" img="reptiles-amphibians.png">
+            <cell type="topic">171</cell> <!-- Amphibians -->
+            <cell type="topic">172</cell> <!-- Reptiles -->
+        </page>
+        <page id="171" columns="3" name="Amphibians" img="amphibians.png">
+            <cell name="Amphibians" img="amphibians.png" type="search">su:amphibian</cell>
+            <cell name="Frogs" img="frogs.png" type="search">su:frog</cell>
+            <cell name="Salamanders" img="salamanders.png" type="search">su:salamander</cell>
+            <cell name="Toads" img="toads.png" type="search">su:toad</cell>
+        </page>
+        <page id="172" columns="3" name="Reptiles" img="reptiles.png">
+            <cell name="Alligators" img="alligators.png" type="search">su:alligator</cell>
+            <cell name="Crocodiles" img="crocodiles.png" type="search">su:crocodile</cell>
+            <cell name="Lizards" img="lizards.png" type="search">su:lizard</cell>
+            <cell name="Reptiles" img="reptiles.png" type="search">su:reptile</cell>
+            <cell name="Snakes" img="snakes.png" type="search">su:snake</cell>
+            <cell name="Turtles" img="turtles.png" type="search">su:turtle</cell>
+        </page>
+        <page id="180" columns="3" name="Wild Animals" img="wild-animals.png">
+            <cell type="topic">181</cell> <!-- Arctic -->
+            <cell type="topic">182</cell> <!-- Backyard -->
+            <cell type="topic">183</cell> <!-- Desert -->
+            <cell type="topic">184</cell> <!-- Forest -->
+            <cell type="topic">185</cell> <!-- Jungle -->
+            <cell type="topic">186</cell> <!-- Zoo -->
+        </page>
+        <page id="181" columns="3" name="Arctic" img="arctic.png">
+            <cell name="Polar Bears" img="polar-bears.png" type="search">su:polar bear</cell>
+            <cell name="Reindeer" img="reindeer.png" type="search">su:reindeer</cell>
+            <cell name="Seals" img="seals.png" type="search">su:seals animals</cell>
+            <cell name="Sled Dogs" img="sled-dogs.png" type="search">su:sled dog</cell>
+        </page>
+        <page id="182" columns="3" name="Backyard" img="backyard.png">
+            <cell name="Birds" img="birds.png" type="search">keyword:backyard birds</cell>
+            <cell name="Chimpmunks" img="chipmunks.png" type="search">su:chipmunk</cell>
+            <cell name="Opossums" img="opossums.png" type="search">su:opossum</cell>
+            <cell name="Raccoons" img="raccoons.png" type="search">su:raccoon</cell>
+            <cell name="Skunks" img="skunks.png" type="search">su:skunk</cell>
+            <cell name="Squirrels" img="squirrels.png" type="search">su:squirrel</cell>
+        </page>
+        <page id="183" columns="3" name="Desert" img="desert.png">
+            <cell name="Camels" img="camels.png" type="search">su:camel</cell>
+            <cell name="Cheetahs" img="cheetahs.png" type="search">su:cheetah</cell>
+            <cell name="Hyenas" img="hyenas.png" type="search">su:hyena</cell>
+            <cell name="Lions" img="lions.png" type="search">su:lion</cell>
+            <cell name="Ostriches" img="ostriches.png" type="search">su:ostrich</cell>
+        </page>
+        <page id="184" columns="3" name="Forest" img="forest.png">
+            <cell name="Bears" img="bears.png" type="search">su:bear</cell>
+            <cell name="Deer" img="deer.png" type="search">su:deer</cell>
+            <cell name="Foxes" img="foxes.png" type="search">su:fox</cell>
+            <cell name="Moose" img="moose.png" type="search">su:moose</cell>
+            <cell name="Wolves" img="wolves.png" type="search">su:wolf</cell>
+        </page>
+        <page id="185" columns="3" name="Jungle" img="jungle.png">
+            <cell name="Amphibians" img="amphibians.png" type="search">su:amphibian</cell>
+            <cell name="Birds" img="birds.png" type="search">keyword:tropical birds</cell>
+            <cell name="Gorillas" img="gorillas.png" type="search">su:gorilla</cell>
+            <cell name="Monkeys" img="monkeys.png" type="search">su:monkey</cell>
+            <cell name="Pandas" img="pandas.png" type="search">su:panda</cell>
+            <cell name="Tigers" img="tigers.png" type="search">su:tiger</cell>
+        </page>
+        <page id="186" columns="3" name="Zoo" img="zoo.png">
+            <cell name="Elephants" img="elephants.png" type="search">su:elephant</cell>
+            <cell name="Giraffes" img="giraffes.png" type="search">su:giraffe</cell>
+            <cell name="Lions" img="lions.png" type="search">su:lion</cell>
+            <cell name="Monkeys" img="monkeys.png" type="search">su:monkey</cell>
+            <cell name="Tigers" img="tigers.png" type="search">su:tiger</cell>
+            <cell name="Zebras" img="zebras.png" type="search">su:zebra</cell>
+        </page>
+
+        <page id="210" columns="3" name="Art" img="art.png">
+            <cell name="Animation" img="animation.png" type="search">keyword:computer animation</cell>
+            <cell name="Artists" img="artists.png" type="search">su:artists</cell>
+            <cell name="Crafts" img="crafts.png" type="search">su:crafts</cell>
+            <cell name="Drawing" img="drawing.png" type="search">su:drawing</cell>
+            <cell name="Painting" img="painting.png" type="search">su:painting</cell>
+            <cell name="Photography" img="photography.png" type="search">su:photography</cell>
+        </page>
+        <page id="220" columns="3" name="Music" img="music.png">
+            <cell name="Brass" img="brass.png" type="search">keyword:music brass</cell>
+            <cell name="Composers" img="composers.png" type="search">su:composers</cell>
+            <cell name="Instruments" img="instruments.png" type="search">su:musical instruments</cell>
+            <cell name="Percussion" img="percussion.png" type="search">keyword:percussion</cell>
+            <cell name="Songs" img="songs.png" type="search">su:songs</cell>
+            <cell name="Strings" img="strings.png" type="search">keyword:music strings</cell>
+            <cell name="Woodwinds" img="woodwinds.png" type="search">keyword:woodwinds</cell>
+        </page>
+        <page id="230" columns="3" name="Drama" img="drama.png">
+            <cell name="Dance" img="dance.png" type="search">su:dance</cell>
+            <cell name="Movies" img="movies.png" type="search">su:motion picture</cell>
+            <cell name="Plays" img="plays.png" type="search">su:play theater</cell>
+        </page>
+
+        <page id="310" columns="3" name="Caldecott" img="category/caldecott.png">
+            <cell name="Medal Winner" img=".png" type="search">keyword:Caldecott Medal 2012 sort(titlesort)#ascending</cell>
+            <cell name="Honor Books" img=".png" type="search">keyword:Caldecott Honor Book, 2012 sort(titlesort)#ascending</cell>
+        </page>
+        <page id="320" columns="3" name="Coretta Scott King" img="category/coretta.png">
+            <cell name="Medal Winners" img=".png" type="search">keyword:Coretta Scott King Award 2012 sort(titlesort)#ascending</cell>
+            <cell name="Past Winners" img=".png" type="search">keyword:Coretta Scott King Award sort(titlesort)#ascending</cell>
+        </page>
+        <page id="330" columns="3" name="Newbery" img="category/newbery.png">
+            <cell name="Medal Winner" img=".png" type="search">keyword:Newbery Medal, 2012 sort(titlesort)#ascending</cell>
+            <cell name="Honor Books" img=".png" type="search">keyword:Newbery Honor Book, 2012 sort(titlesort)#ascending</cell>
+        </page>
+        <page id="340" columns="3" name="Pura Belpr&#233;" img="category/pura.png">
+            <cell name="Medal Winners" img=".png" type="search">keyword:Pura Belpre Award, 2012 sort(titlesort)#ascending</cell>
+            <cell name="Past Winners" img=".png" type="search">keyword:Pura Belpre Award sort(titlesort)#ascending</cell>
+        </page>
+
+        <page id="410" columns="3" name="Holidays" img="holidays.png">
+            <cell name="Chinese New Year" img="chinese-new-year.png" type="search">su:chinese new year</cell>
+            <cell type="topic">411</cell> <!-- Christian -->
+            <cell name="Cinco de Mayo" img="cinco-de-mayo.png" type="search">su:cinco de mayo</cell>
+            <cell name="Hindu" img="hindu.png" type="search">su:diwali</cell>
+            <cell type="topic">412</cell> <!-- Jewish -->
+            <cell name="Kwanzaa" img="kwanzaa.png" type="search">keyword:kwanzaa</cell>
+            <cell name="Muslim" img="muslim.png" type="search">keyword:ramadan</cell>
+            <cell type="topic">413</cell> <!-- Patriotic Holidays -->
+            <cell type="topic">414</cell> <!-- U.S. Holidays -->
+        </page>
+        <page id="411" columns="3" name="Christian" img="christian.png">
+            <cell name="Christmas" img="christmas.png" type="search">su:christmas</cell>
+            <cell name="Easter" img="easter.png" type="search">su:easter</cell>
+        </page>
+        <page id="412" columns="3" name="Jewish" img="jewish.png">
+            <cell name="Hanukkah" img="hanukkah.png" type="search">su:hanukkah</cell>
+            <cell name="Passover" img="passover.png" type="search">keyword:passover</cell>
+            <cell name="Purim" img="purim.png" type="search">keyword:purim</cell>
+            <cell name="Rosh Hashanah" img="rosh-hashanah.png" type="search">keyword:rosh hashanah</cell>
+            <cell name="Yom Kippur" img="yom-kippur.png" type="search">keyword:yom kippur</cell>
+        </page>
+        <page id="413" columns="3" name="Patriotic Holidays" img="patriotic-holidays.png">
+            <cell name="4th of July" img="4th-of-july.png" type="search">su:fourth of july</cell>
+            <cell name="Columbus Day" img="columbus-day.png" type="search">keyword:columbus day</cell>
+            <cell name="Flag Day" img="flag-day.png" type="search">keyword:flag day</cell>
+            <cell name="Labor Day" img="labor-day.png" type="search">keyword:labor day</cell>
+            <cell name="Martin Luther King Day" img="mlk-day.png" type="search">su:martin luther king</cell>
+            <cell name="Memorial Day" img="memorial-day.png" type="search">su:memorial day</cell>
+            <cell name="Presidents Day" img="presidents-day.png" type="search">su:presidents day</cell>
+            <cell name="Veterans Day" img="veterans-day.png" type="search">su:veterans day</cell>
+        </page>
+        <page id="414" columns="3" name="US Holidays" img="us-holidays.png">
+            <cell name="April Fool's Day" img="april-fools-day.png" type="search">su:april fool's day</cell>
+            <cell name="Earth Day" img="earth-day.png" type="search">su:earth day</cell>
+            <cell name="Father's Day" img="fathers-day.png" type="search">su:father's day</cell>
+            <cell name="Groundhog Day" img="groundhog-day.png" type="search">su:groundhog day</cell>
+            <cell name="Halloween" img="halloween.png" type="search">su:halloween</cell>
+            <cell name="Mother's Day" img="mothers-day.png" type="search">su:mother's day</cell>
+            <cell name="New Year's Day" img="new-years-day.png" type="search">su:new year</cell>
+            <cell name="St. Patrick's Day" img="st-patricks-day.png" type="search">su:saint patrick's day</cell>
+            <cell name="Thanksgiving" img="thanksgiving.png" type="search">su:thanksgiving</cell>
+            <cell name="Valentine's Day" img="valentines-day.png" type="search">su:valentine's day</cell>
+        </page>
+        <page id="420" columns="3" name="Languages" img="languages.png">
+            <cell name="Chinese" img="chinese.png" type="search">su:chinese language</cell>
+            <cell name="English" img="english.png" type="search">su:english language</cell>
+            <cell name="French" img="french.png" type="search">su:french language</cell>
+            <cell name="German" img="german.png" type="search">su:german language</cell>
+            <cell name="Japanese" img="japanese.png" type="search">su:japanese language</cell>
+            <cell name="Portuguese" img="portuguese.png" type="search">su:portuguese language</cell>
+            <cell name="Russian" img="russian.png" type="search">su:russian language</cell>
+            <cell name="Sign Language" img="sign-language.png" type="search">su:american sign language</cell>
+            <cell name="Spanish" img="spanish.png" type="search">su:spanish language</cell>
+        </page>
+        <page id="430" columns="3" name="Religion" img="religion.png">
+            <cell name="Buddhism" img="buddhism.png" type="search">su:buddhism</cell>
+            <cell name="Christianity" img="christianity.png" type="search">su:christianity</cell>
+            <cell name="Hinduism" img="hinduism.png" type="search">su:hinduism</cell>
+            <cell name="Islam" img="islam.png" type="search">su:islam</cell>
+            <cell name="Judaism" img="judaism.png" type="search">su:judaism</cell>
+            <cell name="Native American" img="native-american.png" type="search">keyword:native american religion</cell>
+            <cell name="Religion" img="religion.png" type="search">su:religion</cell>
+        </page>
+        <page id="440" columns="3" name="Culture" img="culture.png">
+            <cell name="Food" img="food.png" type="search">su:food customs</cell>
+            <cell name="Fairy Tales" img="fairy-tales.png" type="search">su:fairy tales</cell>
+            <cell name="Legends" img="legends.png" type="search">su:legends</cell>
+            <cell name="Mythology" img="mythology.png" type="search">su:mythology</cell>
+            <cell name="Traditions" img="traditions.png" type="search">su:social life and customs</cell>
+        </page>
+
+        <page id="510" columns="3" name="African Americans" img="african-americans.png">
+            <cell name="Athletes" img="african-american-athletes.png" type="search">keyword:african american athletes biography</cell>
+            <cell name="Authors" img="african-american-authors.png" type="search">keyword:african american authors biography</cell>
+            <cell name="Explorers" img="african-american-explorers.png" type="search">keyword:african american explorers biography</cell>
+            <cell name="Inventors" img="african-american-inventors.png" type="search">keyword:african american inventors biography</cell>
+            <cell name="Malcolm X" img="malcolmx.png" type="search">keyword:malcolm x biography</cell>
+            <cell name="Martin Luther King, Jr." img="mlk.png" type="search">keyword:martin luther king jr biography</cell>
+            <cell name="Musicians" img="african-american-musicians.png" type="search">keyword:african american musicians biography</cell>
+            <cell name="Scientists" img="african-american-scientists.png" type="search">keyword:african american scientists biography</cell>
+            <cell name="Women" img="african-american-women.png" type="search">keyword:african american women biography</cell>
+        </page>
+        <page id="520" columns="3" name="Americans in History" img="americans-in-history.png">
+            <cell name="Native Americans" img="native-americans.png" type="search">keyword:indians america biography</cell>
+            <cell name="Colonial America" img="colonial-america.png" type="search">keyword:colonial america biography</cell>
+            <cell name="American Revolution" img="american-revolution.png" type="search">keyword:american revolution biography</cell>
+            <cell name="Civil War" img="civil-war.png" type="search">keyword:united states civil war biography</cell>
+            <cell name="World Wars" img="world-wars.png" type="search">su:world wars biography</cell>
+            <cell name="War Heroes" img="war-heroes.png" type="search">keyword:united states biography war</cell>
+        </page>
+        <page id="530" columns="3" name="Athletes" img="athletes.png">
+            <cell name="Baseball" img="baseball.png" type="search">keyword:baseball players biography</cell>
+            <cell name="Basketball" img="basketball.png" type="search">keyword:basketball players biography</cell>
+            <cell name="Football" img="football.png" type="search">keyword:football players biography</cell>
+            <cell name="Gymnasts" img="gymnasts.png" type="search">keyword:gymnasts biography</cell>
+            <cell name="Hockey" img="hockey.png" type="search">keyword:hockey players biography</cell>
+            <cell name="Skaters" img="skaters.png" type="search">keyword:ice skaters biography</cell>
+            <cell name="Soccer" img="soccer.png" type="search">keyword:soccer players biography</cell>
+            <cell name="Swimmers" img="swimmers.png" type="search">keyword:swimmers biography</cell>
+            <cell name="Tennis" img="tennis.png" type="search">keyword:tennis players biography</cell>
+        </page>
+        <page id="540" columns="3" name="Hispanics" img="hispanics.png">
+            <cell name="Artists" img="hispanic-artists.png" type="search">keyword:hispanic artists</cell>
+            <cell name="Authors" img="hispanic-authors.png" type="search">keyword:hispanic authors</cell>
+            <cell name="Explorers" img="hispanic-explorers.png" type="search">keyword:hispanic explorers</cell>
+        </page>
+        <page id="550" columns="3" name="Scientists &amp; Inventors" img="scientists-inventors.png">
+            <cell name="Inventors" img="inventors.png" type="search">su:inventors biography</cell>
+            <cell name="Scientists" img="scientists.png" type="search">su:scientists biography</cell>
+        </page>
+        <page id="560" columns="3" name="Women" img="women.png">
+            <cell name="Artists" img="women-artists.png" type="search">keyword:women artists biography</cell>
+            <cell name="Athletes" img="women-athletes.png" type="search">keyword:women athletes biography</cell>
+            <cell name="Authors" img="women-authors.png" type="search">keyword:women authors biography</cell>
+            <cell name="Explorers" img="women-explorers.png" type="search">keyword:women explorers biography</cell>
+            <cell name="First Ladies" img="first-ladies.png" type="search">keyword:first ladies biography</cell>
+            <cell name="Inventors" img="women-inventors.png" type="search">keyword:women inventors biography</cell>
+            <cell name="Musicians" img="women-musicians.png" type="search">keyword:women musicians biography</cell>
+            <cell name="Scientists" img="women-scientists.png" type="search">keyword:women scientists biography</cell>
+        </page>
+
+        <page id="610" columns="3" name="Feelings" img="feelings.png">
+            <cell name="Anger" img="anger.png" type="search">su:anger</cell>
+            <cell name="Fear" img="fear.png" type="search">su:fear</cell>
+            <cell name="Feelings" img="feelings.png" type="search">su:emotions</cell>
+            <cell name="Grief" img="grief.png" type="search">su:grief</cell>
+        </page>
+        <page id="620" columns="3" name="Human Body" img="human-body.png">
+            <cell name="Bones" img="bones.png" type="search">keyword:human bones</cell>
+            <cell name="Brain" img="brain.png" type="search">keyword:human brain</cell>
+            <cell name="Digestion" img="digestion.png" type="search">keyword:human digestion</cell>
+            <cell name="Heart" img="heart.png" type="search">keyword:human heart</cell>
+            <cell name="Human Body" img="human-body.png" type="search">keyword:human body</cell>
+            <cell name="Lungs" img="lungs.png" type="search">keyword:human lungs</cell>
+            <cell name="Muscles" img="muscles.png" type="search">keyword:human muscles</cell>
+            <cell name="Reproduction" img="reproduction.png" type="search">keyword:human reproduction</cell>
+            <cell name="Skin" img="skin.png" type="search">keyword:human skin</cell>
+        </page>
+        <page id="640" columns="3" name="Social Issues" img="social-issues.png">
+            <cell name="Abuse &amp; Violence" img="abuse-violence.png" type="search">keyword:child abuse</cell>
+            <cell name="Bullying" img="bullying.png" type="search">keyword:bullying</cell>
+            <cell name="Disabilities" img="disabilities.png" type="search">su:disabilities</cell>
+            <cell name="Drugs &amp; Alcohol" img="drugs-alcohol.png" type="search">keyword:substance abuse</cell>
+            <cell name="Eating Problems" img="eating-problems.png" type="search">keyword:eating disorders</cell>
+            <cell name="Family" img="family.png" type="search">keyword:family issues</cell>
+            <cell name="Peer Pressure" img="peer-pressure.png" type="search">keyword:peer pressure</cell>
+            <cell name="Racism" img="racism.png" type="search">keyword:racism</cell>
+            <cell name="Strangers" img="strangers.png" type="search">su:children and strangers</cell>
+        </page>
+
+        <page id="710" columns="3" name="North America" img="north-america.png">
+            <cell name="Canada" img="canada.png" type="search">keyword:canada geography</cell>
+            <cell name="Mexico" img="mexico.png" type="search">keyword:mexico geography</cell>
+            <cell name="United States" img="united-states.png" type="search">keyword:united states geography</cell>
+        </page>
+
+        <page id="810" columns="3" name="Ancient World" img="ancient-world.png">
+            <cell name="7 World Wonders" img="7-world-wonders.png" type="search">keyword:seven ancient wonders world</cell>
+            <cell type="topic">811</cell> <!-- Ancient America -->
+            <cell name="Ancient China" img="ancient-china.png" type="search">keyword:ancient china</cell>
+            <cell name="Ancient Egypt" img="ancient-egypt.png" type="search">keyword:ancient egypt</cell>
+            <cell name="Ancient Greece" img="ancient-greece.png" type="search">keyword:ancient greece</cell>
+            <cell name="Ancient Rome" img="ancient-rome.png" type="search">keyword:ancient rome</cell>
+            <cell name="Archeology" img="archeology.png" type="search">keyword:archeology</cell>
+            <cell name="Stonehenge" img="stonehenge.png" type="search">keyword:stonehenge</cell>
+            <cell name="Sumerians" img="sumerians.png" type="search">keyword:sumerians</cell>
+        </page>
+        <page id="811" columns="3" name="Ancient America" img="ancient-america.png">
+            <cell name="Maya" img="maya.png" type="search">keyword:maya</cell>
+            <cell name="Aztecs" img="aztecs.png" type="search">keyword:aztecs</cell>
+            <cell name="Anasazi" img="anasazi.png" type="search">keyword:anasazi</cell>
+            <cell name="Incas" img="incas.png" type="search">keyword:incas</cell>
+        </page>
+        <page id="820" columns="3" name="Middle Ages" img="middle-ages.png">
+            <cell name="Castles" img="castles.png" type="search">keyword:medieval castles</cell>
+            <cell name="Crusades" img="crusades.png" type="search">su:medieval crusades</cell>
+            <cell name="Knights" img="knights.png" type="search">keyword:knights</cell>
+            <cell name="Middle Ages" img="middle-ages.png" type="search">keyword:middle ages</cell>
+        </page>
+        <page id="830" columns="3" name="United States" img="united-states.png">
+            <cell name="Colonial" img="colonial.png" type="search">keyword:colonial america</cell>
+            <cell name="Revolution" img="revolution.png" type="search">keyword:american revolution</cell>
+            <cell name="Civil War" img="civil-war.png" type="search">keyword:united states civil war</cell>
+            <cell name="Native Americans" img="native-americans.png" type="search">keyword:indians america</cell>
+            <cell name="Industrial Revolution" img="industrial-revolution.png" type="search">su:industrial revolution</cell>
+            <cell name="Great Depression" img="great-depression.png" type="search">su:depressions 1929</cell>
+            <cell name="Civil Rights" img="civil-rights.png" type="search">keyword:united states civil rights</cell>
+            <cell name="9/11" img="september11.png" type="search">keyword:september 11 terrorist attacks</cell>
+        </page>
+        <page id="840" columns="3" name="Wars" img="wars.png">
+            <cell name="French &amp; Indian War" img="french-indian-war.png" type="search">su:french and indian war</cell>
+            <cell name="American Revolution" img="american-revolution.png" type="search">keyword:american revolution</cell>
+            <cell name="War of 1812" img="war-of-1812.png" type="search">keyword:war 1812</cell>
+            <cell name="Civil War" img="civil-war.png" type="search">keyword:united states civil war</cell>
+            <cell name="World War I" img="world-war-1.png" type="search">su:world war, 1914-1918</cell>
+            <cell name="World War II" img="world-war-2.png" type="search">su:world war, 1939-1945</cell>
+            <cell name="Korean" img="korean-war.png" type="search">su:ukorean war</cell>
+            <cell name="Vietnam" img="vietnam-war.png" type="search">su:vietnam war</cell>
+            <cell name="Desert Storm" img="desert-storm.png" type="search">su:Persian Gulf War, 1991</cell>
+        </page>
+
+        <page id="910" columns="3" name="Math" img="math.png">
+            <cell name="Counting" img="counting.png" type="search">su:counting</cell>
+            <cell name="Geometry" img="geometry.png" type="search">su:geometry</cell>
+            <cell name="Math" img="math.png" type="search">su:mathematics</cell>
+            <cell name="Math Games" img="math-games.png" type="search">keyword:mathematics games</cell>
+            <cell name="Measuring" img="measuring.png" type="search">su:measuring</cell>
+        </page>
+        <page id="920" columns="3" name="Science" img="science.png">
+            <cell type="topic">921</cell> <!-- Biology -->
+            <cell type="topic">922</cell> <!-- Earth Science -->
+            <cell type="topic">923</cell> <!-- Environment -->
+            <cell type="topic">924</cell> <!-- Machines -->
+            <cell type="topic">930</cell> <!-- Space -->
+            <cell type="topic">940</cell> <!-- Weather -->
+        </page>
+        <page id="921" columns="3" name="Biology" img="biology.png">
+            <cell name="Animal Life" img="animal-life.png" type="search">keyword:animal life</cell>
+            <cell name="Evolution" img="evolution.png" type="search">su:evolution</cell>
+            <cell name="Ocean Life" img="ocean-life.png" type="search">keyword:ocean life</cell>
+            <cell name="Plant Life" img="plant-life.png" type="search">keyword:plant life</cell>
+        </page>
+        <page id="922" columns="3" name="Earth Science" img="earth-science.png">
+            <cell name="Earthquakes" img="earthquakes.png" type="search">su:earthquakes</cell>
+            <cell name="Fossils" img="fossils.png" type="search">su:fossils</cell>
+            <cell name="Minerals" img="minerals.png" type="search">su:mineral*</cell>
+            <cell name="Rocks" img="rocks.png" type="search">su:rocks</cell>
+            <cell name="Volcanoes" img="volcanos.png" type="search">su:volcanoes</cell>
+            <cell name="Weather" img="weather.png" type="search">su:weather</cell>
+        </page>
+        <page id="923" columns="3" name="Environment" img="environment.png">
+            <cell name="Climate Change" img="climate-change.png" type="search">keyword:climate change || keyword:global warming</cell>
+            <cell name="Endangered Animals" img="endangered-animals.png" type="search">su:endangered animals</cell>
+            <cell name="Environment" img="environment.png" type="search">su:ecology</cell>
+            <cell name="Habitat" img="habitat.png" type="search">keyword:habitat</cell>
+            <cell name="Pollution" img="pollution.png" type="search">su:pollution</cell>
+            <cell name="Recycling" img="recycling.png" type="search">su:recycling</cell>
+        </page>
+        <page id="924" columns="3" name="Machines" img="machines.png">
+            <cell type="topic">925</cell> <!-- Construction -->
+            <cell name="Machines" img="machines.png" type="search">keyword:machines</cell>
+            <cell name="Robots" img="robots.png" type="search">keyword:robots</cell>
+            <cell name="Simple Machines" img="simple-machines.png" type="search">su:simple machines</cell>
+            <cell type="topic">926</cell> <!-- Transportation-->
+            <cell type="topic">927</cell> <!-- War Machines -->
+        </page>
+        <page id="925" columns="3" name="Construction" img="construction.png">
+            <cell name="Bulldozers" img="bulldozers.png" type="search">su:bulldozers</cell>
+            <cell name="Diggers" img="diggers.png" type="search">keyword:diggers construction</cell>
+            <cell name="Dump Trucks" img="dump-trucks.png" type="search">su:dump trucks</cell>
+            <cell name="Construction" img="construction.png" type="search">su:construction equipment</cell>
+            <cell name="Tractors" img="tractors.png" type="search">su:tractors</cell>
+        </page>
+        <page id="926" columns="3" name="Transportation" img="transportation.png">
+            <cell name="Cars" img="cars.png" type="search">keyword:cars</cell>
+            <cell name="Fire Engines" img="firetrucks.png" type="search">keyword:fire engines</cell>
+            <cell name="Motorcycles" img="motorcycles.png" type="search">keyword:motorcycles</cell>
+            <cell name="Planes" img="planes.png" type="search">keyword:airplanes</cell>
+            <cell name="Ships" img="ships.png" type="search">su:ships</cell>
+            <cell name="Trains" img="trains.png" type="search">su:railroads trains</cell>
+        </page>
+        <page id="927" columns="3" name="War Machines" img="war-machines.png">
+            <cell name="Helicopters" img="helicopters.png" type="search">keyword:military helicopters</cell>
+            <cell name="Fighter Planes" img="fighter-planes.png" type="search">keyword:fighter planes</cell>
+            <cell name="Military" img="military.png" type="search">su:military</cell>
+            <cell name="Submarines" img="submarines.png" type="search">keyword:submarines</cell>
+            <cell name="Tanks" img="tanks.png" type="search">su:tanks military science</cell>
+            <cell name="Warships" img="warships.png" type="search">keyword:warships</cell>
+        </page>
+        <page id="930" columns="3" name="Space" img="space.png">
+            <cell name="Space" img="space.png" type="search">su:space || su:astronomy</cell>
+            <cell name="Space Exploration" img="space-exploration.png" type="search">keyword:space exploration</cell>
+            <cell name="Stars" img="stars.png" type="search">su:stars -wars -trek -song</cell>
+            <cell type="topic">931</cell> <!-- Solar System -->
+        </page>
+        <page id="931" columns="3" name="Solar System" img="solar-system.png">
+            <cell name="Planets" img="planets.png" type="search">su:planets</cell>
+            <cell name="Moon" img="moon.png" type="search">su:moon</cell>
+            <cell name="Sun" img="sun.png" type="search">su:sun</cell>
+        </page>
+        <page id="940" columns="3" name="Weather" img="weather.png">
+            <cell name="Clouds" img="clouds.png" type="search">su:clouds</cell>
+            <cell name="Forecasting" img="forecasting.png" type="search">su:forecasting</cell>
+            <cell name="Hurricanes" img="hurricanes.png" type="search">su:hurricanes</cell>
+            <cell name="Rainbows" img="rainbows.png" type="search">su:rainbows</cell>
+            <cell name="Snow" img="snow.png" type="search">su:snow</cell>
+            <cell name="Storms" img="storms.png" type="search">su:storms</cell>
+            <cell name="Tornadoes" img="tornadoes.png" type="search">su:tornadoes</cell>
+            <cell name="Weather Experiments" img="weather-experiments.png" type="search">su:weather experiments</cell>
+            <cell name="Wind" img="wind.png" type="search">su:wind</cell>
+        </page>
+        <page id="950" columns="3" name="Technology" img="technology.png">
+            <cell name="Animation" img="animation.png" type="search">keyword:computer animation</cell>
+            <cell name="Computers" img="computers.png" type="search">su:computers</cell>
+            <cell name="Internet" img="internet.png" type="search">su:internet</cell>
+            <cell name="Inventions" img="inventions.png" type="search">keyword:technology inventions</cell>
+            <cell name="Robotics" img="robotics.png" type="search">su:robotics</cell>
+            <cell name="Technology" img="technology.png" type="search">su:technology</cell>
+        </page>
+
+        <page id="1010" columns="3" name="Hobbies" img="hobbies.png">
+            <cell name="Legos" img="legos.png" type="search">su:lego toys</cell>
+            <cell name="Magic" img="magic.png" type="search">su:magic tricks</cell>
+            <cell name="Model Making" img="model-making.png" type="search">keyword:modelmaking</cell>
+            <cell name="Rock Collecting" img="rock-collecting.png" type="search">su:rock collecting</cell>
+            <cell name="Scrapbooking" img="scrapbooking.png" type="search">su:scrapbooking</cell>
+            <cell name="Stamp Collecting" img="stamp-collecting.png" type="search">su:stamp collecting</cell>
+        </page>
+        <page id="1020" columns="3" name="Individual Sports" img="individual-sports.png">
+            <cell name="Gymnastics" img="gymnastics.png" type="search">su:gymnastics</cell>
+            <cell name="Martial Arts" img="martial-arts.png" type="search">su:martial arts</cell>
+            <cell name="Skateboarding" img="skateboarding.png" type="search">su:skateboarding</cell>
+            <cell name="Skiing" img="skiing.png" type="search">su:skiing</cell>
+            <cell name="Snowboarding" img="snowboarding.png" type="search">su:snowboarding</cell>
+            <cell name="Swimming" img="swimming.png" type="search">su:swimming</cell>
+        </page>
+        <page id="1030" columns="3" name="Outdoor Activities" img="outdoor-activities.png">
+            <cell name="Camping" img="camping.png" type="search">su:camping</cell>
+            <cell name="Dirt Biking" img="dirt-biking.png" type="search">keyword:trail bikes</cell>
+            <cell name="Fishing" img="fishing.png" type="search">su:fishing</cell>
+            <cell name="Hiking" img="hiking.png" type="search">su:hiking</cell>
+            <cell name="Horseback Riding" img="horseback-riding.png" type="search">su:horsemanship</cell>
+            <cell name="Scouting" img="scouting.png" type="search">su:scouts</cell>
+        </page>
+        <page id="1040" columns="3" name="Team Sports" img="team-sports.png">
+            <cell name="Baseball" img="baseball.png" type="search">su:baseball</cell>
+            <cell name="Basketball" img="basketball.png" type="search">su:basketball</cell>
+            <cell name="Cheerleading" img="cheerleading.png" type="search">su:cheerleading</cell>
+            <cell name="Football" img="football.png" type="search">su:football</cell>
+            <cell name="Hockey" img="hockey.png" type="search">su:hockey</cell>
+            <cell name="Soccer" img="soccer.png" type="search">su:soccer</cell>
+            <cell name="Softball" img="softball.png" type="search">su:softball</cell>
+        </page>
+
     </pages>
 
     <layout owner="1" page="1"/>

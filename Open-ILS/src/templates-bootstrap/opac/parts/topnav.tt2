@@ -7,7 +7,7 @@
 </div>
 [%- END -%]
 [% IF !ctx.is_staff %]
-
+[% INCLUDE "opac/parts/topnav_logo.tt2" %]
 <div id="header-wrap">
 [% INCLUDE "opac/parts/topnav_links.tt2" %]
 </div>

@@ -57,7 +57,7 @@ ctx.metalinks.push('
         <div class="row h-100">
             <div class="col-lg-8">
                 <div id="rdetail_title_div">
-                <h1 id="rdetail_title" class='h1' property="name">[% IF attrs.hl.title; attrs.hl.title; ELSE; attrs.title_extended | html; END %]</h1>
+                <h1 id="rdetail_title" style="font-size: 1.8em;" property="name">[% IF attrs.hl.title; attrs.hl.title; ELSE; attrs.title_extended | html; END %]</h1>
                 [%-
                 FOR link880 IN attrs.graphic_titles;
                 FOR alt IN link880.graphic;

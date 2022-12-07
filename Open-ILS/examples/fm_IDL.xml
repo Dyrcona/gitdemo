@@ -15584,6 +15584,189 @@ SELECT  usr,
 		</permacrud>
 	</class>
 
+    <!-- START OF CUSTOM SOURCES -->
+	<class id="ariscirc" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::aris_circulation" oils_persist:tablename="extend_reporter.aris_circulation" reporter:core="true" reporter:label="ARIS Circulations" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="money.billable_xact_id_seq">
+		<field reporter:label="Circ ID" name="id" reporter:datatype="id" />
+		<field reporter:label="Circulating Library" name="circ_lib"  reporter:datatype="org_unit"/>
+		<field reporter:label="Patron Home Library" name="patron_library" reporter:datatype="link"/>
+		<field reporter:label="Transaction Finish Date/Time" name="xact_finish" reporter:datatype="timestamp" />
+		<field reporter:label="Check Out Date/Time" name="xact_start" reporter:datatype="timestamp" />
+		<field reporter:label="Circulating Item" name="target_copy" reporter:datatype="link"/>
+		<field reporter:label="Due Date/Time" name="due_date" reporter:datatype="timestamp"/>
+		<field reporter:label="Copy Owning Library" name="copy_owning_lib" reporter:datatype="link"/>
+		<field reporter:label="Circulation Modifier" name="circ_modifier" reporter:datatype="text"/>
+		<field reporter:label="ARIS Audience" name="aris_audience" reporter:datatype="text"/>
+		<field reporter:label="ARIS Format" name="aris_format" reporter:datatype="text"/>
+	  </fields>
+	  <links>
+		<link field="circ_lib" reltype="has_a" key="id" map="" class="aou"/>
+		<link field="copy_owning_lib" reltype="has_a" key="id" map="" class="aou"/>
+		<link field="target_copy" reltype="has_a" key="id" map="" class="acp"/>
+	  </links>
+	</class>
+	<class id="ariscounts" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::aris_copy_counts" oils_persist:tablename="extend_reporter.aris_copy_counts" reporter:core="true" reporter:label="ARIS Item Counts" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="asset.copy_id_seq">
+		<field reporter:label="Copy ID" name="id" reporter:datatype="link"/>
+		<field reporter:label="Copy Owning Library" name="copy_owning_lib" reporter:datatype="link"/>
+		<field reporter:label="Create Date" name="create_date" reporter:datatype="timestamp" />
+		<field reporter:label="ARIS Audience" name="aris_audience" reporter:datatype="text"/>
+		<field reporter:label="ARIS Format" name="aris_format" reporter:datatype="text"/>
+	  </fields>
+	  <links>
+		<link field="id" reltype="has_a" key="id" map="" class="acp"/>
+		<link field="copy_owning_lib" reltype="has_a" key="copy_owning_lib" map="" class="aou"/>
+	  </links>
+	</class>
+	<class id="dusty_books" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::dusty_books" oils_persist:tablename="extend_reporter.dusty_books" reporter:core="false" reporter:label="Dusty Books" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="asset.copy_id_seq">
+		<field reporter:label="bib id" name="bib_id" reporter:datatype="id" />
+		<field reporter:label="copy id" name="copy_id" reporter:datatype="id" />
+		<field reporter:label="owning library" name="circ_lib" reporter:datatype="org_unit" />
+		<field reporter:label="circs" name="circs" reporter:datatype="int" />
+		<field reporter:label="last checkout" name="last_checkout" reporter:datatype="timestamp" />
+		<field reporter:label="price per circ" name="price_per_circ" reporter:datatype="money" />
+		<field reporter:label="isbn" name="isbn" reporter:datatype="text" />
+		<field reporter:label="issn" name="issn" reporter:datatype="text" />
+	  </fields>
+	  <links>
+		<link field="copy_id" reltype="has_a" key="id" map="" class="acp"/>
+		<link field="bib_id" reltype="has_a" key="id" map="" class="bre"/>
+		<link field="circ_lib" reltype="has_a" key="id" map="" class="aou"/>
+	  </links>
+	</class>
+	<class id="serials_holdings" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::serials_holdings" oils_persist:tablename="extend_reporter.serials_holdings" reporter:core="false" reporter:label="Serials Holdings Statement" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="record_entry_id_seq">
+		<field reporter:label="mfhd record id" name="id" reporter:datatype="id" />
+		<field reporter:label="marc record id" name="record" reporter:datatype="id" />
+		<field reporter:label="Owning Library" name="owning_lib" reporter:datatype="org_unit" />
+		<field reporter:label="ereated" name="create_date" reporter:datatype="timestamp"/>
+		<field reporter:label="edited" name="edit_date" reporter:datatype="timestamp"/>
+		<field reporter:label="issn" name="issn" reporter:datatype="text"/>
+		<field reporter:label="title" name="title" reporter:datatype="text"/>
+		<field reporter:label="holdings" name="holdings" reporter:datatype="text"/>
+	  </fields>
+	  <links>
+		<link field="id" reltype="has_a" key="id" map="" class="sitem"/>
+		<link field="record" reltype="has_a" key="id" map="" class="bre"/>
+		<link field="owning_lib" reltype="has_a" key="id" map="" class="aou"/>
+	  </links>
+	</class>
+	<class id="serial_items" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::serial_item_list" oils_persist:tablename="extend_reporter.serial_item_list" reporter:core="false" reporter:label="Serial Item List" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="item_id_seq">
+		<field reporter:label="Owning Library" name="owning_lib" reporter:datatype="org_unit" />
+		<field reporter:label="marc record id" name="id" reporter:datatype="id" />
+		<field reporter:label="tcn" name="tcn_value" reporter:datatype="text"/>
+		<field reporter:label="issn" name="issn" reporter:datatype="text" />
+		<field reporter:label="title" name="title" reporter:datatype="text" />
+		<field reporter:label="issue" name="issue_name" reporter:datatype="text" />
+		<field reporter:label="item id" name="item_id" reporter:datatype="id" />
+		<field reporter:label="Date Expected" name="date_expected" reporter:datatype="timestamp"/>
+		<field reporter:label="Date Received" name="date_received" reporter:datatype="timestamp"/>
+	  </fields>
+	  <links>
+		<link field="item_id" reltype="has_a" key="id" map="" class="sitem"/>
+		<link field="id" reltype="has_a" key="id" map="" class="bre"/>
+		<link field="owning_lib" reltype="has_a" key="id" map="" class="aou"/>
+	  </links>
+	</class>
+	<class id="last_issue" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::last_issue_received" oils_persist:tablename="extend_reporter.last_issue_received" reporter:core="false" reporter:label="Last Issue Received" oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="item_id_seq">
+		<field reporter:label="Owning Library" name="owning_lib" reporter:datatype="org_unit" />
+		<field reporter:label="marc record id" name="id" reporter:datatype="id" />
+		<field reporter:label="tcn" name="tcn_value" reporter:datatype="text"/>
+		<field reporter:label="issn" name="issn" reporter:datatype="text" />
+		<field reporter:label="title" name="title" reporter:datatype="text" />
+		<field reporter:label="issue" name="issue_name" reporter:datatype="text" />
+		<field reporter:label="Date Received" name="date_received" reporter:datatype="timestamp"/>
+	  </fields>
+	  <links>
+		<link field="item_id" reltype="has_a" key="id" map="" class="sitem"/>
+		<link field="id" reltype="has_a" key="id" map="" class="bre"/>
+		<link field="owning_lib" reltype="has_a" key="id" map="" class="aou"/>
+	  </links>
+	</class>
+	<class id="payments_combined_detail" controller="open-ils.cstore" oils_obj:fieldmapper="extend_reporter::payments_combined_detail" oils_persist:tablename="extend_reporter.payments_combined_detail" reporter:core="false" reporter:label="Payments Combined Detail" oils_persist:readonly="true">
+	  <fields oils_persist:primary="xact" oils_persist:sequence="billable_xact_id_seq">
+		<field reporter:label="xact" name="xact_id" reporter:datatype="link" />
+		<field reporter:label="Accepting Staff Member" name="accepting_usr" reporter:datatype="link"/>
+		<field name="cash_drawer" reporter:datatype="text"/>
+		<field name="note" reporter:datatype="text"/>
+		<field name="payment_ts" reporter:datatype="timestamp"/>
+		<field name="usr" reporter:datatype="id"/>
+		<field name="patron" reporter:datatype="text"/>
+		<field name="patron_barcode" reporter:datatype="text"/>
+		<field name="amount_collected" reporter:datatype="money"/>
+		<field name="owning_library" reporter:datatype="text"/>
+		<field name="billing_type" reporter:datatype="text"/>
+		<field name="pay_type" reporter:datatype="text"/>
+	  </fields>
+	  <links>
+		<link field="usr" reltype="has_a" key="id" map="" class="au"/>
+		<link field="accepting_usr" reltype="has_a" key="id" map="" class="au"/>
+		<link field="xact" reltype="has_a" key="id" map="" class="mbt"/>
+	  </links>
+	</class>
+	<class id="springfield_collection_agency"
+	       controller="open-ils.cstore"
+	       oils_obj:fieldmapper="extend_reporter::springfield_collection_agency"
+	       oils_persist:tablename="extend_reporter.springfield_collection_agency"
+	       reporter:core="false"
+	       reporter:label="Springfield Collectioni Agency"
+	       oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="actor.usr_id_seq">
+		<field name="usr" reporter:datatype="id"/>
+		<field name="copy" reporter:datatype="id"/>
+		<field name="balance_owed" reporter:datatype="money"/>
+	  </fields>
+	  <links>
+		<link field="usr" reltype="has_a" key="id" map="" class="au"/>
+		<link field="copy" reltype="has_a" key="id" map="" class="acp"/>
+	  </links>
+	</class>
+    <class id="cash_report_mimic"
+           controller="open-ils.cstore"
+           oils_obj:fieldmapper="extend_reporter::materialized_money"
+           oils_persist:tablename="extend_reporter.materialized_money"
+           reporter:core="false"
+           reporter:label="Cash Report Mimic"
+           oils_persist:readonly="true">
+	  <fields oils_persist:primary="id" oils_persist:sequence="actor.usr_id_seq">
+		<field name="owning_lib" reporter:datatype="id"/>
+		<field name="payment_ts" reporter:datatype="timestamp"/>
+		<field name="name" reporter:datatype="text"/>
+		<field name="billing_type" reporter:datatype="text"/>
+		<field name="pay_method" reporter:datatype="text"/>
+		<field name="amount_collected" reporter:datatype="money"/>
+	  </fields>
+	  <links>
+		<link field="owning_lib" reltype="has_a" key="id" map="" class="aou"/>
+	  </links>
+	</class>
+    <class id="cwmaterializedmoney" controller="open-ils.cstore open-ils.pcrud" oils_obj:fieldmapper="extend_reporter::materialized_money" oils_persist:tablename="extend_reporter.materialized_money" reporter:core="true" reporter:label="CWMARS Materialized Money">
+	  <fields oils_persist:primary="pay_xact" oils_persist:sequence="money.billable_xact_id_seq">
+		<field reporter:label="Payment Xact" name="pay_xact" reporter:datatype="id"/>
+		<field reporter:label="Bill Xact" name="bill_xact" reporter:datatype="id"/>
+		<field reporter:label="Billing Timestamp" name="billing_ts" reporter:datatype="timestamp"/>
+		<field reporter:label="Billing Total Owed" name="total_owed" reporter:datatype="money"/>
+		<field reporter:label="Billing Type" name="billing_type" reporter:datatype="text"/>
+		<field reporter:label="Payment Method" name="pay_method" reporter:datatype="text"/>
+		<field reporter:label="Payment Timestamp" name="payment_ts" reporter:datatype="timestamp"/>
+		<field reporter:label="Amount Collected" name="amount_collected" reporter:datatype="money"/>
+		<field reporter:label="Workstation" name="cash_drawer" reporter:datatype="link"/>
+		<field reporter:label="Accepting User" name="accepting_usr" reporter:datatype="link"/>
+		<field reporter:label="Active Circulation" name="act_circ" reporter:datatype="link"/>
+		<field reporter:label="All Circulation" name="all_circ" reporter:datatype="link"/>
+	  </fields>
+	  <links>
+		<link field="act_circ" reltype="might_have" key="id" map="" class="circ"/>
+		<link field="all_circ" reltype="might_have" key="id" map="" class="combcirc"/>
+		<link field="cash_drawer" reltype="has_a" key="id" map="" class="aws"/>
+		<link field="accepting_usr" reltype="has_a" key="id" map="" class="au"/>
+	  </links>
+    </class>
+    <!-- END OF CUSTOM SOURCES -->
+
 	<!-- ********************************************************************************************************************* -->
 </IDL>
 

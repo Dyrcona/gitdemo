@@ -1,0 +1,37 @@
+<record>
+<leader>00309nkm a2200145Ka 4500</leader>
+<controlfield tag="007">kf co</controlfield>
+<controlfield tag="008">      s        xxunnn            cnzxx d</controlfield>
+<datafield tag="100" ind1="1" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="245" ind1="" ind2="">
+<subfield code="a"/>
+<subfield code="h">[art reproduction].</subfield>
+</datafield>
+<datafield tag="260" ind1="" ind2="">
+<subfield code="a"/>
+<subfield code="b"/>
+<subfield code="c"/>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 art print :</subfield>
+<subfield code="b">color ;</subfield>
+<subfield code="c"> -- x -- cm.</subfield>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="651" ind1="" ind2="0">
+<subfield code="a"/>
+</datafield>
+<datafield tag="710" ind1="2" ind2="">
+<subfield code="a"/>
+</datafield>
+</record>

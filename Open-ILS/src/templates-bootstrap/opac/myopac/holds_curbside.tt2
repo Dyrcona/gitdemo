@@ -3,6 +3,7 @@
     PROCESS "opac/parts/hold_status.tt2";
     PROCESS "opac/parts/hold_notify.tt2";
     PROCESS "opac/parts/myopac/column_sort_support.tt2";
+    PROCESS "opac/parts/css/fonts.tt2";
     WRAPPER "opac/parts/myopac/base.tt2";
 
     myopac_page = "holds_curbside";
@@ -11,6 +12,10 @@
     offset = (ctx.holds_offset.defined) ? ctx.holds_offset : 0;
     count = (ctx.holds_ids.size.defined) ? ctx.holds_ids.size : 0;
 %]
+<p>
+Use the scheduler below to request or update your Curbside pickup appointment(s).
+<a href="https://www.cwmars.org/help/catalog-help/help-curbside-pickup#h.smw4bow2m30z" target="_blank" rel="noopener">Click here</a> or contact your Pickup Library if you need help.
+</p>
 <h3> [% l("Curbside Pickup Appointments") %]</h3>
 <div>
     <div id='holds_main'>
@@ -187,5 +192,11 @@
 
         [% END %]
     </div>
+    <p>
+    Within 30 minutes of scheduling or updating an appointment, a confirmation email/text* will be sent to you with pickup details.
+    </p>
+    <p style="font-size: [% css_fonts.size_smaller %];">
+    *Delivery method will depend on <a href="/eg/opac/myopac/prefs_notify">contact options</a> stored in your account.
+    </p>
 </div>
 [% END %]

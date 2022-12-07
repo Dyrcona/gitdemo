@@ -1,7 +1,9 @@
 <tr>
     <td colspan="3">
+        <p style="font-size: 120%;">
         <strong>
-        [% l('Please print or save the receipt for your records before closing the payment screen.') %]
+        Online payments are non-refundable. Patrons should make every effort to find and return lost items prior to payment.
         </strong>
+        </p>
     </td>
 </tr>

@@ -139,13 +139,16 @@ facet.default_display_count = 5;
 #   for consistency.
 
 search.adv_config = [
-    {adv_label => l("Item Type"), adv_attr => ["mattype", "item_type"], id => 'adv_selector_item_type'},
-    {adv_label => l("Item Form"), adv_attr => "item_form", id => 'adv_selector_item_form'},
-    {adv_label => l("Language"),  adv_attr => "item_lang", id => 'adv_selector_item_lang'},
-    {adv_label => l("Audience"),  adv_attr => ["audience_group", "audience"], id => 'adv_selector_audience', adv_break => 1},
-    {adv_label => l("Video Format"), adv_attr => "vr_format", id => 'adv_selector_video_format'},
-    {adv_label => l("Bib Level"), adv_attr => "bib_level", id => 'adv_selector_bib_level'},
-    {adv_label => l("Literary Form"), adv_attr => "lit_form", id => 'adv_selector_lit_form'},
+    {adv_label => l("Format"), adv_attr => [ctx.get_cgf('opac.format_selector.attr').value], id => 'adv_selector_format', adv_size => 6},
+#    {adv_label => l("Item Type"), adv_attr => ["mattype", "item_type"], id => 'adv_selector_item_type'},
+#    {adv_label => l("Item Form"), adv_attr => "item_form", id => 'adv_selector_item_form'},
+    {adv_label => l("Language"),  adv_attr => "item_lang", id => 'adv_selector_item_lang', adv_size => 6},
+    {adv_label => l("Audience"),  adv_attr => ["audience_group", "audience"], id => 'adv_selector_audience', adv_size => 6},
+#    {adv_label => l("Video Format"), adv_attr => "vr_format", id => 'adv_selector_video_format'},
+
+#    {adv_label => l("Bib Level"), adv_attr => "bib_level", id => 'adv_selector_bib_level'},
+#    {adv_label => l("Literary Form"), adv_attr => "lit_form", id => 'adv_selector_lit_form'},
+
     {adv_label => l("Shelving Location"), adv_special => "copy_location", id => 'adv_copy_location_selector', js_only => 1, adv_break => 1},
     {adv_label => l("Search Library"), adv_special => "lib_selector", id => 'adv_org_selector'},
     {adv_label => l("Where"), adv_special => "scope_selector", id => 'adv_scope_selector'},
@@ -213,7 +216,7 @@ ctx.depth_sel_resultshint = l('Showing results from all libraries');
 # Exclude Electronic Resources Checkbox
 # One setting for both the advanced search page and the results bar.
 # Off by default; set to 1 to display.
-ctx.exclude_electronic_checkbox = 0;
+ctx.exclude_electronic_checkbox = 1;
 
 ##############################################################################
 # Metarecords configuration

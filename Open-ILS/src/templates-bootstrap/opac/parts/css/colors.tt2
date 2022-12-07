@@ -7,20 +7,20 @@
         zero_count = "#c1ffbf", #Logged in item/charges count at 0
         non_zero_count = "#ffc107", #Logged in item/charges count NOT at 0
 
-        facets_back = "#006042", #search list facet backgrounds
+        facets_back = "#16416F", #CW
         facets_text = "#fff",
         footer_link = "#fff",
         footer_link_disabled = "#000",
 
-        nav_separation = "#007a54",
-        header_primary = "#007a54", #Primary Header Color
-        header_primary_fade = "#007a54", #Fade Header Color, make equal to header_primary for no fade
-        footer_primary = "#007a54", #Primary Footer Color
-        footer_primary_fade = "#007a54", #Fade Footer Color, make equal to footer_primary for no fade
+        nav_separation = "#16416F", #CW
+        header_primary = "#16416F", #CW
+        header_primary_fade = "#16416F", #CW
+        footer_primary = "#006098", #CW
+        footer_primary_fade = "#16416F", #CW
 
-        bg_extras = "#007a54",
-        bg_filter = "#007a54",
-        bg_filter_hover = "#00593d"
+        bg_extras = "#16416F", #CW
+        bg_filter = "#16416F", #CW
+        bg_filter_hover = "#63CFE3",
 
         text_filter = "#fff",
 
@@ -35,10 +35,10 @@
         text_greatnews = "green", # green
         text_invert = "#fff", # white
         text_match = "#c00", # deep red
-        primary = "#007a54", # dark green
-        primary_fade = "#007a54", # medium green
-        primary_offset = "#417860", # light_green
-        control = "#69A088", # lighter green
+        primary = "#16416F", #CW
+        primary_fade = "#002B49", #CW
+        primary_offset = "#63CFE3", #CW
+        control = "#16416F", #CW
         accent_light = "#ccc", #  grey (light)
         accent_lighter = "#ddd", #  grey (lighter)
         accent_lighter2 = "#d8d8d8", #  grey (lighter again)
@@ -56,14 +56,14 @@
         table_heading = "#d8d8d8", # grey-blue
         mobile_header_text = "#fff", # white
         item_selected = "#ddd", # grey (lighter)
-        link = "#007a54", # dark green
+        link = "#0645AD ", #CW
 
 #Buttons are using default Bootstrap styling colors by default with this scheme, changable to match your library colours
 
 #Submit buttons and confirmations likle login. Make all 4 the same color for no hover effect
-        button_confirm = "#007a54",
+        button_confirm = "#16416F",
         button_confirm_hover = "#00593d",
-        button_confirm_border = "#007a54",
+        button_confirm_border = "#16416F",
         button_confirm_border_hover = "#00593d",
         button_confirm_text = "#fff",
 
@@ -89,11 +89,11 @@
         opac_button_text = "#fff",
 
 #Action buttons such as Place Hold and Add to List seen in record and results. Make all 4 the same color for no hover effect
-        action_button = "#f8f9fa",
+        action_button = "#f2f4f5", #CW
         action_button_hover = "#e2e6ea",
-        action_button_border = "#007a54",
-        action_button_border_hover = "#00593d",
-        action_button_text = "#00593d",
+        action_button_border = "#f2f4f5", #CW
+        action_button_border_hover = "#e2e6ea", #CW
+        action_button_text = "#16416F", #CW
         #Many action buttons use link coloring on the anchor tags. This setting will change the color to match your color schema if necessary
         #action_button_text_anchors = "",
 };

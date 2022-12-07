@@ -28,6 +28,12 @@ use Email::Send;
 
 use open ':utf8';
 
+# Put this at the top because it was not found when at the bottom.
+sub die_error {
+	my $msg = shift;
+	$logger->error('Reporter died with error: ' . $msg);
+	die $msg;
+}
 
 my ($config, $sleep_interval, $lockfile, $daemon) = ('SYSCONFDIR/opensrf_core.xml', 10, '/tmp/reporter-LOCK');
 
@@ -128,7 +134,7 @@ my ($dbh,$running,$sth,@reports,$run, $current_time);
 
 if ($daemon) {
 	daemonize("Clark Kent, waiting for trouble");
-	open(F, ">$lockfile") or die "Cannot write lockfile '$lockfile'";
+	open(F, ">$lockfile") or die_error "Cannot write lockfile '$lockfile'";
 	print F $$;
 	close F;
 }
@@ -143,7 +149,7 @@ $dbh = DBI->connect(
 	{ AutoCommit => 1,
 	  pg_expand_array => 0,
 	  pg_enable_utf8 => 1,
-	  RaiseError => 1
+	  HandleError => \&die_error
 	}
 );
 
@@ -333,7 +339,7 @@ for my $r ( @reports ) {
 				$r->{chart_line},
 			)) {
 				# Ignore duplicate key errors on reporter.schedule (err 7 is a fatal query error). Just look for the constraint name in the message to avoid l10n issues.
-				warn($state_dbh->errstr()) unless $state_dbh->err() == 7 && $state_dbh->errstr() =~ m/rpt_sched_recurrence_once_idx/;
+				$logger->warn($state_dbh->errstr()) unless $state_dbh->err() == 7 && $state_dbh->errstr() =~ m/rpt_sched_recurrence_once_idx/;
 			}
 			$state_dbh->{PrintError} = $prevP;
 		}
@@ -701,7 +707,7 @@ sub draw_pie {
 				print IMG $pic->gd->$format;
 			} otherwise {
 				my $e = shift;
-				warn "Couldn't draw $file.pie.$vcol.$sub_graph.$format : $e";
+				$logger->warn("Couldn't draw $file.pie.$vcol.$sub_graph.$format : $e");
 				$forgetit = 1;
 			};
 
@@ -824,7 +830,7 @@ sub draw_bars {
 		print IMG $pic->gd->$format;
 	} otherwise {
 		my $e = shift;
-		warn "Couldn't draw $file.bar.$format : $e";
+		$logger->warn("Couldn't draw $file.bar.$format : $e");
 	};
 
 	close IMG;
@@ -930,7 +936,7 @@ sub draw_lines {
 		print IMG $pic->gd->$format;
 	} otherwise {
 		my $e = shift;
-		warn "Couldn't draw $file.line.$format : $e";
+		$logger->warn("Couldn't draw $file.line.$format : $e");
 	};
 
 	close IMG;

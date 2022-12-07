@@ -52,9 +52,9 @@
         END;
 
         extras = [
-            {name => 'summaryplus',  label => l('Summaries & More'), hide => hide_summary},
-            {name => 'annotation', label => l('Annotation'), hide => 1},
             {name => 'awards',  label => l('Awards, Reviews, & Suggested Reads')},
+            {name => 'annotation', label => l('Annotation'), hide => 1},
+            {name => 'summaryplus',  label => l('Summaries & More'), hide => hide_summary},
             {name => 'excerpt',  label => l('Excerpt'), hide => 1},
             {name => 'issues',   label => l('Issues Held'), hide => !(ctx.have_holdings_to_show || ctx.have_mfhd_to_show)},
             {name => 'preview',  label => l('Preview'), hide => 1},
@@ -69,7 +69,7 @@
         %]
         <div class="card border-secondary col-12 p-0">
          [%
-                    IF tab_is_active(name);
+                    IF tab_is_active(name) OR name == 'awards';
                         href = mkurl('', {}, ['expand', 'ac']);
                         arrow = arrow_down;
                     ELSE;
@@ -83,10 +83,10 @@
                 %]
             <div class="card-header extra_header">
               <a id='[% name %]' href='[% href %]' class="text-white" rel="nofollow" vocab="" style="text-decoration:none;">
-                <span>[% arrow %] [% extra.label | html %]</span>
-              </a>
+                <span>[% IF !(name == 'awards'); arrow; END %] [% extra.label | html %]</span>
+                </a>
             </div>
-            [%  IF tab_is_active(name); %]
+            [%  IF tab_is_active(name) OR name == 'awards'; %]
             <div class='card-body'>
 
                     [% IF name == 'marchtml';

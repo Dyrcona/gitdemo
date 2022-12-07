@@ -7,7 +7,7 @@ dojo.require('dijit.layout.ContentPane');
 
 var plist;
 var plOffset = 0;
-var plLimit = 20;
+var plLimit = 100;
 var liTable;
 
 

@@ -1,6 +1,9 @@
         [% IF ctx.mylist.size %]
         <div class="bookbag-specific">
         <p class="big-strong">[% l('Basket') %]</p>
+<p>
+Baskets are temporary. Contents will be removed automatically after your current session expires. To save the contents of your basket, you can add them to <a href="https://www.cwmars.org/help/catalog-help/help-my-lists#h.p_9OsMxIrPoA4R" target="_blank" rel="noopener">a list.</a>
+</p>
         <div class="sort">
             <form method="get">
                 <label for="anonsort">[% l("Sort basket items by: ") %]</label>

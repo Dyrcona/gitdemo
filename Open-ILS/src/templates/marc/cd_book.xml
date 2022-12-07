@@ -1,0 +1,46 @@
+<record>
+  <leader>01149cim a2200265Ka 4500</leader>
+  <controlfield tag="007">sd fungnn---uu</controlfield>	
+  <controlfield tag="008">      s                            eng d</controlfield>
+  <datafield tag="020" ind1="" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="024" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="028" ind1="4" ind2="2">
+    <subfield code="a"/>
+  </datafield>
+    <datafield tag="100" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="d"/>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="">
+    <subfield code="a"/>
+    <subfield code="h">[sound recording]</subfield>
+    <subfield code="b"/>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="260" ind1="" ind2="">
+    <subfield code="a"/>
+    <subfield code="b"/>
+    <subfield code="c"/>
+  </datafield>
+  <datafield tag="300" ind1="" ind2="">
+    <subfield code="a">sound discs :</subfield>
+    <subfield code="b">digital ;</subfield>
+    <subfield code="c">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="" ind2="">
+    <subfield code="a">Narrated by</subfield>
+  </datafield>
+  <datafield tag="500" ind1="" ind2="">
+    <subfield code="a"/>
+  </datafield>
+  <datafield tag="650" ind1="" ind2="0">
+    <subfield code="a"/>
+  </datafield>
+   <datafield tag="700" ind1="1" ind2="">
+    <subfield code="a"/>
+  </datafield>
+</record>

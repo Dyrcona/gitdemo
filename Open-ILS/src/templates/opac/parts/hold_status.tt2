@@ -53,10 +53,9 @@
         [% # Only show the count for holds that have not been captured
            IF hold.hold.status < 3 OR hold.hold.status == 5 OR hold.hold.status == 7 %]
              <span class="myopac-hold-count">
-                [% l('Hold #[_1] on [quant,_2, copy, copies]',
+                [% l('Hold #[_1] on [quant,_2, circulating copy, circulating copies]',
                    hold.hold.queue_position, hold.hold.potential_copies) | html %]
              </span>
          [% END %]
     </div>
 [% END %]
-

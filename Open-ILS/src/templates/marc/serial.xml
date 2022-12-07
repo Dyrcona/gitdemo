@@ -1,0 +1,39 @@
+<record>
+ <leader>00309nas a22001457a 4500</leader>
+ <controlfield tag="008">      cuuuu9999xxuuu         0   a0eng d</controlfield>
+ <datafield tag="022" ind2="" ind1="">
+ <subfield code="a"/>
+ </datafield>
+ <datafield tag="222" ind2="" ind1="">
+ <subfield code="a"/>
+ </datafield>
+ <datafield tag="245" ind1="0" ind2="0">
+  <subfield code="a"/>	
+  <subfield code="b"> </subfield>
+ </datafield>
+ <datafield tag="260" ind1="" ind2="">
+  <subfield code="a"/>
+  <subfield code="b"/>
+  <subfield code="c"/>
+ </datafield>
+ <datafield tag="300" ind2="" ind1="">
+  <subfield code="a"> v. ; </subfield>
+  <subfield code="c"> cm.</subfield>
+ </datafield>
+ <datafield tag="310" ind2="" ind1="">
+ <subfield code="a"/>
+ </datafield>
+<datafield tag="362" ind2="" ind1="">
+<subfield code="a"/>
+</datafield>
+ <datafield tag="500" ind2="" ind1="">
+  <subfield code="a"/>
+ </datafield>
+  <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a"/>
+  <subfield code="v">Periodicals.</subfield>
+ </datafield>
+ <datafield tag="710" ind1="2" ind2="">
+  <subfield code="a"/>
+ </datafield>
+</record>

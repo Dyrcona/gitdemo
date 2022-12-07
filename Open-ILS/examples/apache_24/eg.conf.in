@@ -5,8 +5,14 @@ LogLevel info
 # CustomLog /var/log/apache2/access.log combined
 # ErrorLog /var/log/apache2/error.log
 # - log to syslog 
-CustomLog "|/usr/bin/logger -p local7.info" common
-ErrorLog syslog:local7
+LogFormat "%a %l %u %t \"%r\" %>s %b" proxy
+Logformat "%a %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" proxy-combined
+CustomLog "|/usr/bin/logger -p local7.info" proxy-combined
+ErrorLog  "|/usr/bin/logger -p local7.error"
+
+# Obscure Server Version for security
+ServerSignature Off
+ServerTokens Prod
 
 
 # ----------------------------------------------------------------------------------
@@ -58,7 +64,7 @@ Alias /cgi-bin/offline/ "@localstatedir@/cgi-bin/offline/"
 	AddHandler cgi-script .cgi .pl
 	AllowOverride None
 	Options None
-    Require host 10.0.0.0/8
+	Require all granted
 	Options FollowSymLinks ExecCGI Indexes
 </Directory>
 
@@ -92,7 +98,7 @@ Alias /updates/ "@localstatedir@/updates/pub/"
 # you can change the cache-key in opac/parts/config.tt2 to force browsers to
 # reload them immediately.
 # ----------------------------------------------------------------------------------
-ExpiresActive On
+ExpiresActive Off
 ExpiresDefault "access plus 1 year"
 ExpiresByType text/html "access plus 18 hours"
 ExpiresByType application/xhtml+xml "access plus 18 hours"
@@ -104,7 +110,7 @@ ExpiresByType text/css "access plus 1 year"
 # Set up our SSL virtual host
 # ----------------------------------------------------------------------------------
 #Listen 443
-<VirtualHost *:443>
+<VirtualHost *:7443>
 	DocumentRoot "@localstatedir@/web"
 	ServerName localhost:443
 	ServerAlias 127.0.0.1:443
@@ -143,7 +149,7 @@ ExpiresByType text/css "access plus 1 year"
 # errors, per http://wiki.apache.org/httpd/InternalDummyConnection
 # ----------------------------------------------------------------------------------
 
-<VirtualHost *:80>
+<VirtualHost *:7080>
 	ServerName localhost:80
 	ServerAlias 127.0.0.1:80
  	DocumentRoot @localstatedir@/web/

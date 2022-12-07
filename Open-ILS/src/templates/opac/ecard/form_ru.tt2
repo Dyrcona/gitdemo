@@ -1,0 +1,45 @@
+[%- PROCESS "opac/parts/header.tt2";
+    PROCESS "opac/parts/org_selector.tt2";
+    WRAPPER "opac/parts/base.tt2";
+    INCLUDE "opac/parts/topnav.tt2";
+    ctx.page_title = l("Get a CW MARS eCard");
+    ctx_org = ctx.physical_loc || ctx.search_ou || ctx.aou_tree.id;
+%]
+<div id="content-wrapper">
+<div id="main-content-register"
+     style="margin: auto; width: 65%;">
+<h2>Получите электронный билет CW MARS</h2>
+[% IF ctx.ecard.enabled && ctx.ecard.quipu_id %]
+<div id="ecard-intro">
+<!-- The following script tags can be placed in the library's <head> or <body> tag -->
+<script src="https://ecard-us2.quipugroup.net/js/eCARDEmbed.js"></script>
+<script>loadQGeCARD([% ctx.ecard.quipu_id %])</script>
+
+[% INCLUDE "opac/ecard/lang.tt2" %]
+
+<p>Электронный билет - это библиотечный билет  CW MARS, который вы можете зарегистрировать в Интернете для доступа к электронным материалам, как например электронные книги, аудиокниги, журналы и базы данных.</p>
+
+<p>Электронный билет предназначен для посетителей, у которых еще нет библиотечного билета CW MARS, и его можно улутчить к физическому библиотечному билету с привилегиями заимствования, посетив местную библиотеку. Для получения дополнительной информации об электронном билете прочтите наш <a href="https://www.cwmars.org/help/general-faq#h.tsmz4ldtjggv" target="_blank" rel="noopener">FAQ</a>.</p>
+
+<p>Вы имеете право подать заявку на получение билета CW MARS eCard, если вы ...</p>
+<ul>
+<li>живете в городе в Массачусетс с библиотекочным членом <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">CW MARS</a>,</li>
+<li>13 лет и старше,</li>
+<li>и если в настоящее время у вас нет читательского билета из библиотеки-члена <a href="https://www.cwmars.org/memberlibraries" target="_blank" rel="noopener">CW MARS</a>.</li>
+</ul>
+
+<p>Обратитесь в местную библиотеку, если вы не имеете права зарегистрироваться онлайн или продлить библиотечный билет с истекшим сроком действия.</p>
+
+<p>Финансирование электронного контента обеспечивается библиотеками-членами CW MARS и Советом комиссаров библиотек штата Массачусетс при финансовой поддержке Института музейного и библиотечного обслуживания и Содружества Массачусетса.</p>
+
+</div>
+<!-- The following <div> tag should be placed on the web page where the library would like the registration form to display -->
+<div id="eCARD" data-language="ru" data-branchid="[% ctx_org %]"></div>
+[% ELSE %]
+<p>
+[% l('Electronic card registration is not enabled for this library.') %]
+</p>
+[% END #IF %]
+</div>
+</div>
+[% END #WRAPPER %]

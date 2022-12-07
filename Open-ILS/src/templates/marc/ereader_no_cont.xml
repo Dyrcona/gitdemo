@@ -1,0 +1,30 @@
+<record>
+<leader>01149cam a2200265Ka 4500</leader>
+<controlfield tag="008">      s                            eng d</controlfield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a"/>
+<subfield code="h">[electronic reader]</subfield>
+</datafield>
+<datafield tag="300" ind1="" ind2="">
+<subfield code="a">1 e-reader +</subfield>
+<subfield code="e"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="500" ind1="" ind2="">
+<subfield code="a"/>
+</datafield>
+<datafield tag="650" ind1="" ind2="0">
+<subfield code="a">Electronic book readers.</subfield>
+</datafield>
+<datafield tag="740" ind1="0" ind2="">
+<subfield code="a"/>
+</datafield>
+</record>

@@ -1,0 +1,39 @@
+<record>
+ <leader>00309nam a22001457a 4500</leader>
+ <controlfield tag="008">120919s        xxu     f    000    eng d</controlfield>
+ <datafield tag="020" ind1="" ind2="">
+  <subfield code="a"/>
+ </datafield>
+ <datafield tag="100" ind1="1" ind2="">
+  <subfield code="a"/>
+  <subfield code="d"/>
+ </datafield>
+ <datafield tag="245" ind1="1" ind2="0">
+  <subfield code="a"/>
+  <subfield code="h">[braille]</subfield>
+  <subfield code="b"/>
+  <subfield code="c"/>
+ </datafield>
+ <datafield tag="250" ind1="" ind2="">
+  <subfield code="a">Braille edition.</subfield>
+  </datafield>
+ <datafield tag="260" ind1="" ind2="">
+  <subfield code="a"/>
+  <subfield code="b"/>
+  <subfield code="c"/>
+ </datafield>
+ <datafield tag="300" ind1="" ind2="">
+  <subfield code="a"> pages of braille ;</subfield>
+  <subfield code="c"> cm.</subfield>
+ </datafield>
+ <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a"/>
+  <subfield code="v"/>
+ </datafield>
+ <datafield tag="650" ind1="" ind2="0">
+  <subfield code="a">Braille books.</subfield>
+ </datafield>
+ <datafield tag="700" ind1="1" ind2="">
+  <subfield code="a"/>
+ </datafield>
+</record>

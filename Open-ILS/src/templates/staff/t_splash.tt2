@@ -27,9 +27,25 @@
             </a>
           </div>
           <div>
+            <a href="./circ/patron/register" target="_self"
+              eg-accesskey="[% l('shift+f1') %]"
+              eg-accesskey-desc="[% l('Register Patron') %]">
+              <img src="[% ctx.media_predix %]/images/portal/registerpatron.png" alt="" role="presentation"/>
+              <span class="glyphicon glyphicon-user"></span>
+              [% l('Register Patron') %]
+            </a>
+          </div>
+          <div>
             <a target="_self" href="./circ/patron/search">
               <img src="[% ctx.media_prefix %]/images/portal/retreivepatron.png" alt="" role="presentation"/>
               [% l('Search For Patron By Name') %]
+            </a>
+          </div>
+          <div>
+            <a href="./circ/holds/pull" target="_self">
+              <img src="[% ctx.media_prefix %]/images/portal/holds.png" alt="" role="presentation"/>
+              <span class="glyphicon glyphicon-th-list"></span>
+              [% l('Pull List for Hold Requests') %]
             </a>
           </div>
         </div>
@@ -57,15 +73,36 @@
             </div>
           </div>
           <div>
-            <a target="_self" href="./cat/bucket/record/">
-              <img src="[% ctx.media_prefix %]/images/portal/bucket.png" alt="" role="presentation"/>
-              [% l('Record Buckets') %]
+            <a href="./cat/item/search" target="_self">
+            <img src="[% ctx.media_prefix %]/images/portal/book.png" alt="" role="presentation"/>
+              <span class="glyphicon glyphicon-saved"></span>
+              <span>[% l('Item Status') %]</span>
+            </a>
+          </div>
+          <div>
+            <a href="./cat/catalog/vandelay" target="_self">
+            <img src="[% ctx.media_prefix %]/images/portal/batchimport.png" alt="" role="presentation"/>
+              <span class="glyphicon glyphicon-transfer"></span>
+              [% l('MARC Batch Import/Export') %]
+            </a>
+          </div>
+          <div>
+            <a href="./cat/z3950/index" target="_self">
+            <img src="[% ctx.media_prefix %]/images/portal/z3950.png" alt="" role="presentation"/>
+              <span class="glyphicon glyphicon-cloud-download"></span>
+              [% l('Import Record from Z39.50') %]
             </a>
           </div>
           <div>
             <a target="_self" href="./cat/bucket/copy/">
-              <img src="[% ctx.media_prefix %]/images/portal/bucket.png" alt="" role="presentation"/>
-              [% l('Item Buckets') %]
+            <img src="[% ctx.media_prefix %]/images/portal/bucket.png" alt="" role="presentation"/>
+            [% l('Item Buckets') %]
+            </a>
+          </div>
+          <div>
+            <a target="_self" href="./cat/bucket/record/">
+            <img src="[% ctx.media_prefix %]/images/portal/bucket.png" alt="" role="presentation"/>
+            [% l('Record Buckets') %]
             </a>
           </div>
         </div>
@@ -79,10 +116,33 @@
         </div>
         <div class="panel-body">
           <div>
-            <a target="_top" href="http://docs.evergreen-ils.org/">
-              <img src="[% ctx.media_prefix %]/images/portal/helpdesk.png" alt="" role="presentation"/>
-              [% l('Evergreen Documentation') %]
+            <a target="_top" href="./reporter/legacy/main">
+            <img src="[% ctx.media_prefix %]/images/portal/reports.png" alt="" role="presentation"/>
+              [% l('Reports') %]
             </a>
+          </div>
+        <div>
+          <a target="_self" href="./admin/workstation/print/templates">
+          <img src="[% ctx.media_prefix %]/images/portal/receipt_editor.png" alt="" role="presentation"/>
+          <span class="glyphicon glyphicon-film"></span>
+            [% l('Print Templates') %]
+          </a>
+        </div>
+        <div>
+          <a target="_blank" href="https://www.cwmars.org/memberlibraries">
+            <img src="[% ctx.media_prefix %]/images/portal/libraries.png" alt="" role="presentation"/>
+            [% l('Member Libraries') %]
+          </a>
+          </div>
+          <div>
+          <a target="_blank" href="https://sites.google.com/a/cwmars.org/staff">
+              [% l('Library Staff Site - login required') %]
+          </a>
+          </div>
+          <div>
+          <a target="_blank" href="https://www.cwmars.org/help">
+              [% l('Patron FAQ') %]
+          </a>
           </div>
           <div>
             <a target="_top" href="./admin/workstation/index">
@@ -91,9 +151,11 @@
             </a>
           </div>
           <div>
-            <a target="_top" href="./reporter/legacy/main">
-              <img src="[% ctx.media_prefix %]/images/portal/reports.png" alt="" role="presentation"/>
-              [% l('Reports') %]
+     
+          <div>
+            <a target="_top" href="http://docs.evergreen-ils.org/">
+              <img src="[% ctx.media_prefix %]/images/portal/helpdesk.png" alt="" role="presentation"/>
+              [% l('Evergreen Community Documentation') %]
             </a>
           </div>
         </div>

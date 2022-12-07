@@ -1,0 +1,45 @@
+[%- PROCESS "opac/parts/header.tt2";
+    PROCESS "opac/parts/org_selector.tt2";
+    WRAPPER "opac/parts/base.tt2";
+    INCLUDE "opac/parts/topnav.tt2";
+    ctx.page_title = l("Get a CW MARS eCard");
+    ctx_org = ctx.physical_loc || ctx.search_ou || ctx.aou_tree.id;
+%]
+<div id="content-wrapper">
+<div id="main-content-register"
+     style="margin: auto; width: 65%;">
+<h2>Zdobądź CW MARS ECARD</h2>
+[% IF ctx.ecard.enabled && ctx.ecard.quipu_id %]
+<div id="ecard-intro">
+<!-- The following script tags can be placed in the library's <head> or <body> tag -->
+<script src="https://ecard-us2.quipugroup.net/js/eCARDEmbed.js"></script>
+<script>loadQGeCARD([% ctx.ecard.quipu_id %])</script>
+
+[% INCLUDE "opac/ecard/lang.tt2" %]
+
+<p>ECARD jest karta elektroniczny biblioteki CW MARS, którą możesz zarejestrować się w Internecie, aby uzyskać dostęp do materiałów elektronicznych, takich jak e-książki, audiobooki, czasopisma, gazety, i bazy danych.</p>
+
+<p>Karta jest dla klientów, którzy nie mają już fizyczną karty biblioteki CW Mars i mogą zostać zaktualizowane do fizycznej karty biblioteki z przywilejami pożyczkowania, odwiedzając lokalną bibliotekę. Aby uzyskać więcej informacji na temat ECARD, przeczytaj nasze FAQ.</p>
+
+<p>Kwalifikujesz się do ubiegania się o Karta CW MARS, jeśli ...</p>
+<ul>
+<li>mieszkasz w mieście Massachusetts z biblioteką członkowską CW MARS,</li>
+<li>masz 13 lat albo więcej,</li>
+<li>I obecnie nie masz już fizyczną karty biblioteki z biblioteki członkowskiej CW MARS.</li>
+</ul>
+
+<p>Skontaktuj się z lokalną biblioteką, jeśli nie kwalifikujesz się do rejestracji online albo odnowić wygasłą kartę.</p>
+
+<p>Finansowanie treści elektronicznych jest dostarczane przez biblioteki członkowskie CW MARS, a Rada Massachusetts komisarzy bibliotecznych z finansowaniem z Instytutu Muzeum i Biblioteki oraz Wspólnoty Massachusetts.</p>
+
+</div>
+<!-- The following <div> tag should be placed on the web page where the library would like the registration form to display -->
+<div id="eCARD" data-language="pl" data-branchid="[% ctx_org %]"></div>
+[% ELSE %]
+<p>
+[% l('Electronic card registration is not enabled for this library.') %]
+</p>
+[% END #IF %]
+</div>
+</div>
+[% END #WRAPPER %]
