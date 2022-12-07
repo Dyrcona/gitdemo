@@ -56,6 +56,13 @@
     </head>
     <body[% IF want_dojo; ' class="tundra"'; END %]>
         <h1 class="sr-only">[% l('Catalog') %]</h1>
+        [% IF !ctx.is_staff %]
+        <p style="text-align: center; background: white; font-size:20px;">
+          <strong style="color:red;">TRAINING SERVER - DO NOT USE FOR LIVE TRANSACTIONS</strong>
+          <br />
+          Library Patrons: <a href="https://catalog.cwmars.org/">Click Here for the live catalog.</a>
+        </p>
+        [% END %]
         [%#Each content page needs (at minimum) an <h2> describing the content%]
         [% content %] 
         <h2 class="sr-only">[% l('Additional Resources') %]</h2>
