@@ -43,9 +43,7 @@ RewriteRule ^/opac/extras/slimpac/advanced.html$ %{REQUEST_SCHEME}://%{HTTP_HOST
 OSRFGatewayConfig @sysconfdir@/opensrf_core.xml
 OSRFTranslatorConfig @sysconfdir@/opensrf_core.xml
 # Translator memcache server.  Default is localhost
-OSRFTranslatorCacheServer 192.168.1.70:11211
-OSRFTranslatorCacheServer 192.168.1.71:11211
-OSRFTranslatorCacheServer 192.168.1.98:11211
+OSRFTranslatorCacheServer 127.0.0.1:11211
 
 
 # ----------------------------------------------------------------------------------
