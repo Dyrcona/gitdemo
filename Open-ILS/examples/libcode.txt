@@ -72,6 +72,7 @@ hopedale.cwmars.org hopedale
 hopkinton.cwmars.org hopkinton
 hubbardstn.cwmars.org hubbardstn
 hudson.cwmars.org hudson
+huntington.cwmars.org huntington
 lancaster.cwmars.org lancaster
 lanesboro.cwmars.org lanesboro
 lee.cwmars.org lee
