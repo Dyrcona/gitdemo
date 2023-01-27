@@ -1,3 +1,5 @@
+-- No pager for reingest selects
+\pset pager off
 --Upgrade Script for 3.7.3 to 3.10.0
 \set eg_version '''3.10.0'''
 BEGIN;
