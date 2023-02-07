@@ -1088,8 +1088,7 @@ console.debug($scope.copy_alert_count);
                             'usr',
                             'workstation',
                             'checkin_workstation',
-                            'recurring_fine_rule',
-                            'circ_staff'
+                            'recurring_fine_rule'
                         ],
                         au : ['card']
                     },
