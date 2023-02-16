@@ -6,6 +6,8 @@ Git."
 
 ## Description
 
+TBD: A more detailed description, or just drop it?
+
 ## Getting Started
 
 ### Prerequisites
