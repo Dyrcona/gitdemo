@@ -12,6 +12,7 @@ athol.cwmars.org athol
 auburn.cwmars.org auburn
 ayer.cwmars.org ayer
 barre.cwmars.org barre
+becket.cwmars.org becket
 belchertwn.cwmars.org belchertwn
 bellingham.cwmars.org bellingham
 berlin.cwmars.org berlin
@@ -31,6 +32,7 @@ chcp-fair.cwmars.org chcp-fair
 chcp-fall.cwmars.org chcp-fall
 chcp-main.cwmars.org chcp-main
 cheshire.cwmars.org cheshire
+chester.cwmars.org chester
 chesterfld.cwmars.org chesterfld
 clarksburg.cwmars.org clarksburg
 conway.cwmars.org conway

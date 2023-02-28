@@ -13,6 +13,7 @@ athol 8
 auburn 12
 ayer 14
 barre 16
+becket 442
 belchertwn 162
 bellingham 18
 berlin 20
@@ -32,6 +33,7 @@ chcp-fair 172
 chcp-fall 173
 chcp-main 174
 cheshire 168
+chester 444
 chesterfld 170
 clarksburg 176
 clinton 178
