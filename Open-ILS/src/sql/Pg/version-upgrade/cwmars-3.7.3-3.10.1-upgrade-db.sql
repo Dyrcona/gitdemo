@@ -1,9 +1,9 @@
 -- No pager for reingest selects
 \pset pager off
---Upgrade Script for 3.7.3 to 3.10.0
-\set eg_version '''3.10.0'''
+--Upgrade Script for 3.7.3 to 3.10.1
+\set eg_version '''3.10.1'''
 BEGIN;
-INSERT INTO config.upgrade_log (version, applied_to) VALUES ('3.10.0', :eg_version);
+INSERT INTO config.upgrade_log (version, applied_to) VALUES ('3.10.1', :eg_version);
 
 SELECT evergreen.upgrade_deps_block_check('1260', :eg_version);
 
