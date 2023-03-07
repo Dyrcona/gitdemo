@@ -3,6 +3,9 @@
 Chacon, Scott and Ben Straub.  *Pro Git, Second Edition*.  New York:
 Apress, 2014.  [Available online.](https://git-scm.com/book/en/v2)
 
+DeVault, Drew.  *git rebase in depth*.  Retrieved: March 7, 2023.
+[https://git-rebase.io/](https://git-rebase.io/).
+
 git-scm.com.  *Git Reference*.  Retrieved: February 12, 2023.
 [https://git-scm.com/docs](https://git-scm.com/docs).
 
