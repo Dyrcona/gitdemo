@@ -20,3 +20,6 @@ git-scm.com.  *Git Reference*.  Retrieved: February 12, 2023.
 
 &mdash;&mdash;&mdash;.  "Quick Wins with Git."  Video.  Retrieved: February 12, 2023.
 [https://git-scm.com/video/quick-wins](https://git-scm.com/video/quick-wins)
+
+Loeliger, Jon and Matthew McCullough.  *Version Control with Git, 2nd
+Edition*. Sebastopol, CA: O'Reilly Media, 2012.
