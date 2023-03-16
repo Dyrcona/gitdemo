@@ -217,8 +217,8 @@ Once you are satisfied with your changes, run
 At this point, you will run the commands below in order to:
 
 1. Reset the commit pointer to the previous commit.  This loses the commit message and unstages the changed files so that you can make changes.
-2. Overwrite our changes to the `marc_export.in` file by checking out the file as it existed in the now current commit.
-3. Add all of the changed files to commited. This step is necessary because of the previous reset.
+2. Overwrite the changes to the `marc_export.in` file by checking out the file as it existed in the now current commit.
+3. Add all of the changed files to be commited. This step is necessary because of the previous reset.
 4. Commit the changed files.
 
 ```
