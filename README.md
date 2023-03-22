@@ -1,12 +1,19 @@
 # Git Demonstration Repository
 
 Demo repository for the Evergreen ILS 2023 pre-conference
-presentation: "(Almost) Everything You Always Wanted to Know About
-Git."
+presentation: *(Almost) Everything You Always Wanted to Know About
+Git.*
 
 ## Description
 
-TBD: A more detailed description, or just drop it?
+This repository conatains text and sample code branches to be used as
+part of the interactive presentation *(Almost) Everything You Always
+Wanted to Know About Git* at the
+[Evergreen ILS 2023 Conference](https://evergreen-ils.org/conference/2023-evergreen-international-conference/).
+
+You can use this repository to follow along during the presenation, to
+experiment with the commands, or to learn and practice Git with the
+text and examples provided.
 
 ## Getting Started
 
