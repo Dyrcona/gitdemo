@@ -2,13 +2,13 @@
 
 Here's an example of a somewhat complicated interactive rebase that I
 did recently.  I had a custom branch based on the Evergreen `rel_3_10`
-branch, with several backports and testing features, that I wanted to
+branch, with several back ports and testing features, that I wanted to
 rebase in order to refresh the code and to make some changes.  With
 this example rebase, you are going to:
 
 1. drop the custom database upgrade script
 2. undo a change to `marc_export.in` in the base commit
-3. fixup a bunch of later commits into the base commit
+3. fix up a bunch of later commits into the base commit
 4. cherry-pick the latest `marc_export` features from the master branch
 
 In a fresh clone of the gitdemo repository, run the following commands
@@ -201,7 +201,7 @@ p eda46923facdd678fdd45661009ef6073855db84
 ```
 
 After you save the changes and close your editor, something like the
-folowing text will show on your screen.
+following text will show on your screen.
 
 <pre>
 Stopped at afc72b28aa...  Forward Port CW MARS Legacy Customization
@@ -218,7 +218,7 @@ At this point, you will run the commands below in order to:
 
 1. Reset the commit pointer to the previous commit.  This loses the commit message and unstages the changed files so that you can make changes.
 2. Overwrite the changes to the `marc_export.in` file by checking out the file as it existed in the now current commit.
-3. Add all of the changed files to be commited. This step is necessary because of the previous reset.
+3. Add all of the changed files to be committed. This step is necessary because of the previous reset.
 4. Commit the changed files.
 
 ```

@@ -6,12 +6,12 @@ Git.*
 
 ## Description ##
 
-This repository conatains text and sample code branches to be used as
+This repository contains text and sample code branches to be used as
 part of the interactive presentation *(Almost) Everything You Always
 Wanted to Know About Git* at the
 [Evergreen ILS 2023 Conference](https://evergreen-ils.org/conference/2023-evergreen-international-conference/).
 
-You can use this repository to follow along during the presenation, to
+You can use this repository to follow along during the presentation, to
 experiment with the commands, or to learn and practice Git with the
 text and examples provided.
 
@@ -22,7 +22,7 @@ text and examples provided.
 You will need [Git](https://git-scm.com/), obviously.
 
 An account with [GitHub](https://github.com/) will help, but is not
-essential.  If you don't have one, you can [signup
+essential.  If you don't have one, you can [sign up
 here](https://github.com/signup?ref_cta=Sign+up&ref_page=%2F&source=header-home).
 
 The command line examples in this demo were performed on GNU/Linux,
