@@ -34,7 +34,7 @@ and clone your fork.
 ## Authors
 
 [Jason Stephenson](https://www.sigio.com/) is responsible for most of
-the code here.
+the content here.
 
 ## Licenses
 
