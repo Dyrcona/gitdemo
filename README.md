@@ -40,6 +40,13 @@ You can clone this repository directly using the following command:
 or, you may [fork this repository on GitHub](https://docs.github.com/en/get-started/quickstart/fork-a-repo),
 and clone your fork.
 
+## Using This Repository ##
+
+This repository contains text files and code branches that are
+intended to work together to teach certain key concepts of using Git.
+You should [start here](Start.md) if you are new to Git or want to
+begin at the beginning.
+
 ## Authors ##
 
 [Jason Stephenson](https://www.sigio.com/) is responsible for most of
