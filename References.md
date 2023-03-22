@@ -1,4 +1,4 @@
-# References
+# References #
 
 Chacon, Scott and Ben Straub.  *Pro Git, Second Edition*.  New York:
 Apress, 2014.  [Available online.](https://git-scm.com/book/en/v2)

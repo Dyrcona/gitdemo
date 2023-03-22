@@ -1,4 +1,4 @@
-# Interactive Rebase Example
+# Interactive Rebase Example #
 
 Here's an example of a somewhat complicated interactive rebase that I
 did recently.  I had a custom branch based on the Evergreen `rel_3_10`

@@ -1,10 +1,10 @@
-# Git Demonstration Repository
+# Git Demonstration Repository #
 
 Demo repository for the Evergreen ILS 2023 pre-conference
 presentation: *(Almost) Everything You Always Wanted to Know About
 Git.*
 
-## Description
+## Description ##
 
 This repository conatains text and sample code branches to be used as
 part of the interactive presentation *(Almost) Everything You Always
@@ -15,9 +15,9 @@ You can use this repository to follow along during the presenation, to
 experiment with the commands, or to learn and practice Git with the
 text and examples provided.
 
-## Getting Started
+## Getting Started ##
 
-### Prerequisites
+### Prerequisites ###
 
 You will need [Git](https://git-scm.com/), obviously.
 
@@ -31,7 +31,7 @@ any environment that offers a command line interface to git.  If you
 use a different version of git, some of the command line options may
 not work, or there may be different ways of doing some of the steps.
 
-### Installing
+### Installing ###
 
 You can clone this repository directly using the following command:
 
@@ -40,12 +40,12 @@ You can clone this repository directly using the following command:
 or, you may [fork this repository on GitHub](https://docs.github.com/en/get-started/quickstart/fork-a-repo),
 and clone your fork.
 
-## Authors
+## Authors ##
 
 [Jason Stephenson](https://www.sigio.com/) is responsible for most of
 the content here.
 
-## Licenses
+## Licenses ##
 
 The text documents in this repository, i.e. the Markdown files, are
 licensed under a [Creative Commons Attribution-ShareAlike 4.0
@@ -58,7 +58,7 @@ License, version
 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), or, at
 your option, any later version of the [GNU General Public License](https://www.gnu.org/licenses/licenses.html#GPL).
 
-## Acknowledgments
+## Acknowledgments ##
 
 See the [References](References.md) for more information.
 
