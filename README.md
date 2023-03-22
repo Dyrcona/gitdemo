@@ -47,8 +47,16 @@ the content here.
 
 ## Licenses
 
-TBD: Some kind of CC license for the text and command lists.  Some
-code in the example branches are under different licenses.
+The text documents in this repository, i.e. the Markdown files, are
+licensed under a [Creative Commons Attribution-ShareAlike 4.0
+International
+License](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The [Evergreen ILS](https://evergreen-ils.org/) code samples included in, or pulled into, this
+repository are licensed under the terms of the [GNU General Public
+License, version
+2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html), or, at
+your option, any later version of the [GNU General Public License](https://www.gnu.org/licenses/licenses.html#GPL).
 
 ## Acknowledgments
 
