@@ -26,7 +26,7 @@ essential.  If you don't have one, you can [signup
 here](https://github.com/signup?ref_cta=Sign+up&ref_page=%2F&source=header-home).
 
 The command line examples in this demo were performed on GNU/Linux,
-specifically Ubuntu 20.04, with Git version 2.25.1 but should work in
+specifically Ubuntu 20.04, with git version 2.25.1 but should work in
 any environment that offers a command line interface to git.  If you
 use a different version of git, some of the command line options may
 not work, or there may be different ways of doing some of the steps.
