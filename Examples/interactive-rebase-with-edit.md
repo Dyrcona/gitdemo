@@ -232,7 +232,7 @@ At this point, you will run the commands below in order to:
 git reset HEAD^
 git checkout HEAD -- Open-ILS/src/support-scripts/marc_export.in
 git add .
-git commit --date="Wed Dec 7 14:52:57 2022 -0500"
+git commit --date="Wed Dec 7 14:52:57 2022 -0500" --author="Jason Stephenson <jason@sigio.com>"
 ```
 
 When your editor opens with a blank screen for a commit message, you
@@ -242,9 +242,15 @@ above or below it.  It might also be a good idea to run a spell check
 on the commit message body to fix any typos in the original message.
 There are a few of these.
 
-Note that you also used the `--date` option to set the commit date
-back to the original.  This is purely optional and depends on how much
-of a stickler you are regarding history, dates, and order.
+Note that you also used the `--date` and `--author` options to
+preserve the original values from the edited commit.  This is optional
+when dealing with your own commits in your own repositories.  It is a
+courteous thing to do when you are editing someone else's commit.
+
+The `--author` option sets only the "Author" field in the commit log.
+The "Commit" field will be set to your name and email address when you
+follow these instructions exactly.  You can see this by doing `git log
+--pretty=fuller`.
 
 Once you save the changes and close your editor, the commit will be
 done, but the rebase is not finished.  Typing the following command
