@@ -47,6 +47,17 @@ intended to work together to teach certain key concepts of using Git.
 You should [start here](Start.md) if you are new to Git or want to
 begin at the beginning.
 
+This branch, `main`, is intended to serve as the text tutorial.  The
+author recommends that you read it on
+[GithHub](https://github.com/Dyrcona/gitdemo/tree/main) and work in a
+local clone of the repository.
+
+The other branches in this repository are to be used as directed in
+the examples and text of the tutorial.  They contain code and other
+data that are not directly part of the Git demonstration.  They are
+used to illustrate the concepts and provide material for exercises.
+Feel free to experiment with these branches as you gain proficiency.
+
 ## Authors ##
 
 [Jason Stephenson](https://www.sigio.com/) is responsible for most of
