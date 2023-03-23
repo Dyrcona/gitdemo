@@ -238,10 +238,13 @@ git commit --date="Wed Dec 7 14:52:57 2022 -0500"
 When your editor opens with a blank screen for a commit message, you
 want to paste in the previous message, but remove the line that reads
 "LP1940662: Add a --pipe option to marc_export" as well as the line
-above or below it.  Note that you also used the `--date` option to set
-the commit date back to the original.  This is purely optional and
-depends on how much of a stickler you are regarding history, dates,
-and order.
+above or below it.  It might also be a good idea to run a spell check
+on the commit message body to fix any typos in th eoriginal message.
+There are a few of these.
+
+Note that you also used the `--date` option to set the commit date
+back to the original.  This is purely optional and depends on how much
+of a stickler you are regarding history, dates, and order.
 
 Once you save the changes and close your editor, the commit will be
 done, but the rebase is not finished.  Typing the following command
