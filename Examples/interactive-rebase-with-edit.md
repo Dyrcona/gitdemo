@@ -239,7 +239,7 @@ When your editor opens with a blank screen for a commit message, you
 want to paste in the previous message, but remove the line that reads
 "LP1940662: Add a --pipe option to marc_export" as well as the line
 above or below it.  It might also be a good idea to run a spell check
-on the commit message body to fix any typos in th eoriginal message.
+on the commit message body to fix any typos in the original message.
 There are a few of these.
 
 Note that you also used the `--date` option to set the commit date
