@@ -216,7 +216,7 @@ External commands
 
 Notice the external command `cwcommit` listed at the bottom.  This is
 a local command that the author added to use certain options when
-committing files.  It has not help available.
+committing files.  It has no help available.
 
 If you want help with particular Git concepts, then run `git help -g`.
 
