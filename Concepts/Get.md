@@ -11,7 +11,7 @@ Download links for specific operating systems are listed below.
 
 [Microsoft Windows](https://git-scm.com/download/windows)
 
-You may also install Git via source code if you prefer.  You may
+You may also install Git via source code if you prefer.  You can
 download a [code
 archive](https://www.kernel.org/pub/software/scm/git/git-2.40.0.tar.gz)
 or [check Git out via git](https://github.com/git/git).
