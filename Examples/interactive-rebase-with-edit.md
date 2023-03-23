@@ -27,9 +27,16 @@ original in case something goes horribly wrong.
 git checkout -b local/custom_rel_3_10-rebase local/custom_rel_3_10
 ```
 
-Save the commit message for afc72b28aaed9fe2f20de6419de32c83d5044aa7 to be edited and reused.
+Save the commit message for afc72b28aaed9fe2f20de6419de32c83d5044aa7 to be edited and reused:
 
 ```
+git log -1 afc72b28aaed9fe2f20de6419de32c83d5044aa7
+```
+
+Save the output (shown below) to a file or copy and paste it into your
+text editor because you will use it later.
+
+<p><code>
 commit afc72b28aaed9fe2f20de6419de32c83d5044aa7
 Author: Jason Stephenson <jason@sigio.com>
 Date:   Wed Dec 7 14:52:57 2022 -0500
@@ -129,7 +136,7 @@ Date:   Wed Dec 7 14:52:57 2022 -0500
     Enable HTTPS rewrite for all URLs
     
     Add OCLC Cloud IP addresses to marc_stream_importer configuration
-```
+</code></p>
 
 Now that you have saved at least the commit message body to a file,
 you can start the interactive rebase:
