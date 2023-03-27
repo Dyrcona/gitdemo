@@ -15,16 +15,16 @@ In a fresh clone of the gitdemo repository, run the following commands
 to get the branches that you need.
 
 ```
-git fetch origin local/custom_rel_3_10:local/custom_rel_3_10
+git fetch origin evergreen/custom_rel_3_10:evergreen/custom_rel_3_10
 git fetch git://git.evergreen-ils.org/Evergreen.git rel_3_10:evergreen/rel_3_10
 git fetch git://git.evergreen-ils.org/Evergreen.git master:evergreen/master
 ```
 
-Checkout a copy of the `local/custom_rel_3_10` branch to preserve the
+Checkout a copy of the `evergreen/custom_rel_3_10` branch to preserve the
 original in case something goes horribly wrong.
 
 ```
-git checkout -b local/custom_rel_3_10-rebase local/custom_rel_3_10
+git checkout -b evergreen/custom_rel_3_10-rebase evergreen/custom_rel_3_10
 ```
 
 Save the commit message for afc72b28aaed9fe2f20de6419de32c83d5044aa7 to be edited and reused:
