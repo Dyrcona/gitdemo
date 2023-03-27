@@ -232,7 +232,7 @@ At this point, you will run the commands below in order to:
 git reset HEAD^
 git checkout HEAD -- Open-ILS/src/support-scripts/marc_export.in
 git add .
-git commit --date="Wed Dec 7 14:52:57 2022 -0500" --author="Jason Stephenson <jason@sigio.com>"
+git commit --date="Wed Dec 7 14:52:57 2022 -0500" --author="Jason Stephenson <jstephenson@cwmars.org>"
 ```
 
 When your editor opens with a blank screen for a commit message, you
