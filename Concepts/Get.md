@@ -16,7 +16,7 @@ download a [code
 archive](https://www.kernel.org/pub/software/scm/git/git-2.40.0.tar.gz)
 or [check Git out via git](https://github.com/git/git).
 
-If you are more interested in GUI interfaces not covered by this
+If you are interested in GUI interfaces not covered by this
 tutorial/demo, then have a look here:
 
 [GUI Clients for Git](https://git-scm.com/downloads/guis)
