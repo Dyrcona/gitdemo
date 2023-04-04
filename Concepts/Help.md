@@ -238,14 +238,7 @@ Developer-facing file formats, protocols and other interfaces
    protocol-http           Git HTTP-based protocols
    protocol-pack           How packs are transferred over-the-wire
    protocol-v2             Git Wire Protocol, Version 2
-
-External commands
-   cwcommit
 </pre>
-
-Notice the external command `cwcommit` listed at the bottom.  This is
-a local command that the author added to use certain options when
-committing files.  It has no help available.
 
 If you want help with particular Git concepts, then run `git help -g`.
 
