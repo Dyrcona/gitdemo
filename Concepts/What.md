@@ -15,7 +15,7 @@ and managing changes to data over time. Some examples of VCS include:
 
 Each of the above methods has its advantages, disadvantages, and area
 of applicability.  Numbers 1 through 3 are the most generally
-applicable to a wide ranged of data, and they are listed in order from
+applicable to a wide range of data, and they are listed in order from
 least to most advantageous, at least in the author's opinion.  Numbers
 4 and 5 are more narrowly applicable to specific software applications,
 but are certainly worth including in this list.
