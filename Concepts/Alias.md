@@ -9,31 +9,80 @@ An alias takes the form of `alias.[alias-name] [subcommand with
 options]`. The `alias-name` becomes an alias (or shortcut) to execute
 the existing `subcommand with options`.
 
-Below is an example from *Version Control with Git, 2nd Edition* by
-Jon Loeliger and Matthew McCullough that has proven useful to others.
+Below is an example that I have found useful because I often want to
+see the current branch's history in as compact a form as possible:
 
 ```
-git config --global alias.show-graph \
-    'log --graph --abbrev-commit --pretty=oneline'
+git config --global alias.brief \
+    'log --abbrev-commit --pretty=oneline'
 ```
 
-Once you have run the above command, git will actually do `git log
---graph --abbrev-commit --pretty=oneline` whenever you type `git
-show-graph`.
+We have to quote the `subcommand with options` when adding the alias
+via the command line, particularly via a shell on Linux or some
+similar operating system.  I use single quotes in the examples here,
+but double quotes would also work.  You have to follow the quoting
+conventions of whatever shell you use.
+
+If you add the alias directly to the git config file, then you do not
+have to quote the subcommand and options.  For instance, the `brief`
+alias looks like the following when it is the first one in the config
+file:
+
+<pre>
+[alias]
+	brief = log --abbrev-commit --pretty=oneline
+</pre>
+
+Once you have added the alias, git will actually do `git log
+--abbrev-commit --pretty=oneline` whenever you type `git brief`.
 
 Since the alias is a shortcut for another git subcommand, you can also
 give it any other options accepted by the subcommand.  For example, if
-you always want to sign-off on your commits for Evergreen, since this
-is the community policy for accepting code submissions via commit, you
-might want to add the following alias to your Evergreen and OpenSRF
-repositories:
+you want to add the merge graph to the above compact representation,
+you can run:
 
-    git config alias.egcommit 'commit -s'
+    git brief --graph
 
-You can now use this just like the regular commit subcommand.  All of
-the following will still work:
+If you want to find the commit that added a certain file or directory,
+this will serve the purpose:
 
-```
-git egcommit -a
-git egcommit {filename}
-```
+    git brief --reverse -- path/to/file
+    
+The above will produce the brief log output in reverse order for the
+given file.
+
+You can pass any other options of the `git log` subcommand to the `git
+brief` alias and they will work as appropriate.  Naturally, you won't
+to add any contradictory options as they may not work as expected.
+
+If you always want to add "Signed-off-by:" to your commits, then you
+might add:
+
+    git config --global alias.cs 'commit -s'
+
+You could do likewise for `cherry-pick`:
+
+    git config --global alias.ps 'cherry-pick -s'
+
+If you work on one project in particular that has a policy of
+requiring "Signed-off-by:" then you might add those just to that
+project's repositories by omitting the `--global` flag.
+
+For instance many cryptocurrency projects require a cryptographic
+signature on all submitted commits, so if you work on such projects,
+then you might add the following to those repositories:
+
+    git config alias.csign 'commit -S'
+
+You can, of course, name these aliases anyway you like, etc.
+
+If you find yourself running the same subcommand with the same options
+quite often, consider adding an alias to save yourself time in the
+future.
+
+If you ever want to remove an alias, you can do so with the `--unset`
+option to `git config` as if it were any other configuration setting:
+
+    git config --global --unset alias.brief
+
+for example.
