@@ -14,6 +14,8 @@
 
 ## Advanced Concepts ##
 
+[Subcommand Aliases](Concepts/Alias.md)
+
 [Git External Commands](Concepts/External.md)
 
 ## Examples ##
