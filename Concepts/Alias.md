@@ -47,7 +47,7 @@ If you want to find the commit that added a certain file or directory,
 this will serve the purpose:
 
     git brief --reverse -- path/to/file
-    
+
 The above will produce the brief log output in reverse order for the
 given file.
 
