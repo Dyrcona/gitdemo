@@ -248,7 +248,7 @@ unset:
 
     git config --unset include.path '^foo.inc$'
 
-The above will unset only the latest one that we add matching 'foo.inc':
+The above will unset only the one matching 'foo.inc':
 
 <pre>
 [include]
