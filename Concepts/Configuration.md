@@ -143,21 +143,21 @@ manipulate configuration values.
 ### Synopsis ###
 
 <pre>
-       git config [<file-option>] [--type=<type>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] <name> [<value> [<value-pattern>]]
-       git config [<file-option>] [--type=<type>] --add <name> <value>
-       git config [<file-option>] [--type=<type>] [--fixed-value] --replace-all <name> <value> [<value-pattern>]
-       git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get <name> [<value-pattern>]
-       git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get-all <name> [<value-pattern>]
-       git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--name-only] --get-regexp <name-regex> [<value-pattern>]
-       git config [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch <name> <URL>
-       git config [<file-option>] [--fixed-value] --unset <name> [<value-pattern>]
-       git config [<file-option>] [--fixed-value] --unset-all <name> [<value-pattern>]
-       git config [<file-option>] --rename-section <old-name> <new-name>
-       git config [<file-option>] --remove-section <name>
-       git config [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list
-       git config [<file-option>] --get-color <name> [<default>]
-       git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]
-       git config [<file-option>] -e | --edit
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] &lt;name&gt; [&lt;value&gt; [&lt;value-pattern&gt;]]
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] --add &lt;name&gt; &lt;value&gt;
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [--fixed-value] --replace-all &lt;name&gt; &lt;value&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get &lt;name&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get-all &lt;name&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--name-only] --get-regexp &lt;name-regex&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] [--type=&lt;type&gt;] [-z|--null] --get-urlmatch &lt;name&gt; &lt;URL&gt;
+       git config [&lt;file-option&gt;] [--fixed-value] --unset &lt;name&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] [--fixed-value] --unset-all &lt;name&gt; [&lt;value-pattern&gt;]
+       git config [&lt;file-option&gt;] --rename-section &lt;old-name&gt; &lt;new-name&gt;
+       git config [&lt;file-option&gt;] --remove-section &lt;name&gt;
+       git config [&lt;file-option&gt;] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list
+       git config [&lt;file-option&gt;] --get-color &lt;name&gt; [&lt;default&gt;]
+       git config [&lt;file-option&gt;] --get-colorbool &lt;name&gt; [&lt;stdout-is-tty&gt;]
+       git config [&lt;file-option&gt;] -e | --edit
 </pre>
 
 ### Specifying Variable Names ###
