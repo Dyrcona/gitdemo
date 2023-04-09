@@ -59,6 +59,9 @@ A global configuration might look something like this:
 	defaultBranch = main
 [include]
 	path = ~/CWMARS/utilities/gitconfig
+[merge]
+	tool = emerge
+	guitool = emerge
 </pre>
 
 The global scope is set via the `--global` file option to `git config`.
@@ -288,6 +291,8 @@ alias.brief=log --abbrev-commit --pretty=oneline
 init.defaultbranch=main
 include.path=~/CWMARS/utilities/gitconfig
 alias.cwcommit=-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit
+merge.tool=emerge
+merge.guitool=emerge
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
