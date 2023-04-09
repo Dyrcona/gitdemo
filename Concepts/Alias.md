@@ -12,10 +12,10 @@ the existing `subcommand with options`.
 Below is an example that I have found useful because I often want to
 see the current branch's history in as compact a form as possible:
 
-```
-git config --global alias.brief \
+
+    git config --global alias.brief \
     'log --abbrev-commit --pretty=oneline'
-```
+
 
 We have to quote the `subcommand with options` when adding the alias
 via the command line, particularly via a shell on Linux or some
@@ -68,17 +68,12 @@ If you work on one project in particular that has a policy of
 requiring "Signed-off-by:" then you might add those just to that
 project's repositories by omitting the `--global` flag.
 
-For instance many cryptocurrency projects require a cryptographic
-signature on all submitted commits, so if you work on such projects,
-then you might add the following to those repositories:
+Aliases do not have to begin with a subcommand.  You can begin them
+with options to the `git` command.  For instance, the author has an
+alias to run `commit` with a specific email address:
 
-    git config alias.csign 'commit -S'
-
-You can, of course, name these aliases anyway you like, etc.
-
-If you find yourself running the same subcommand with the same options
-quite often, consider adding an alias to save yourself time in the
-future.
+    git config --global alias.cwcommit \
+    '-c autor.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit'
 
 If you ever want to remove an alias, you can do so with the `--unset`
 option to `git config` as if it were any other configuration setting:
