@@ -121,12 +121,24 @@ The worktree scope is set via the `--worktree` file option to `git config`.
 
 ### The --file Option ###
 
-You can specify that git read configuration from, or write to, a
-specific file using the `--file <filename>` option.  Git will not
-automatically read configuration options from this file when running
-commands, so it is rarely used.  The `--file` option might be most
-useful when creating files to include in other configurations or to
-share with others.
+You can specify that `git config` read configuration from, or write
+to, a specific file using the `--file <filename>` option.  Git will
+not automatically read configuration options from this file when
+running commands, so it is rarely used.  The `--file` is useful when
+creating files to include in other configurations or to share with
+others.
+
+Here is an example of such a file that the author uses:
+
+<pre>
+[alias]
+	cwcommit = -c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit
+</pre>
+
+The above could be created like so:
+
+    git config --file=/path/to/file alias.cwcommit \
+    '-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit'
 
 ## Command Line Override ##
 
