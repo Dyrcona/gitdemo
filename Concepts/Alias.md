@@ -73,7 +73,7 @@ with options to the `git` command.  For instance, the author has an
 alias to run `commit` with a specific email address:
 
     git config --global alias.cwcommit \
-    '-c autor.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit'
+    '-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit'
 
 If you ever want to remove an alias, you can do so with the `--unset`
 option to `git config` as if it were any other configuration setting:
