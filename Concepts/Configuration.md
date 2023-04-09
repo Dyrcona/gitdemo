@@ -57,11 +57,11 @@ A global configuration might look something like this:
 	brief = log --abbrev-commit --pretty=oneline
 [init]
 	defaultBranch = main
-[include]
-	path = ~/CWMARS/utilities/gitconfig
 [merge]
 	tool = emerge
 	guitool = emerge
+[include]
+	path = ~/CWMARS/utilities/gitconfig
 </pre>
 
 The global scope is set via the `--global` file option to `git config`.
@@ -376,21 +376,18 @@ user.signingkey=73C4C35C7E2B970ACC679A4CD8800BE5008CB35A
 core.autocrlf=input
 alias.brief=log --abbrev-commit --pretty=oneline
 init.defaultbranch=main
-include.path=~/CWMARS/utilities/gitconfig
-alias.cwcommit=-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit
 merge.tool=emerge
 merge.guitool=emerge
+include.path=~/CWMARS/utilities/gitconfig
+alias.cwcommit=-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 remote.origin.url=git@github.com:Dyrcona/gitdemo.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
 branch.main.remote=origin
 branch.main.merge=refs/heads/main
-user.email=jason@sigio.com
 </pre>
 
 You can also limit the output using an appropriate file option, such
