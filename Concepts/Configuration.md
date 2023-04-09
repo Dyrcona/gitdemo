@@ -150,6 +150,81 @@ initialized with the default branch named "dev" instead of "main."
 
     git -c init.defaultBranch=devel init testrepo
 
+## Including Other Configuration Files ##
+
+As demonstrated in previous examples, `gitconfig` files may include
+configuration from other files.  The values from included files are
+added where the include sections appear in the file that does the
+inclusion.  If you are using includes to override previous settings,
+then you may want to edit your `gitconfig` files by hand so that the
+include sections are at the bottom.  Multiple files may be included at
+once, and their inclusion may depend on certain conditions using the
+`includeif` section directive.
+
+We have already seen examples of using the `include` directive to
+unconditionally include the contents of other configuration files, so
+we will skip over that and discuss the more interesting `includeif`
+which allows the user to control when configuration from external
+files is used.
+
+The `includeif` directive can be used to limit the inclusion of
+additional configuration depending upon the location of the `gitdir`,
+the name of the currently checked out branch, or the value of a remote
+URL.
+
+For instance,
+
+<pre>
+[includeif "gitdir:/path/to/group"]
+	path = /path/to/group.inc
+</pre>
+
+includes the `/path/to/group.inc` configuration file if the path to
+the current repository begins with `/path/to/group`.  This allows you
+to have some common configuration options for all of the repositories
+under a given directory hierarchy perhaps because these repositories
+are related to the same project.
+
+The matching for `gitdir:` is case sensitive.  There is a
+corresponding `gitdiri:` that matches the patch without regard to
+case.
+
+Using `[includeif "onbranch:branch-name"]` allows the conditional
+inclusion of configuration for branches that match the "branch-name"
+pattern.  This is useful if you organize your branches in such a way
+that you want to use different configuration for them.  For instance,
+the author's `cwcommit` alias could be replaced with the following
+configuration:
+
+<pre>
+[user]
+	email = jstephenson@cwmars.org
+</pre>
+
+The following could then be added to the global or other `gitconfig`
+to change the `user.email` whenever a branch whose name begins with
+`cwmars/` is checked out:
+
+<pre>
+[includeif "onbranch:cwmars/**"]
+	path = ~/CWMARS/utilities/gitconfig
+</pre>
+
+The above would make the alias unnecessary but limits the automatic
+change in email addresses to only certain branches.  The author has
+not chosen to do this because the alias is more flexible.
+
+Using `hasconfig:remote.*.url:` limits the inclusion of configuration
+to repositories when one or more branches come from certain remote
+hosts.  For instance, you could include configuration that only
+applies to local repositories originating from GitHub: `[includeif
+"hasconfig:remote.*.url:github.com"]`.  This particular directive
+might be most useful in a system or global configuration.
+
+The `includeif` directives use a special form of pattern matching.
+For more information, [see the official
+documentation](https://git-scm.com/docs/git-config#_conditional_includes).
+
 ## git config ##
 
 The `git config` subcommand is used to view and to manipulate
