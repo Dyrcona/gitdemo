@@ -3,11 +3,11 @@
 If you ever get stuck, you can run `git help` to get help with git.
 
 <pre>
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envvar>] <command> [<args>]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           [--config-env=&lt;name&gt;=&lt;envvar&gt;] &lt;command&gt; [&lt;args&gt;]
 
 These are common Git commands used in various situations:
 
@@ -44,7 +44,7 @@ collaborate (see also: git help workflows)
    push      Update remote refs along with associated objects
 
 'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
+concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 </pre>
@@ -53,7 +53,7 @@ To see the list of all of the subcommands available in your
 installation, you can run `git help -a`.
 
 <pre>
-See 'git help <command>' to read about a specific subcommand
+See 'git help &lt;command&gt;' to read about a specific subcommand
 
 Main Porcelain Commands
    add                     Add file contents to the index
@@ -259,7 +259,7 @@ The Git concept guides are:
    workflows        An overview of recommended workflows with Git
 
 'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
+concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 </pre>
