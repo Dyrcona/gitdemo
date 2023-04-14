@@ -72,7 +72,7 @@ Aliases do not have to begin with a subcommand.  You can begin them
 with options to the `git` command.  For instance, the author has an
 alias to run `commit` with a specific email address:
 
-    git config --global alias.cwcommit \
+    git config alias.cwcommit \
     '-c author.email=jstephenson@cwmars.org -c committer.email=jstephenson@cwmars.org commit'
 
 If you ever want to remove an alias, you can do so with the `--unset`
