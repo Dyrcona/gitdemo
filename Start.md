@@ -18,8 +18,10 @@
 
 [Git External Subcommands](Concepts/External.md)
 
-[Using Git with Evergreen](https://wiki.evergreen-ils.org/doku.php?id=dev:git)
+[Using Git with Evergreen](Evergreen.md)
 
 ## Examples ##
 
 [A Moderately Complicated Interactive Rebase With a Commit Edit](Examples/interactive-rebase-with-edit.md)
+
+[A script using git to help manage Evergreen Override Directories](Examples/overridinator)

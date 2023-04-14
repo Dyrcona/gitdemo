@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# ---------------------------------------------------------------
+# Copyright © 2023 Jason J.A. Stephenson <jason@sigio.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# ---------------------------------------------------------------
+
+fromrev="${1}"
+otag="${2}"
+
+overridinate () {
+    local tofile=$(echo "${1}" | sed -e "s/${2}/${2}${otag}/")
+    local todir="${tofile%/*}"
+    if [ ! -e "${todir}" ]; then
+        mkdir -p "${todir}"
+    fi
+    echo "Relocating ${1} to ${tofile}"
+    git show "${fromrev}:${1}" > "${tofile}"
+}
+
+usage () {
+    cat <<END
+
+Usage:
+${0##*/} <fromrevision> <overridetag>
+
+Use this program to copy custom Evergreen templates from another
+branch into the current branch.
+
+<fromrevision> is another branch or other git revision containing the
+modified templates in their original location.
+
+<overridetag> is a string to add to the templates and
+templates-bootstrap directory names for the overrides.
+
+Example:
+    overridinator rel_3_10-custom _custom
+
+The above will copy the modified templates and bootstrap templates
+from Open-ILS/src/templates and Open-ILS/src/templates-bootstrap in
+the rel_3_10-custom branch to Open-ILS/src/templates_custom and
+Open-ILS/src/templates-bootstrap_custom in the currently checked out
+branch.
+
+NB: MARC templates are skipped.  The assumption is that you put these
+in the "normal" location and do not override them.
+END
+}
+
+if [ "${1}" = "" ]; then
+    echo "From revision, first argument, required."
+    usage
+    exit 1
+fi
+
+if [ "${2}" = "" ]; then
+    echo "Override tag, second argument, required."
+    usage
+    exit 1
+fi
+
+for fromfile in $(git diff --name-only ${fromrev} -- Open-ILS/src/templates | sed -e '/\/marc\//d')
+do
+    overridinate "${fromfile}" "templates"
+done
+
+for fromfile in $(git diff --name-only ${fromrev} -- Open-ILS/src/templates-bootstrap)
+do
+    overridinate "${fromfile}" "bootstrap"
+done
