@@ -18,7 +18,7 @@
 
 [Git External Subcommands](Concepts/External.md)
 
-[Using Git with Evergreen](Evergreen.md)
+[Using Git with Evergreen](Concepts/Evergreen.md)
 
 ## Examples ##
 
