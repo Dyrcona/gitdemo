@@ -84,5 +84,5 @@ whatever is appropriate for your situation.
 
 Given that manually editing long lists of files is error prone, even
 with the assistance of editor features, you could just run the
-[overridinator script](Examples/overridinator) that the author has
+[overridinator script](../Examples/overridinator) that the author has
 prepared for this purpose.
