@@ -8,6 +8,8 @@
 
 [Getting Help](Concepts/Help.md)
 
+[Understanding How Git Works](Concepts/Understanding.md)
+
 ## Getting Started ##
 
 [Configuration](Concepts/Configuration.md)
