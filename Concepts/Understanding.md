@@ -46,8 +46,8 @@ binary data, filesystem metadata, and commits.  These objects are
 organized in the `objects` subdirectory of the git directory in the
 repository.
 
-For more complete documentation of Git objects see [Git Objects in Pro
-Git](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
+For more complete documentation of Git objects see [Git Internals -
+Git Objects in Pro Git](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
 
 ### blob ###
 
@@ -136,3 +136,6 @@ repository, or if you run `git gc` or `git repack` manually.
 An understanding of packfiles is not strictly necessary for daily
 usage of Git.  However, if you go poking around in the nonpublic areas
 of a git repository, you may see them.
+
+For more information on Git packfiles see [Git Internals - Packfiles
+in Pro Git](https://git-scm.com/book/en/v2/Git-Internals-Packfiles).
