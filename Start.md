@@ -8,19 +8,19 @@
 
 [Getting Help](Concepts/Help.md)
 
-[Understanding How Git Works](Concepts/Understanding.md)
-
-## Getting Started ##
+## Basic Git Usage ##
 
 [Configuration](Concepts/Configuration.md)
 
+[Using Git with Evergreen](Concepts/Evergreen.md)
+
 ## Advanced Concepts ##
+
+[Understanding How Git Works](Concepts/Understanding.md)
 
 [Subcommand Aliases](Concepts/Alias.md)
 
 [Git External Subcommands](Concepts/External.md)
-
-[Using Git with Evergreen](Concepts/Evergreen.md)
 
 ## Examples ##
 
