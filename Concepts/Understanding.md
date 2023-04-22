@@ -96,6 +96,27 @@ of the commit that represents the top of the branch.
 Branch refs will change as commits are added or modified on the
 branch.
 
+#### HEAD ####
+
+A special reference called `HEAD` exists in the root of the `gitdir`,
+usually `.git/HEAD`.  This reference refers to the top commit of the
+currently checked out branch, also known as the head of the branch.
+With the main branch of this repository checked out, it looks like
+this:
+
+    ref: refs/heads/main
+
+It normally references another branch reference in the `heads`
+directory.  When it references a commit directly, you are working in a
+"detached HEAD" state. Git will inform you when your work enters this
+state.  This sometimes occurs by accident, and you normally fix it by
+switching to an actual branch.
+
+The detached head state can be useful for making experimental changes,
+testing them locally, and committing them.  If you decide that you
+want to keep these changes it is advisable to create a new branch
+based on your current state.
+
 ### remotes ###
 
 References to remote repository branches are stored in the
