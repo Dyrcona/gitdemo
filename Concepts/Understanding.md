@@ -112,10 +112,11 @@ directory.  When it references a commit directly, you are working in a
 state.  This sometimes occurs by accident, and you normally fix it by
 switching to an actual branch.
 
-The detached head state can be useful for making experimental changes,
-testing them locally, and committing them.  If you decide that you
-want to keep these changes it is advisable to create a new branch
-based on your current state.
+The detached HEAD state is most useful when using `git rebase`.  By
+forcing this state while editing a commit, you can modify the changes
+made in a commit and add additional commits to a branch.  An example
+of using detached HEAD to remove a change from a commit is available
+[here](../Examples/interactive-rebase-with-edit.md).
 
 ### remotes ###
 
