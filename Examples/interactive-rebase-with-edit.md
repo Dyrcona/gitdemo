@@ -14,24 +14,18 @@ this example rebase, you are going to:
 In a fresh clone of the gitdemo repository, run the following commands
 to get the branches that you need.
 
-```
-git fetch origin evergreen/custom_rel_3_10:evergreen/custom_rel_3_10
-git fetch git://git.evergreen-ils.org/Evergreen.git rel_3_10:evergreen/rel_3_10
-git fetch git://git.evergreen-ils.org/Evergreen.git master:evergreen/master
-```
+    git fetch origin evergreen/custom_rel_3_10:evergreen/custom_rel_3_10
+    git fetch git://git.evergreen-ils.org/Evergreen.git rel_3_10:evergreen/rel_3_10
+    git fetch git://git.evergreen-ils.org/Evergreen.git master:evergreen/master
 
 Checkout a copy of the `evergreen/custom_rel_3_10` branch to preserve the
 original in case something goes horribly wrong.
 
-```
-git checkout -b evergreen/custom_rel_3_10-rebase evergreen/custom_rel_3_10
-```
+    git checkout -b evergreen/custom_rel_3_10-rebase evergreen/custom_rel_3_10
 
 Save the commit message for afc72b28aaed9fe2f20de6419de32c83d5044aa7 to be edited and reused:
 
-```
-git log -1 afc72b28aaed9fe2f20de6419de32c83d5044aa7
-```
+    git log -1 afc72b28aaed9fe2f20de6419de32c83d5044aa7
 
 Save the output (shown below) to a file or copy and paste it into your
 text editor because you will use it later.
@@ -141,10 +135,7 @@ Date:   Wed Dec 7 14:52:57 2022 -0500
 Now that you have saved at least the commit message body to a file,
 you can start the interactive rebase:
 
-
-```
-git rebase -i evergreen/rel_3_10
-```
+    git rebase -i evergreen/rel_3_10
 
 Your text editor should open with a window full of text that looks like the text below.
 
@@ -258,7 +249,4 @@ will allow it to complete.  It should finish without incident unless
 something has drastically changed in the `rel_3_10` branch since I
 last did a test run of this procedure.
 
-
-```
-git rebase --continue
-```
+    git rebase --continue
