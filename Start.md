@@ -28,6 +28,8 @@
 
 [Git External Subcommands](Concepts/External.md)
 
+[Git Hosting](Concepts/Hosting.md)
+
 ## Examples ##
 
 [A Moderately Complicated Interactive Rebase With a Commit Edit](Examples/interactive-rebase-with-edit.md)
