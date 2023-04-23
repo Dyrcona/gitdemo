@@ -18,14 +18,14 @@ Your branch is ahead of 'origin/main' by 1 commit.
 Changes not staged for commit:
   (use "git add &lt;file&gt;..." to update what will be committed)
   (use "git restore &lt;file&gt;..." to discard changes in working directory)
-	<span style="color: red;">modified:   Concepts/Understanding.md
+	modified:   Concepts/Understanding.md
 	modified:   Start.md</span>
 
 Untracked files:
   (use "git add &lt;file&gt;..." to include in what will be committed)
-	<span style="color: red;">Concepts/Branches.md
+	Concepts/Branches.md
 	Concepts/Commits.md
-	Concepts/Repositories.md</span>
+	Concepts/Repositories.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 </pre>
