@@ -10,6 +10,8 @@
 
 ## Basic Git Usage ##
 
+[Repositories](Concepts/Repositories.md)
+
 [Configuration](Concepts/Configuration.md)
 
 [Using Git with Evergreen](Concepts/Evergreen.md)
