@@ -16,6 +16,8 @@
 
 [Commits](Concepts/Commits.md)
 
+[Collaborating With Others](Concepts/Collaboration.md)
+
 [Configuration](Concepts/Configuration.md)
 
 [Using Git with Evergreen](Concepts/Evergreen.md)
