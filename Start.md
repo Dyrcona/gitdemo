@@ -14,6 +14,8 @@
 
 [Branches](Concepts/Branches.md)
 
+[Commits](Concepts/Commits.md)
+
 [Configuration](Concepts/Configuration.md)
 
 [Using Git with Evergreen](Concepts/Evergreen.md)
