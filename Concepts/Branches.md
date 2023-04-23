@@ -44,7 +44,7 @@ can give the remote branch any local name that you want.
     git checkout time-machine_exp
     git switch time-machine_exp
 
-## Keeping Up to Date ##
+## Tracking Remote Branches ##
 
 Local branches can track remote branches.  This is the default case
 when you make local branches by checking out a remote branch as in the
