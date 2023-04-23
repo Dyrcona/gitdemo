@@ -53,7 +53,7 @@ These vary widely in features, so do your research before picking one.
 [Savannah](http://savannah.nongnu.org/projects/administration)
 
 
-## These Lists Are Icnomplete ##
+## These Lists Are Incomplete ##
 
 There are many more potential entries for both categories.  If you
 have a favorite that you would like to see added, please make a pull
