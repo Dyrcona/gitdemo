@@ -1,50 +1,12 @@
 # Understanding How Git Works #
 
-We approach an understanding of how Git works from the outside in.
-
-## Repositories ##
-
-At the outermost level, code is organized into repositories.  A Git
-repository has the same function as any other repository does in the
-real world: a place where stuff is stored.  Git repositories come with
-the added bonus of very good inventory control in the form of the
-various git commands used to manage the objects stored in the
-repository.  So much so that Git tracks not only the current
-configuration of these objects, but their past incarnations as well.
-
-Users create new repositories with the `init` and `clone` subcommands.
-The first initializes a new repository and the latter copies an
-existing repository.  One has to establish a repository before working
-with Git.
-
-The code within a repository is generally related to a single project.
-However, unrelated code can be introduced into a repository in the
-form of branches, and some repositories, the Evergreen project's
-[random repository](https://git.evergreen-ils.org/?p=working/random.git;a=summary)
-for example, hold only loosely related code.
-
-## Branches ##
-
-Branches organize the code within a repository.  The main branch,
-often called "master" or "trunk," represents the principal line of
-development in a project.  Developers work on new features and bug
-fixes in separate branches until the changes are ready to be merged
-into the main branch.  One can make as many branches as required.
-Branches can be deleted as well as shared between repositories.
-
-Branches are typically manipulated using the `branch`, `checkout`, and
-`switch` subcommands of git.
-
-As explained below, git manages branches by reference to other
-objects.
-
 ## Objects ##
 
-Git stores objects, not files, in what amounts to an object database.
-Three types of objects represents the kind of data that git stores:
-binary data, filesystem metadata, and commits.  These objects are
-organized in the `objects` subdirectory of the git directory in the
-repository.
+Git stores objects, not files, in what amounts to an object database,
+or content-addressable filesystem.  Three types of objects represents
+the kind of data that git stores: binary data, filesystem metadata,
+and commits.  These objects are organized in the `objects`
+subdirectory of the git directory in the repository.
 
 For more complete documentation of Git objects see [Git Internals -
 Git Objects in Pro Git](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
