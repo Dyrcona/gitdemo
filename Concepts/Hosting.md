@@ -1,6 +1,6 @@
 # Git Hosting #
 
-**Disclaimer** Nothing in this document constitutes an endorsement of
+**Disclaimer:** Nothing in this document constitutes an endorsement of
 any of these sites or software.  They are listed here for the
 convenience of the reader.
 
