@@ -32,4 +32,4 @@
 
 [A Moderately Complicated Interactive Rebase With a Commit Edit](Examples/interactive-rebase-with-edit.md)
 
-[A script using git to help manage Evergreen Override Directories](Examples/overridinator)
+[A Script Using Git to Manage Evergreen Override Directories](Examples/overridinator)
