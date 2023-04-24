@@ -97,7 +97,7 @@ As always `git add` has more options.  See `git help add`.
 > Staged changes for a particular file can be removed from the index via
 > `git restore --staged <filepath>`.
 >
-> You can view the current state of the index via `git diff --staged`.
+> You can view the current state of the index via `git diff --cached`.
 
 ## git commit ##
 
