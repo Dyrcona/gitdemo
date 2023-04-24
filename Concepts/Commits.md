@@ -137,9 +137,9 @@ case of conflict.
   * `!` inverts the meaning and matches the opposite of the rest of
     the line.
 
-> `!` is useful to override an entry from a higher level file.
+`!` is useful to override an entry from a higher level file.
 
-> You can match files that begin with `#` by preceding it with `\`.
+You can match files that begin with `#` by preceding it with `\`.
 
 ### Files to Ignore ###
 
