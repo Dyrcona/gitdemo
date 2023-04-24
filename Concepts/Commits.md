@@ -202,6 +202,11 @@ the `-S` (capital S) option.
 See `git help commit` for more options and more details on using the
 command.
 
+> ### Writing Good Commit Messages ###
+>
+> Natalie Pina of freeCodeCamp
+> [sums it up nicely](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/#5-steps-to-write-better-commit-messages).
+
 ## Ignoring Files ##
 
 Git can ignore files whose names or paths match certain patterns.
@@ -236,8 +241,3 @@ You can match files that begin with `#` by preceding it with `\`.
 ## git revert ##
 
 Commits can be undone with `git revert`.
-
-## Writing Good Commit Messages ##
-
-Natalie Pina of freeCodeCamp
-[sums it up nicely](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/#5-steps-to-write-better-commit-messages).
