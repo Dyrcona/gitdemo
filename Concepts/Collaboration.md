@@ -20,7 +20,7 @@ references to the remote branches into your repository's `.git`
 directory.  You fetch a single remote's references by specifying the
 remote repository's local name.
 
-    git fetch <remoteName>
+    git fetch <name>
 
 New references and changes on remote repositories do not automatically
 propagate to your local repository.  You should `git fetch`
@@ -29,19 +29,19 @@ periodically to keep your local view of the remotes up to date.
 `git checkout` allows you to check out local copies of remote
 branches.
 
-    git checkout -b <localBranch> <remote>/<remoteBranch>
+    git checkout -b <localBranch> <name>/<remoteBranch>
 
 ## Sending Code ##
 
 When you have changes in a branch that you want to share with others,
 you do so via `git push`.
 
-    git push <remoteName> <localBranch>
+    git push <name> <localBranch>
 
 If you need to rename *localBranch* on the remote, then that is
 accomplished like so:
 
-    git push <remoteName> <localBranch>:<remoteBranch>
+    git push <name> <localBranch>:<remoteBranch>
 
 See `git help push` for more options that you may find useful.
 
