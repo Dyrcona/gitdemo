@@ -206,6 +206,9 @@ command.
 >
 > Natalie Pina of freeCodeCamp
 > [sums it up nicely](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/#5-steps-to-write-better-commit-messages).
+>
+> The Evergreen Community has its own
+> [recommendations for commit messages](https://wiki.evergreen-ils.org/doku.php?id=dev:git#commit_messages).
 
 ## Ignoring Files ##
 
