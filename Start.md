@@ -34,6 +34,8 @@
 
 ## Examples ##
 
+[Adding git diff Output to the Commits Document](Examples/adding-diff-output-to-commits.md)
+
 [A Moderately Complicated Interactive Rebase With a Commit Edit](Examples/interactive-rebase-with-edit.md)
 
 [A Script Using Git to Manage Evergreen Override Directories](Examples/overridinator)
