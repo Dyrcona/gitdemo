@@ -23,3 +23,6 @@ git-scm.com.  *Git Reference*.  Retrieved: February 12, 2023.
 
 Loeliger, Jon and Matthew McCullough.  *Version Control with Git, 2nd
 Edition*. Sebastopol, CA: O'Reilly Media, 2012.
+
+Pina, Natalie.  *How to Write Better Git Commit Messages – A Step-By-Step Guide*.  Retrieved: April 24, 2023.
+[https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
