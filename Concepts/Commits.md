@@ -85,6 +85,20 @@ want to add them one at a time.
 
 As always `git add` has more options.  See `git help add`.
 
+> ### The Index ###
+>
+> The `git add` command stages changes for the next commit into the
+> *index*.  The content of paths can be added as a whole or only parts
+> of the changes can be added using the appropriate options.  The index
+> holds a snapshot of the state at the time `git add` runs.  You can run
+> `git add` multiple times to refresh the index and what will
+> subsequently be committed.
+>
+> Staged changes for a particular file can be removed from the index via
+> `git restore --staged <filepath>`.
+>
+> You can view the current state of the index via `git diff --staged`.
+
 ## git commit ##
 
 Commit files that have been added:
