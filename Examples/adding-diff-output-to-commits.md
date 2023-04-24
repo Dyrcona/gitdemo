@@ -19,4 +19,4 @@ and to return the current working state of the *main* branch.
     git switch main
 
 At this point, *Commits.md* is edited to insert the saved output and
-add some explanatory text.  The changes were then committed as normal.
+add some explanatory text.  The changes are committed as normal.
