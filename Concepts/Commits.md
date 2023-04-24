@@ -133,3 +133,7 @@ case of conflict.
   * Editor backup and auto-save files: `\#*#`, `.#*`, `*.swp`, `*~`.
   * Temporary output of failed patches: `*.rej`, `*.orig`.
   * Anything else that you do not want Git to track!
+
+## git revert ##
+
+Commits can be undone with `git revert`.
