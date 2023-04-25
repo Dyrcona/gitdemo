@@ -32,6 +32,8 @@
 
 [Hygiene](Concepts/Hygiene.md)
 
+[Editor Integration](Concepts/Integration.md)
+
 [Subcommand Aliases](Concepts/Alias.md)
 
 [Git External Subcommands](Concepts/External.md)
