@@ -45,6 +45,12 @@ accomplished like so:
 
 See `git help push` for more options that you may find useful.
 
+> ### Being a Good Neighbor ###
+> 
+>   * Avoid force-pushes.
+>   * Use work in progress branches.
+>   * Rebase into a new branch when you're ready to share.
+
 ## Keeping Up to Date ##
 
 It is a good idea to begin every work session with the following
@@ -81,3 +87,49 @@ Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
 </pre>
 
 As the message above suggests, you use `git pull` to update your local branch.
+
+## Pull, Rebase, or Merge ##
+
+The question sometimes arises which should I use: `git pull`,
+`git merge`, or `git rebase`?  The answer depends on your local
+configuration and what you are trying to achieve.
+
+`git pull` and `git merge` typically behave the same, though options
+and configuration can make `git pull` act like `git rebase`.
+
+`git merge` merges the local branch changes with the remote branch
+changes, often "ordering" the commits by timestamp, and adding a
+commit at the top indicating the start and end points of the merge.
+This option does not alter commit history or hashes.
+
+`git rebase` rewinds the local branch to a point where there is a
+common commit between it and the remote branch.  It then adds the
+commits from the remote branch on top of this common commit, and
+finally adds your local commits on top of these.  It has the advantage
+of keeping your commits on top of you branch, but it also changes your
+commit hashes, thus altering "history."
+
+### fast-forward ###
+
+When your local branch and the remote share a completely common set of
+commits, i.e. there are no commits in the local branch that are not in
+the remote branch, then your local branch can be *fast-forwarded* to
+the remote branch.  This means that the remote changes can be added to
+your local branch without changing commit hashes, also know as not
+changing history.  In this case, either `git pull` or `git merge` will
+do the same thing.
+
+You can force `git pull` to halt and to emit an error message if a
+fast-forward is not possible by using the `--ff-only` option:
+
+    git pull --ff-only
+
+### Merge Strategy ###
+
+For now, we'll link to the [reference
+documentation](https://git-scm.com/docs/git-merge#_merge_strategies).
+
+## git cherry-pick ##
+
+`git cherry-pick` pulls commits from a remote branch on top of the
+local branch, like a reverse `git rebase`.
