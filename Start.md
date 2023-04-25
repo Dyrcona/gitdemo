@@ -26,6 +26,8 @@
 
 [Understanding How Git Works](Concepts/Understanding.md)
 
+[Hygiene](Concepts/Hygiene.md)
+
 [Subcommand Aliases](Concepts/Alias.md)
 
 [Git External Subcommands](Concepts/External.md)
