@@ -16,6 +16,8 @@
 
 [Commits](Concepts/Commits.md)
 
+[Revisions](https://git-scm.com/docs/gitrevisions)
+
 [Collaborating With Others](Concepts/Collaboration.md)
 
 [Configuration](Concepts/Configuration.md)
