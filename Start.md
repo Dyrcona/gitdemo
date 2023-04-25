@@ -28,6 +28,8 @@
 
 [Understanding How Git Works](Concepts/Understanding.md)
 
+[Conflict Resolution](Concepts/Resolution.md)
+
 [Hygiene](Concepts/Hygiene.md)
 
 [Subcommand Aliases](Concepts/Alias.md)
