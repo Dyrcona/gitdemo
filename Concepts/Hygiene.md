@@ -14,8 +14,9 @@ Use `git rm` to delete a file:
 Both commands stage the change in the index and do not take effect
 until you run `git commit`.  The files are only deleted or renamed in
 future commits.  They still exist in previous commits with the old
-name.  To completey remove or rename a file in all previous commits,
-you wil need to use `git filter-branch`.
+name.  [git filter-repo](https://github.com/newren/git-filter-repo/)
+can be used To completely remove or rename a file in all previous
+commits.
 
 You can restore a deleted or moved file by checking out from a
 previous commit where it existed.  For instance, you could recover
