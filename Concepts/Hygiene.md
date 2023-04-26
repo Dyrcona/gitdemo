@@ -22,13 +22,24 @@ You can restore a deleted or moved file by checking out from a
 previous commit where it existed.  For instance, you could recover
 *fileB* in the next commit after the deletion:
 
-    git checout HEAD^ -- fileB
+    git checkout HEAD^ -- fileB
+
+## Getting Rid of Extraneous Files ##
+
+[git clean](https://git-scm.com/docs/git-clean)
 
 ## Garbage Collection ##
 
-[git clean](https://git-scm.com/docs/git-clean)
+Git will automatically do maintenance when there are too many loos
+objects in a repository.
+
+<pre>
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+</pre>
 
 [git gc](https://git-scm.com/docs/git-gc)
 
 [git fsck](https://git-scm.com/docs/git-fsck)
 
+`git remote prune`
