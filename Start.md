@@ -47,3 +47,5 @@
 [A Moderately Complicated Interactive Rebase With a Commit Edit](Examples/interactive-rebase-with-edit.md)
 
 [A Script Using Git to Manage Evergreen Override Directories](Examples/overridinator)
+
+[Renaming The Master Branch](Examples/rename-master-branch.md)
